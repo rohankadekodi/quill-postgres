@@ -98,18 +98,14 @@ struct InodeToMapping
 
 /******************* Locking ********************/
 
-#define BG_CLOSING 0
 #define ASYNC_CLOSING async_close_enable
 #define SEQ_LIST 0
 #define RAND_LIST 1
 #define DIRTY_TRACKING 1
-#define PASS_THROUGH_CALLS 0
-#define NON_TEMPORAL_WRITES 1
 #define NUM_NODE_LISTS 1
 #define PRINT_DEBUG_MSGS 0
 #define PRINT_CONTENTION_MSGS 0
 #define TOTAL_CLOSED_INODES 4096
-#define ANON_MEM_HANDLE 1
 
 volatile int async_close_enable;
 unsigned int num_async_close;

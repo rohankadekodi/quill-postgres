@@ -1,4 +1,4 @@
-cscope 15 $HOME/projects/quill-postgres               0001529588
+cscope 15 $HOME/projects/quill-postgres               0001529511
 	@debug.h
 
 1 #i‚de‡
@@ -16530,30 +16530,36 @@ NVM_DELAY
 
 
 2529 
+	`DEBUG_FILE
+("%s: dñayög\n", 
+__func__
+);
+
+2530 
 	`≥rfmodñ_add_dñay
 (0, 
 exã¡_Àngth
 );
 
-2531 
+2532 
 	`_mm_m„n˚
 ();
 
-2532 
+2533 
 num_m„n˚
 ++;
 
-2533 
+2534 
 num_wrôe_n⁄ãmp‹Æ
 ++;
 
-2534 
+2535 
 n⁄_ãmp‹Æ_wrôe_size
  +
 exã¡_Àngth
 ;
 
-2536 
+2537 
 	`END_TIMING
 (
 c›y_d©a_t
@@ -16561,7 +16567,7 @@ c›y_d©a_t
 c›y_d©a_time
 );
 
-2540 if(
+2541 if(
 	`FSYNC_MEMCPY
 ((*)
 mm≠_addr
@@ -16571,13 +16577,13 @@ buf
 exã¡_Àngth
 ) != (*)mmap_addr) {
 
-2541 
+2542 
 	`DEBUG_FILE
 ("%s: mem˝y faûed\n", 
 __func__
 );
 
-2543 
+2544 
 	`END_TIMING
 (
 nvp_do_pwrôe_ovîwrôe_t
@@ -16585,7 +16591,7 @@ nvp_do_pwrôe_ovîwrôe_t
 nvp_do_pwrôe_ovîwrôe_time
 );
 
-2544 
+2545 
 	`END_TIMING
 (
 nvp_do_pwrôe_lo›_t
@@ -16593,7 +16599,7 @@ nvp_do_pwrôe_lo›_t
 nvp_do_pwrôe_lo›_time
 );
 
-2545 
+2546 
 	`END_TIMING
 (
 nvp_do_pwrôe_t
@@ -16601,35 +16607,35 @@ nvp_do_pwrôe_t
 nvp_do_pwrôe_time
 );
 
-2546 
+2547 
 	`as£π
 (0);
 
-2549 #i‡
+2550 #i‡
 NVM_DELAY
 
 
-2550 
+2551 
 	`≥rfmodñ_add_dñay
 (0, 
 exã¡_Àngth
 );
 
-2552 
+2553 
 num_wrôe_ãmp‹Æ
 ++;
 
-2553 
+2554 
 ãmp‹Æ_wrôe_size
  +
 exã¡_Àngth
 ;
 
-2554 #i‡
+2555 #i‡
 DIRTY_TRACKING
 
 
-2556 
+2557 
 	`modifyBm≠
 ((
 mîkÀBåìNode
@@ -16641,41 +16647,41 @@ off£t_wôhö_mm≠
 exã¡_Àngth
 );
 
-2560 
+2561 
 num_mem˝y_wrôe
 ++;
 
-2561 
+2562 
 mem˝y_wrôe_size
  +
 exã¡_Àngth
 ;
 
-2562 
+2563 
 Àn_to_wrôe
  -
 exã¡_Àngth
 ;
 
-2563 
+2564 
 wrôe_off£t
  +
 exã¡_Àngth
 ;
 
-2564 
+2565 
 wrôe_cou¡
  +
 exã¡_Àngth
 ;
 
-2565 
+2566 
 buf
  +
 exã¡_Àngth
 ;
 
-2567 
+2568 
 	`END_TIMING
 (
 nvp_do_pwrôe_ovîwrôe_t
@@ -16683,7 +16689,7 @@ nvp_do_pwrôe_ovîwrôe_t
 nvp_do_pwrôe_ovîwrôe_time
 );
 
-2571 
+2572 
 	`START_TIMING
 (
 nvp_do_pwrôe_≠≥nd_t
@@ -16691,11 +16697,11 @@ nvp_do_pwrôe_≠≥nd_t
 nvp_do_pwrôe_≠≥nd_time
 );
 
-2574 #i‡
+2575 #i‡
 ANON_MEM_HANDLE
 
 
-2575 
+2576 
 exãndFûeRëu∫
  = 
 	`_nvp_exãnd_wrôe
@@ -16715,7 +16721,7 @@ wr_lock
 nvf
 );
 
-2578 
+2579 
 	`START_TIMING
 (
 wrôe_sysˇŒ_t
@@ -16723,7 +16729,7 @@ wrôe_sysˇŒ_t
 wrôe_sysˇŒ_time
 );
 
-2580 
+2581 
 exãndFûeRëu∫
  = 
 _nvp_fûe›s
@@ -16739,7 +16745,7 @@ buf
 wrôe_off£t
 );
 
-2581 
+2582 
 	`END_TIMING
 (
 wrôe_sysˇŒ_t
@@ -16747,29 +16753,29 @@ wrôe_sysˇŒ_t
 wrôe_sysˇŒ_time
 );
 
-2583 
+2584 
 num_posix_wrôe
 ++;
 
-2584 
+2585 
 posix_wrôe_size
  +
 exãndFûeRëu∫
 ;
 
-2585 
+2586 
 num_m„n˚
 ++;
 
-2586 
+2587 
 num_wrôe_n⁄ãmp‹Æ
 ++;
 
-2587 
+2588 
 _nvp_wr_exãnded
 ++;
 
-2588 
+2589 
 nvf
 ->
 node
@@ -16779,7 +16785,7 @@ node
 exãndFûeRëu∫
 ;
 
-2589 
+2590 
 nvf
 ->
 node
@@ -16789,7 +16795,7 @@ node
 exãndFûeRëu∫
 ;
 
-2590 
+2591 
 nvf
 ->
 node
@@ -16799,31 +16805,31 @@ node
 exãndFûeRëu∫
 ;
 
-2593 
+2594 
 Àn_to_wrôe
  -
 exãndFûeRëu∫
 ;
 
-2594 
+2595 
 wrôe_cou¡
  +
 exãndFûeRëu∫
 ;
 
-2595 
+2596 
 wrôe_off£t
  +
 exãndFûeRëu∫
 ;
 
-2596 
+2597 
 buf
  +
 exãndFûeRëu∫
 ;
 
-2598 
+2599 
 	`END_TIMING
 (
 nvp_do_pwrôe_≠≥nd_t
@@ -16831,7 +16837,7 @@ nvp_do_pwrôe_≠≥nd_t
 nvp_do_pwrôe_≠≥nd_time
 );
 
-2609 
+2610 
 	`END_TIMING
 (
 nvp_do_pwrôe_t
@@ -16839,15 +16845,15 @@ nvp_do_pwrôe_t
 nvp_do_pwrôe_time
 );
 
-2610  
+2611  
 wrôe_cou¡
 ;
 
-2611 
+2612 
 	}
 }
 
-2613 
+2614 
 	$_nvp_ã°_övÆid©e_node
 (
 NVFûe
@@ -16855,7 +16861,7 @@ NVFûe
 nvf
 )
 
-2615 
+2616 
 NVNode
 * 
 node
@@ -16863,11 +16869,11 @@ node
 nvf
 ->node;
 
-2617 
+2618 
 	`DEBUG
 ("munmappingÅemporarily diabled...\n");
 
-2621 
+2622 
 	`SANITYCHECK
 (
 node
@@ -16875,7 +16881,7 @@ node
 NULL
 );
 
-2623 
+2624 
 	`±hªad_•ö_lock
 (&
 node_lookup_lock
@@ -16885,37 +16891,37 @@ node_lookup_lock
 NUM_NODE_LISTS
 )]);
 
-2624 
+2625 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-2625 
+2626 
 node
 ->
 ª„ªn˚
 --;
 
-2626 
+2627 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2627 i‡(
+2628 i‡(
 node
 ->
 ª„ªn˚
  == 0) {
 
-2628 
+2629 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-2629 
+2630 
 ödex
  = 
 nvf
@@ -16923,13 +16929,13 @@ nvf
 £rü o
  % 1024;
 
-2630 
+2631 
 _nvp_öo_lookup
 [
 ödex
 ] = 0;
 
-2632 
+2633 
 	`nvp_˛ónup_node
 (
 nvf
@@ -16937,19 +16943,19 @@ nvf
 node
 , 0, 1);
 
-2633 
+2634 
 node
 ->
 £rü o
  = 0;
 
-2634 
+2635 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2636 
+2637 
 	`±hªad_•ö_u∆ock
 (&
 node_lookup_lock
@@ -16959,11 +16965,11 @@ node_lookup_lock
 NUM_NODE_LISTS
 )]);
 
-2638 
+2639 
 	}
 }
 
-2640 
+2641 
 RETT_SEEK64
  
 	$_nvp_do_£ek64
@@ -16975,21 +16981,21 @@ NVFûe
 nvf
 )
 
-2642 
+2643 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-2644 
+2645 
 	`DEBUG
 ("_nvp_do_seek64\n");
 
-2648 
+2649 
 	`DEBUG
 ("_nvp_do_seek64: fileÜen %li, mapÜen %li, current offset %li, "
 
-2650 
+2651 
 nvf
 ->
 node
@@ -17001,83 +17007,83 @@ m≠Àngth
 off£t
 ,
 
-2651 
+2652 
 off£t
 , 
 whí˚
 );
 
-2653 
+2654 
 whí˚
 )
 
-2655 
+2656 
 SEEK_SET
 :
 
-2656 if(
+2657 if(
 off£t
  < 0)
 
-2658 
+2659 
 	`DEBUG
 ("offset out ofÑange (wouldÑesult in "
 
-2660 
+2661 
 î∫o
  = 
 EINVAL
 ;
 
-2663 *(
+2664 *(
 nvf
 ->
 off£t
 ) = offset ;
 
-2666  *(
+2667  *(
 nvf
 ->
 off£t
 );
 
-2668 
+2669 
 SEEK_CUR
 :
 
-2669 if((*(
+2670 if((*(
 nvf
 ->
 off£t
 ) + offset) < 0)
 
-2671 
+2672 
 	`DEBUG
 ("offset out ofÑange (wouldÑesult in "
 
-2673 
+2674 
 î∫o
  = 
 EINVAL
 ;
 
-2676 *(
+2677 *(
 nvf
 ->
 off£t
 ) += offset ;
 
-2677  *(
+2678  *(
 nvf
 ->
 off£t
 );
 
-2679 
+2680 
 SEEK_END
 :
 
-2680 if–
+2681 if–
 nvf
 ->
 node
@@ -17087,17 +17093,17 @@ node
 off£t
  < 0 )
 
-2682 
+2683 
 	`DEBUG
 ("offset out ofÑange (wouldÑesult in "
 
-2684 
+2685 
 î∫o
  = 
 EINVAL
 ;
 
-2688 *(
+2689 *(
 nvf
 ->
 off£t
@@ -17107,31 +17113,31 @@ node
 Àngth
  + offset;
 
-2689  *(
+2690  *(
 nvf
 ->
 off£t
 );
 
-2692 
+2693 
 	`DEBUG
 ("Invalid whenceÖarameter.\n");
 
-2693 
+2694 
 î∫o
  = 
 EINVAL
 ;
 
-2697 
+2698 
 	`as£π
 (0);
 
-2699 
+2700 
 	}
 }
 
-2701 
+2702 
 ssize_t
  
 	$_nvp_check_ªad_size_vÆid
@@ -17141,39 +17147,39 @@ size_t
 cou¡
 )
 
-2703 if(
+2704 if(
 cou¡
  == 0)
 
-2705 
+2706 
 	`DEBUG
 ("RequestedáÑead of 0Üength. NoÖroblem\n");
 
-2708 if(
+2709 if(
 cou¡
  < 0)
 
-2710 
+2711 
 	`DEBUG
 ("Reque°edÑód o‡√g©ivêbyã†(%li)\n", 
 cou¡
 );
 
-2711 
+2712 
 î∫o
  = 
 EINVAL
 ;
 
-2715  
+2716  
 cou¡
 ;
 
-2716 
+2717 
 	}
 }
 
-2718 
+2719 
 ssize_t
  
 	$_nvp_check_wrôe_size_vÆid
@@ -17183,41 +17189,41 @@ size_t
 cou¡
 )
 
-2720 if(
+2721 if(
 cou¡
  == 0)
 
-2722 
+2723 
 	`DEBUG
 ("Requestedá write of 0 bytes. NoÖroblem\n");
 
-2726 if(((sig√d )
+2727 if(((sig√d )
 cou¡
 ) < 0)
 
-2728 
+2729 
 	`DEBUG
 ("Requestedá write of %li < 0 bytes.\n",
 
-2729 (sig√d )
+2730 (sig√d )
 cou¡
 );
 
-2730 
+2731 
 î∫o
  = 
 EINVAL
 ;
 
-2734  
+2735  
 cou¡
 ;
 
-2735 
+2736 
 	}
 }
 
-2740 
+2741 
 RETT_MKSTEMP
  
 	$_nvp_MKSTEMP
@@ -17225,13 +17231,13 @@ RETT_MKSTEMP
 INTF_MKSTEMP
 )
 
-2742 
+2743 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-2744 * 
+2745 * 
 suffix
  = 
 fûe
@@ -17239,43 +17245,43 @@ fûe
 	`°æí
 (file) - 6;
 
-2746 
+2747 
 	`DEBUG
 ("CÆÀd _nvp_mk°em∞wôhÅem∂©ê%s; makögáÇew fûíame...\n", 
 fûe
 );
 
-2748 if(
+2749 if(
 suffix
  =
 NULL
 ) {
 
-2749 
+2750 
 	`DEBUG
 ("InvÆidÅem∂©ê°rög (%sË∑s£dÅÿmk°emp\n", 
 fûe
 );
 
-2750 
+2751 
 î∫o
  = 
 EINVAL
 ;
 
-2756 
+2757 
 i
 ;
 
-2757 
+2758 
 suc˚ss
  = 0;
 
-2758 
+2759 
 i
 =0; i<1000000; i++)
 
-2760 
+2761 
 	`•rötf
 (
 suffix
@@ -17283,7 +17289,7 @@ suffix
 i
 );
 
-2762 
+2763 
 fs
  = 
 	`ac˚ss
@@ -17293,29 +17299,29 @@ fûe
 F_OK
 );
 
-2764 if(
+2765 if(
 fs
  == 0) {
 
-2765 
+2766 
 suc˚ss
  = 1;
 
-2770 if(!
+2771 if(!
 suc˚ss
 ) {
 
-2771 
+2772 
 	`DEBUG
 ("Noávailable fileÇames!\n");
 
-2775 
+2776 
 	`DEBUG
 ("Gíî©ed fûíamê%s. CÆlög (ªguœrË›í...\n", 
 fûe
 );
 
-2777  
+2778  
 	`›í
 (
 fûe
@@ -17325,11 +17331,11 @@ O_CREAT
 O_EXCL
 , 0600);
 
-2778 
+2779 
 	}
 }
 
-2780 
+2781 
 RETT_CLOSE
  
 	$_nvp_REAL_CLOSE
@@ -17343,19 +17349,19 @@ INTF_CLOSE
 async_fûe_˛osög
 ) {
 
-2782 
+2783 
 RETT_CLOSE
  
 ªsu…
 ;
 
-2783 
+2784 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-2784 
+2785 
 ö°rumíèti⁄_ty≥
  
 node_lookup_lock_time
@@ -17371,21 +17377,21 @@ c›y_to_mm≠_ˇche_time
 give_up_node_time
 ;
 
-2785 
+2786 
 ˝uid
 ;
 
-2786 
+2787 
 node_li°_idx
 ;
 
-2788 
+2789 
 	`DEBUG
 ("_nvp_CLOSE(%i)\n", 
 fûe
 );
 
-2794 
+2795 
 NVFûe
 * 
 nvf
@@ -17395,7 +17401,7 @@ _nvp_fd_lookup
 fûe
 ];
 
-2795 
+2796 
 node_li°_idx
  = 
 nvf
@@ -17405,35 +17411,35 @@ node
 ‰ì_li°_idx
 ;
 
-2797 
+2798 
 num_˛o£
 ++;
 
-2799 i‡(
+2800 i‡(
 nvf
 ->
 posix
 ) {
 
-2800 
+2801 
 nvf
 ->
 vÆid
  = 0;
 
-2801 
+2802 
 nvf
 ->
 posix
  = 0;
 
-2802 
+2803 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-2803 
+2804 
 nvf
 ->
 node
@@ -17441,13 +17447,13 @@ node
 ª„ªn˚
 --;
 
-2804 
+2805 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2805 i‡(
+2806 i‡(
 nvf
 ->
 node
@@ -17455,7 +17461,7 @@ node
 ª„ªn˚
  == 0) {
 
-2806 
+2807 
 nvf
 ->
 node
@@ -17463,7 +17469,7 @@ node
 £rü o
  = 0;
 
-2807 
+2808 
 ödex
  = 
 nvf
@@ -17471,13 +17477,13 @@ nvf
 £rü o
  % 1024;
 
-2808 
+2809 
 _nvp_öo_lookup
 [
 ödex
 ] = 0;
 
-2809 
+2810 
 	`push_ö_°ack
 (1, 0, 
 nvf
@@ -17489,13 +17495,13 @@ node
 node_li°_idx
 );
 
-2811 
+2812 
 nvf
 ->
 £rü o
  = 0;
 
-2812 
+2813 
 	`DEBUG
 ("CÆ»posix CLOSE f‹ fd %d\n", 
 nvf
@@ -17503,7 +17509,7 @@ nvf
 fd
 );
 
-2813 
+2814 
 ªsu…
  = 
 _nvp_fûe›s
@@ -17513,21 +17519,21 @@ _nvp_fûe›s
 CALL_CLOSE
 );
 
-2816  
+2817  
 ªsu…
 ;
 
-2819 #i‡
+2820 #i‡
 ANON_MEM_HANDLE
 
 
-2820 
+2821 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-2821 
+2822 
 	`fsync_Êush_⁄_fsync
 (
 nvf
@@ -17535,11 +17541,11 @@ nvf
 ˝uid
 , 1, 0);
 
-2831 #i‡
+2832 #i‡
 PRINT_DEBUG_MSGS
 
 
-2832 
+2833 
 	`¥ötf
 ("%s:ácquúögÇodêlooku∞lock, index = %d,Åhªad = %lu\n", 
 __func__
@@ -17549,13 +17555,13 @@ node_li°_idx
 	`±hªad_£lf
 ());
 
-2833 
+2834 
 	`fÊush
 (
 NULL
 );
 
-2837 
+2838 
 	`±hªad_•ö_lock
 (&
 node_lookup_lock
@@ -17563,11 +17569,11 @@ node_lookup_lock
 node_li°_idx
 ]);
 
-2839 #i‡
+2840 #i‡
 PRINT_DEBUG_MSGS
 
 
-2840 
+2841 
 	`¥ötf
 ("%s:ácquúedÇodêlooku∞lock, index = %d\n", 
 __func__
@@ -17575,19 +17581,19 @@ __func__
 node_li°_idx
 );
 
-2841 
+2842 
 	`fÊush
 (
 NULL
 );
 
-2844 if(
+2845 if(
 nvf
 ->
 vÆid
  == 0) {
 
-2845 
+2846 
 	`±hªad_•ö_u∆ock
 (&
 node_lookup_lock
@@ -17595,7 +17601,7 @@ node_lookup_lock
 node_li°_idx
 ]);
 
-2849 if(
+2850 if(
 nvf
 ->
 node
@@ -17603,7 +17609,7 @@ node
 ª„ªn˚
  <= 0) {
 
-2850 
+2851 
 	`±hªad_•ö_u∆ock
 (&
 node_lookup_lock
@@ -17611,7 +17617,7 @@ node_lookup_lock
 node_li°_idx
 ]);
 
-2854 if(
+2855 if(
 nvf
 ->
 node
@@ -17619,7 +17625,7 @@ node
 £rü o
  != serialno) {
 
-2855 
+2856 
 	`±hªad_•ö_u∆ock
 (&
 node_lookup_lock
@@ -17627,13 +17633,13 @@ node_lookup_lock
 node_li°_idx
 ]);
 
-2861 
+2862 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-2863 
+2864 
 nvf
 ->
 node
@@ -17641,13 +17647,13 @@ node
 ª„ªn˚
 --;
 
-2864 
+2865 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2866 i‡(
+2867 i‡(
 nvf
 ->
 node
@@ -17655,7 +17661,7 @@ node
 ª„ªn˚
  == 0) {
 
-2867 
+2868 
 nvf
 ->
 node
@@ -17663,7 +17669,7 @@ node
 £rü o
  = 0;
 
-2870 
+2871 
 	`push_ö_°ack
 (1, 0, 
 nvf
@@ -17675,11 +17681,11 @@ node
 node_li°_idx
 );
 
-2874 i‡(
+2875 i‡(
 async_fûe_˛osög
 ) {
 
-2875 
+2876 
 nvf
 ->
 node
@@ -17687,7 +17693,7 @@ node
 async_fûe_˛o£
  = 1;
 
-2878 
+2879 
 	`±hªad_•ö_u∆ock
 (&
 node_lookup_lock
@@ -17695,43 +17701,43 @@ node_lookup_lock
 node_li°_idx
 ]);
 
-2881 
+2882 
 	`NVP_LOCK_FD_WR
 (
 nvf
 );
 
-2882 
+2883 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-2884 
+2885 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-2888 if(
+2889 if(
 nvf
 ->
 vÆid
  == 0) {
 
-2889 
+2890 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2890 
+2891 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-2894 if(
+2895 if(
 nvf
 ->
 node
@@ -17739,43 +17745,43 @@ node
 ª„ªn˚
  < 0) {
 
-2895 
+2896 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2896 
+2897 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-2900 if(
+2901 if(
 nvf
 ->
 £rü o
  != serialno) {
 
-2901 
+2902 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2902 
+2903 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-2907 
+2908 
 nvf
 ->
 vÆid
  = 0;
 
-2910 i‡(
+2911 i‡(
 nvf
 ->
 node
@@ -17783,7 +17789,7 @@ node
 ª„ªn˚
  == 0) {
 
-2913 
+2914 
 	`nvp_add_to_öode_m≠pög
 (
 nvf
@@ -17793,7 +17799,7 @@ node
 £rü o
 );
 
-2915 
+2916 
 nvf
 ->
 node
@@ -17801,7 +17807,7 @@ node
 backup_£rü o
  = 0;
 
-2917 
+2918 
 ödex
  = 
 nvf
@@ -17809,23 +17815,23 @@ nvf
 £rü o
  % 1024;
 
-2918 
+2919 
 _nvp_öo_lookup
 [
 ödex
 ] = 0;
 
-2919 
+2920 
 	`DEBUG
 ("Clo£ CÀ™u∞nodêf‹ %d\n", 
 fûe
 );
 
-2921 
+2922 
 	`GLOBAL_LOCK_WR
 ();
 
-2922 if(
+2923 if(
 nvf
 ->
 node
@@ -17833,7 +17839,7 @@ node
 ™⁄ymous_roŸ
 ) {
 
-2925 
+2926 
 	`nvp_å™s„r_to_‰ì_™⁄ymous_poﬁ
 (
 nvf
@@ -17851,7 +17857,7 @@ node
 ™⁄ymous_roŸ_dúty_íd
 ,Çvf->node);
 
-2929 
+2930 
 nvf
 ->
 node
@@ -17859,11 +17865,11 @@ node
 async_fûe_˛o£
  = 0;
 
-2930 
+2931 
 	`GLOBAL_UNLOCK_WR
 ();
 
-2932 
+2933 
 	`nvp_˛ónup_node
 (
 nvf
@@ -17871,25 +17877,25 @@ nvf
 node
 , 0, 0);
 
-2937 
+2938 
 nvf
 ->
 £rü o
  = 0;
 
-2939 
+2940 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-2940 
+2941 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-2944 
+2945 
 ªsu…
  = 
 _nvp_fûe›s
@@ -17899,15 +17905,15 @@ _nvp_fûe›s
 CALL_CLOSE
 );
 
-2948  
+2949  
 ªsu…
 ;
 
-2950 
+2951 
 	}
 }
 
-2952 
+2953 
 RETT_OPEN
  
 	$_nvp_OPEN
@@ -17915,15 +17921,15 @@ RETT_OPEN
 INTF_OPEN
 )
 
-2955 
+2956 
 ªsu…
 ;
 
-2956 #i‡
+2957 #i‡
 BG_CLOSING
 
 
-2957 
+2958 
 ˛o£d_fûedesc
  = -1, 
 fd
@@ -17931,13 +17937,13 @@ fd
 hash_ödex
  = -1;
 
-2958 #i‡
+2959 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-2959 
+2960 
 Clo£dFûes
  *
 ˛f
@@ -17945,7 +17951,7 @@ Clo£dFûes
 NULL
 ;
 
-2961 
+2962 
 InodeClo£dFûe
  *
 tbl
@@ -17953,7 +17959,7 @@ tbl
 NULL
 ;
 
-2964 
+2965 
 ö°rumíèti⁄_ty≥
  
 ›í_time
@@ -17963,7 +17969,7 @@ NULL
 nvnode_lock_time
 ;
 
-2966 
+2967 
 	`START_TIMING
 (
 ›í_t
@@ -17971,15 +17977,15 @@ nvnode_lock_time
 ›í_time
 );
 
-2968 #i‡
+2969 #i‡
 PASS_THROUGH_CALLS
 
 
-2969 
+2970 
 num_›í
 ++;
 
-2970 i‡(
+2971 i‡(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -17987,13 +17993,13 @@ oÊag
 O_CREAT
 ))
 
-2972 
+2973 
 va_li°
  
 ¨g
 ;
 
-2973 
+2974 
 	`va_°¨t
 (
 ¨g
@@ -18001,7 +18007,7 @@ va_li°
 oÊag
 );
 
-2974 
+2975 
 mode
  = 
 	`va_¨g
@@ -18009,13 +18015,13 @@ mode
 ¨g
 , );
 
-2975 
+2976 
 	`va_íd
 (
 ¨g
 );
 
-2978 
+2979 
 ªsu…
  = 
 _nvp_fûe›s
@@ -18031,7 +18037,7 @@ O_APPEND
 mode
 );
 
-2980 
+2981 
 ªsu…
  = 
 _nvp_fûe›s
@@ -18045,15 +18051,15 @@ oÊag
 O_APPEND
 ));
 
-2983 if(
+2984 if(
 ªsu…
 <0)
 
-2985 
+2986 
 	`DEBUG
 ("_nvp_OPEN->%s_OPEN failed: %s\n",
 
-2986 
+2987 
 _nvp_fûe›s
 ->
 «me
@@ -18063,7 +18069,7 @@ _nvp_fûe›s
 î∫o
 ));
 
-2988 
+2989 
 	`DEBUG_FILE
 ("%s: o≥¿Áûed!,Çum_fûes_˛o£d = %lu, \n", 
 __func__
@@ -18071,7 +18077,7 @@ __func__
 num_fûes_˛o£d
 );
 
-2990 
+2991 
 	`END_TIMING
 (
 ›í_t
@@ -18079,11 +18085,11 @@ num_fûes_˛o£d
 ›í_time
 );
 
-2991  
+2992  
 ªsu…
 ;
 
-2994 
+2995 
 	`END_TIMING
 (
 ›í_t
@@ -18091,33 +18097,33 @@ num_fûes_˛o£d
 ›í_time
 );
 
-2995  
+2996  
 ªsu…
 ;
 
-2998 
+2999 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-3000 if(
+3001 if(
 ∑th
 ==
 NULL
 ) {
 
-3001 
+3002 
 	`DEBUG
 ("InvalidÖath.\n");
 
-3002 
+3003 
 î∫o
  = 
 EINVAL
 ;
 
-3003 
+3004 
 	`END_TIMING
 (
 ›í_t
@@ -18125,27 +18131,27 @@ EINVAL
 ›í_time
 );
 
-3007 
+3008 
 	`DEBUG
 ("_nvp_OPEN(%s)\n", 
 ∑th
 );
 
-3008 
+3009 
 num_›í
 ++;
 
-3010 
+3011 
 	`DEBUG
 ("AttemptingÅo _nvp_OPENÅhe file \"%s\" withÅhe following "
 
-3011 "Êag†(0x%X): ", 
+3012 "Êag†(0x%X): ", 
 ∑th
 , 
 oÊag
 );
 
-3018 i‡(
+3019 i‡(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -18153,13 +18159,13 @@ oÊag
 O_WRONLY
 )) {
 
-3019 
+3020 
 oÊag
  |
 O_RDONLY
 ;
 
-3022 if((
+3023 if((
 oÊag
 &
 O_RDWR
@@ -18169,11 +18175,11 @@ O_RDONLY
 O_WRONLY
 ))) {
 
-3023 
+3024 
 	`DEBUG_P
 ("O_RDWR ");
 
-3024 } if(
+3025 } if(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -18181,11 +18187,11 @@ oÊag
 O_RDONLY
 )) {
 
-3025 
+3026 
 	`DEBUG_P
 ("O_RDONLY ");
 
-3032 
+3033 
 	`DUMP_FLAGS
 (
 oÊag
@@ -18193,20 +18199,12 @@ oÊag
 O_APPEND
 );
 
-3033 
-	`DUMP_FLAGS
-(
-oÊag
-,
-O_CREAT
-);
-
 3034 
 	`DUMP_FLAGS
 (
 oÊag
 ,
-O_TRUNC
+O_CREAT
 );
 
 3035 
@@ -18214,7 +18212,7 @@ O_TRUNC
 (
 oÊag
 ,
-O_EXCL
+O_TRUNC
 );
 
 3036 
@@ -18222,7 +18220,7 @@ O_EXCL
 (
 oÊag
 ,
-O_SYNC
+O_EXCL
 );
 
 3037 
@@ -18230,7 +18228,7 @@ O_SYNC
 (
 oÊag
 ,
-O_ASYNC
+O_SYNC
 );
 
 3038 
@@ -18238,7 +18236,7 @@ O_ASYNC
 (
 oÊag
 ,
-O_DSYNC
+O_ASYNC
 );
 
 3039 
@@ -18246,7 +18244,7 @@ O_DSYNC
 (
 oÊag
 ,
-O_FSYNC
+O_DSYNC
 );
 
 3040 
@@ -18254,7 +18252,7 @@ O_FSYNC
 (
 oÊag
 ,
-O_RSYNC
+O_FSYNC
 );
 
 3041 
@@ -18262,7 +18260,7 @@ O_RSYNC
 (
 oÊag
 ,
-O_NOCTTY
+O_RSYNC
 );
 
 3042 
@@ -18270,7 +18268,7 @@ O_NOCTTY
 (
 oÊag
 ,
-O_NDELAY
+O_NOCTTY
 );
 
 3043 
@@ -18278,7 +18276,7 @@ O_NDELAY
 (
 oÊag
 ,
-O_NONBLOCK
+O_NDELAY
 );
 
 3044 
@@ -18286,7 +18284,7 @@ O_NONBLOCK
 (
 oÊag
 ,
-O_DIRECTORY
+O_NONBLOCK
 );
 
 3045 
@@ -18294,7 +18292,7 @@ O_DIRECTORY
 (
 oÊag
 ,
-O_LARGEFILE
+O_DIRECTORY
 );
 
 3046 
@@ -18302,7 +18300,7 @@ O_LARGEFILE
 (
 oÊag
 ,
-O_NOATIME
+O_LARGEFILE
 );
 
 3047 
@@ -18310,7 +18308,7 @@ O_NOATIME
 (
 oÊag
 ,
-O_DIRECT
+O_NOATIME
 );
 
 3048 
@@ -18318,20 +18316,28 @@ O_DIRECT
 (
 oÊag
 ,
-O_NOFOLLOW
+O_DIRECT
 );
 
 3049 
+	`DUMP_FLAGS
+(
+oÊag
+,
+O_NOFOLLOW
+);
+
+3050 
 	`DEBUG_P
 ("\n");
 
-3051 
+3052 
 °©
  
 fûe_°
 ;
 
-3054 
+3055 
 NVNode
 * 
 node
@@ -18339,29 +18345,29 @@ node
 NULL
 ;
 
-3056 #i‡
+3057 #i‡
 BG_CLOSING
 
 
-3057 i‡(
+3058 i‡(
 async_˛o£_íabÀ
 ) {
 
-3058 if(
+3059 if(
 num_fûes_˛o£d
  >800 || (
 ™⁄_mem_˛o£d_fûes
  >= ((5ULL) * 1024 * 1024 * 1024))) {
 
-3059 
+3060 
 ASYNC_CLOSING
  = 0;
 
-3060 
+3061 
 	`checkAndA˘iv©eBgThªad
 ();
 
-3069 i‡(
+3070 i‡(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -18369,13 +18375,13 @@ oÊag
 O_CREAT
 ))
 
-3071 
+3072 
 va_li°
  
 ¨g
 ;
 
-3072 
+3073 
 	`va_°¨t
 (
 ¨g
@@ -18383,7 +18389,7 @@ va_li°
 oÊag
 );
 
-3073 
+3074 
 mode
  = 
 	`va_¨g
@@ -18391,13 +18397,13 @@ mode
 ¨g
 , );
 
-3074 
+3075 
 	`va_íd
 (
 ¨g
 );
 
-3077 
+3078 
 ªsu…
  = 
 	`sysˇŒ
@@ -18417,7 +18423,7 @@ fûe_°
 °_size
 );
 
-3080 
+3081 
 ªsu…
  = 
 	`sysˇŒ
@@ -18435,15 +18441,15 @@ fûe_°
 °_size
 );
 
-3091 if(
+3092 if(
 ªsu…
 <0)
 
-3093 
+3094 
 	`DEBUG
 ("_nvp_OPEN->%s_OPEN failed: %s\n",
 
-3094 
+3095 
 _nvp_fûe›s
 ->
 «me
@@ -18453,11 +18459,11 @@ _nvp_fûe›s
 î∫o
 ));
 
-3096 
+3097 
 	`DEBUG_FILE
 ("_nvp_OPEN->%s_OPEN failed: %s\n",
 
-3097 
+3098 
 _nvp_fûe›s
 ->
 «me
@@ -18467,7 +18473,7 @@ _nvp_fûe›s
 î∫o
 ));
 
-3098 
+3099 
 	`END_TIMING
 (
 ›í_t
@@ -18475,11 +18481,11 @@ _nvp_fûe›s
 ›í_time
 );
 
-3100  
+3101  
 ªsu…
 ;
 
-3103 
+3104 
 	`SANITYCHECK
 (&
 _nvp_fd_lookup
@@ -18489,7 +18495,7 @@ _nvp_fd_lookup
 NULL
 );
 
-3105 
+3106 
 NVFûe
 * 
 nvf
@@ -18497,23 +18503,23 @@ nvf
 NULL
 ;
 
-3107 #i‡
+3108 #i‡
 BG_CLOSING
 
 
-3108 i‡(
+3109 i‡(
 async_˛o£_íabÀ
 )
 
-3109 
+3110 
 	`checkAndA˘iv©eBgThªad
 ();
 
-3110 
+3111 
 	`GLOBAL_LOCK_CLOSE_WR
 ();
 
-3111 
+3112 
 hash_ödex
  = 
 fûe_°
@@ -18523,13 +18529,13 @@ fûe_°
 TOTAL_CLOSED_INODES
 ;
 
-3112 #i‡
+3113 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3113 
+3114 
 ˛f
  = &
 _nvp_˛o£d_fûes
@@ -18537,11 +18543,11 @@ _nvp_˛o£d_fûes
 hash_ödex
 ];
 
-3115 #i‡
+3116 #i‡
 PRINT_CONTENTION_MSGS
 
 
-3116 
+3117 
 	`¥ötf
 ("%s:ácquúögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -18551,19 +18557,19 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-3117 
+3118 
 	`fÊush
 (
 NULL
 );
 
-3121 
+3122 
 	`LRU_NODE_LOCK_WR
 (
 ˛f
 );
 
-3124 
+3125 
 fd
  = 
 	`ªmove_‰om_£q_li°_hash
@@ -18575,7 +18581,7 @@ fûe_°
 °_öo
 );
 
-3126 
+3127 
 tbl
  = &
 öode_to_˛o£d_fûe
@@ -18583,13 +18589,13 @@ tbl
 hash_ödex
 ];
 
-3127 
+3128 
 	`NVP_LOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3128 
+3129 
 fd
  = 
 	`ªmove_‰om_Ãu_li°_hash
@@ -18599,11 +18605,11 @@ fûe_°
 °_öo
 , 0);
 
-3130 if(
+3131 if(
 fd
  >= 0) {
 
-3131 i‡((
+3132 i‡((
 oÊag
  & 
 O_RDWR
@@ -18613,17 +18619,17 @@ O_RDWR
 O_RDONLY
 )) {
 
-3132 
+3133 
 num_˛o£
 ++;
 
-3133 
+3134 
 ˛o£d_fûedesc
  = 
 fd
 ;
 
-3134 
+3135 
 	`__©omic_„tch_sub
 (&
 num_fûes_˛o£d
@@ -18631,17 +18637,17 @@ num_fûes_˛o£d
 __ATOMIC_SEQ_CST
 );
 
-3135 #i‡
+3136 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3137 #i‡
+3138 #i‡
 PRINT_CONTENTION_MSGS
 
 
-3138 
+3139 
 	`MSG
 ("%s:ÑñósögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -18651,23 +18657,23 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-3140 
+3141 
 	`LRU_NODE_UNLOCK_WR
 (
 ˛f
 );
 
-3142 
+3143 
 	`NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3144 
+3145 
 	`GLOBAL_UNLOCK_CLOSE_WR
 ();
 
-3146 
+3147 
 _nvp_fûe›s
 ->
 	`CLOSE
@@ -18675,13 +18681,13 @@ _nvp_fûe›s
 ªsu…
 );
 
-3147 
+3148 
 ªsu…
  = 
 ˛o£d_fûedesc
 ;
 
-3148 
+3149 
 nvf
  = &
 _nvp_fd_lookup
@@ -18689,13 +18695,13 @@ _nvp_fd_lookup
 ªsu…
 ];
 
-3149 
+3150 
 node
  = 
 nvf
 ->node;
 
-3150 
+3151 
 	`__©omic_„tch_sub
 (&
 ™⁄_mem_˛o£d_fûes
@@ -18709,51 +18715,51 @@ node
 __ATOMIC_SEQ_CST
 );
 
-3151 
+3152 
 	`NVP_LOCK_FD_WR
 (
 nvf
 );
 
-3153 
+3154 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-3155 
+3156 
 nvf
 ->
 vÆid
  = 0;
 
-3156 
+3157 
 öôülize_nvf
 ;
 
-3160 #i‡
+3161 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3161 
+3162 
 	`LRU_NODE_UNLOCK_WR
 (
 ˛f
 );
 
-3163 
+3164 
 	`NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3165 
+3166 
 	`GLOBAL_UNLOCK_CLOSE_WR
 ();
 
-3171 
+3172 
 nvf
  = &
 _nvp_fd_lookup
@@ -18761,39 +18767,39 @@ _nvp_fd_lookup
 ªsu…
 ];
 
-3173 
+3174 
 	`DEBUG_FILE
 ("_nvp_OPEN succeeded forÖath %s: fd %iÑeturned. "
 
-3174 "fûlög i¿fûêöfo\n", 
+3175 "fûlög i¿fûêöfo\n", 
 ∑th
 , 
 ªsu…
 );
 
-3176 
+3177 
 	`NVP_LOCK_FD_WR
 (
 nvf
 );
 
-3179 if(
+3180 if(
 nvf
 ->
 vÆid
 )
 
-3181 
+3182 
 	`DEBUG_FILE
 ("Thîêi†Æªadyá fûê›í wôhÅh© FD (%i)!\n", 
 ªsu…
 );
 
-3182 
+3183 
 	`as£π
 (0);
 
-3183 
+3184 
 	`END_TIMING
 (
 ›í_t
@@ -18801,17 +18807,17 @@ vÆid
 ›í_time
 );
 
-3184  
+3185  
 ªsu…
 ;
 
-3205 if(
+3206 if(
 node
  =
 NULL
 )
 
-3212 
+3213 
 node
  = 
 	`nvp_gë_node
@@ -18823,7 +18829,7 @@ fûe_°
 ªsu…
 );
 
-3213 
+3214 
 	`NVP_LOCK_WR
 (
 node
@@ -18831,15 +18837,15 @@ node
 lock
 );
 
-3216 #i‡
+3217 #i‡
 BG_CLOSING
 
 
-3217 
+3218 
 öôülize_nvf
 :
 
-3219 
+3220 
 nvf
 ->
 fd
@@ -18847,19 +18853,19 @@ fd
 ªsu…
 ;
 
-3220 
+3221 
 nvf
 ->
 node
  =Çode;
 
-3221 
+3222 
 nvf
 ->
 posix
  = 0;
 
-3222 
+3223 
 nvf
 ->
 £rü o
@@ -18869,7 +18875,7 @@ fûe_°
 °_öo
 ;
 
-3235 if((
+3236 if((
 oÊag
  & 
 O_RDWR
@@ -18879,7 +18885,7 @@ O_RDONLY
 O_WRONLY
 ))) {
 
-3236 
+3237 
 	`DEBUG
 ("oÊag (%iË•ecifõ†O_RDWR f‹ fd %i\n", 
 oÊag
@@ -18887,47 +18893,47 @@ oÊag
 ªsu…
 );
 
-3237 
+3238 
 nvf
 ->
 ˇnRód
  = 1;
 
-3238 
+3239 
 nvf
 ->
 ˇnWrôe
  = 1;
 
-3239 } if(
+3240 } if(
 oÊag
 &
 O_WRONLY
 ) {
 
-3240 
+3241 
 	`DEBUG
 ("oÊag (%iË•ecifõ†O_WRONLY f‹ fd %i\n", 
 oÊag
 ,
 
-3241 
+3242 
 ªsu…
 );
 
-3245 
+3246 
 nvf
 ->
 ˇnRód
  = 1;
 
-3246 
+3247 
 nvf
 ->
 ˇnWrôe
  = 1;
 
-3251 } if(
+3252 } if(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -18935,49 +18941,49 @@ oÊag
 O_RDONLY
 )) {
 
-3252 
+3253 
 	`DEBUG
 ("oflag (%i) specifies O_RDONLY for fd %i\n",
 
-3253 
+3254 
 oÊag
 , 
 ªsu…
 );
 
-3254 
+3255 
 nvf
 ->
 ˇnRód
  = 1;
 
-3255 
+3256 
 nvf
 ->
 ˇnWrôe
  = 0;
 
-3257 
+3258 
 	`DEBUG_FILE
 ("FileÖermissions don't includeÑead or write!\n");
 
-3258 
+3259 
 nvf
 ->
 ˇnRód
  = 0;
 
-3259 
+3260 
 nvf
 ->
 ˇnWrôe
  = 0;
 
-3260 
+3261 
 	`as£π
 (0);
 
-3263 if(
+3264 if(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -18985,19 +18991,19 @@ oÊag
 O_APPEND
 )) {
 
-3264 
+3265 
 nvf
 ->
 ≠≥nd
  = 1;
 
-3266 
+3267 
 nvf
 ->
 ≠≥nd
  = 0;
 
-3269 
+3270 
 	`SANITYCHECK
 (
 nvf
@@ -19007,7 +19013,7 @@ node
 NULL
 );
 
-3271 if(
+3272 if(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -19021,17 +19027,9 @@ node
 Àngth
 )
 
-3273 
+3274 
 	`DEBUG
 ("We just openedá file with O_TRUNCÅhat wasálready "
-
-3275 
-nvf
-->
-node
-->
-Àngth
-);
 
 3276 
 nvf
@@ -19039,51 +19037,59 @@ nvf
 node
 ->
 Àngth
- = 0;
+);
 
-3279 
+3277 
 nvf
 ->
-posix
+node
+->
+Àngth
  = 0;
 
 3280 
 nvf
 ->
+posix
+ = 0;
+
+3281 
+nvf
+->
 debug
  = 0;
 
-3283 i‡(
+3284 i‡(
 ∑th
 [0] == '/' &&Öath[1] == 's'
 
-3284 && 
+3285 && 
 ∑th
 [2] == 'y' &&Öath[3] == 's') {
 
-3285 
+3286 
 nvf
 ->
 posix
  = 1;
 
-3286 
+3287 
 	`DEBUG_FILE
 ("A Posix P©h: %s\n", 
 ∑th
 );
 
-3290 i‡(
+3291 i‡(
 ∑th
 [29] == 'l' &&Öath[30] == 'o' &&Öath[31] == 'g') {
 
-3291 
+3292 
 nvf
 ->
 debug
  = 1;
 
-3294 
+3295 
 nvf
 ->
 off£t
@@ -19093,13 +19099,13 @@ size_t
 	`ˇŒoc
 (1, ());
 
-3295 *
+3296 *
 nvf
 ->
 off£t
  = 0;
 
-3297 if(
+3298 if(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -19109,41 +19115,41 @@ O_DIRECT
 DO_ALIGNMENT_CHECKS
 )) {
 
-3298 
+3299 
 nvf
 ->
 Æig√d
  = 1;
 
-3300 
+3301 
 nvf
 ->
 Æig√d
  = 0;
 
-3303 
+3304 
 nvf
 ->
 vÆid
  = 1;
 
-3305 
+3306 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-3306 
+3307 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-3308 
+3309 
 î∫o
  = 0;
 
-3309 
+3310 
 	`END_TIMING
 (
 ›í_t
@@ -19151,7 +19157,7 @@ nvf
 ›í_time
 );
 
-3311 
+3312 
 	`DEBUG_FILE
 ("%s: Rëu∫ög fd = %d\n", 
 __func__
@@ -19161,21 +19167,21 @@ nvf
 fd
 );
 
-3312  
+3313  
 nvf
 ->
 fd
 ;
 
-3313 
+3314 
 	}
 }
 
-3315 #ifde‡
+3316 #ifde‡
 TRACE_FP_CALLS
 
 
-3323 
+3324 
 RETT_FOPEN
  
 	$_nvp_FOPEN
@@ -19183,15 +19189,15 @@ RETT_FOPEN
 INTF_FOPEN
 )
 
-3325 
+3326 
 oÊag
  = 0;
 
-3326 
+3327 
 fd
  = -1;
 
-3327 
+3328 
 RETT_FOPEN
  
 Â
@@ -19199,15 +19205,15 @@ RETT_FOPEN
 NULL
 ;
 
-3330 #i‡
+3331 #i‡
 PASS_THROUGH_CALLS
 
 
-3331 
+3332 
 num_›í
 ++;
 
-3332 
+3333 
 Â
  = 
 _nvp_fûe›s
@@ -19219,71 +19225,71 @@ _nvp_fûe›s
 mode
 );
 
-3333  
+3334  
 Â
 ;
 
-3336 i‡(!
+3337 i‡(!
 	`°rcmp
 (
 mode
 ,"w+") || !strcmp(mode,"a+")) {
 
-3337 
+3338 
 oÊag
  |
 O_RDWR
 ;
 
-3338 
+3339 
 oÊag
  |
 O_CREAT
 ;
 
-3340 i‡(!
+3341 i‡(!
 	`°rcmp
 (
 mode
 ,"r+"))
 
-3341 
+3342 
 oÊag
  |
 O_RDWR
 ;
 
-3342 i‡(!
+3343 i‡(!
 	`°rcmp
 (
 mode
 , "w") || !strcmp(mode, "a")) {
 
-3343 
+3344 
 oÊag
  |
 O_WRONLY
 ;
 
-3344 
+3345 
 oÊag
  |
 O_CREAT
 ;
 
-3345 } i‡(!
+3346 } i‡(!
 	`°rcmp
 (
 mode
 , "r"))
 
-3346 
+3347 
 oÊag
  |
 O_RDONLY
 ;
 
-3348 
+3349 
 	`ERROR
 ("%s: unknow¿modê%s\n", 
 __func__
@@ -19291,21 +19297,21 @@ __func__
 mode
 );
 
-3349 
+3350 
 	`as£π
 (0);
 
-3352 i‡(
+3353 i‡(
 mode
 [0] == 'a')
 
-3353 
+3354 
 oÊag
  |
 O_APPEND
 ;
 
-3355 i‡(
+3356 i‡(
 	`FLAGS_INCLUDE
 (
 oÊag
@@ -19313,7 +19319,7 @@ oÊag
 O_CREAT
 ))
 
-3356 
+3357 
 fd
  = 
 	`_nvp_OPEN
@@ -19323,7 +19329,7 @@ fd
 oÊag
 , 0666);
 
-3358 
+3359 
 fd
  = 
 	`_nvp_OPEN
@@ -19333,7 +19339,7 @@ fd
 oÊag
 );
 
-3360 
+3361 
 Â
  = 
 	`fd›í
@@ -19343,11 +19349,11 @@ fd
 mode
 );
 
-3361 i‡(!
+3362 i‡(!
 Â
 ) {
 
-3362 
+3363 
 	`ERROR
 ("%s: fd›í faûed!Éº‹ = %s, fd = %d, modê%s\n", 
 __func__
@@ -19361,25 +19367,25 @@ fd
 mode
 );
 
-3363 
+3364 
 	`fÊush
 (
 NULL
 );
 
-3364 
+3365 
 	`as£π
 (0);
 
-3367  
+3368  
 Â
 ;
 
-3368 
+3369 
 	}
 }
 
-3370 
+3371 
 RETT_FOPEN64
  
 	$_nvp_FOPEN64
@@ -19387,11 +19393,11 @@ RETT_FOPEN64
 INTF_FOPEN64
 ) {
 
-3373 
+3374 
 	}
 }
 
-3377 
+3378 
 RETT_CLOSE
  
 	$_nvp_CLOSE
@@ -19399,19 +19405,19 @@ RETT_CLOSE
 INTF_CLOSE
 )
 
-3379 
+3380 
 RETT_CLOSE
  
 ªsu…
 ;
 
-3380 
+3381 
 öo_t
  
 £rü o
 ;
 
-3381 
+3382 
 NVFûe
 * 
 nvf
@@ -19419,13 +19425,13 @@ nvf
 NULL
 ;
 
-3382 
+3383 
 ö°rumíèti⁄_ty≥
  
 ˛o£_time
 ;
 
-3384 
+3385 
 	`START_TIMING
 (
 ˛o£_t
@@ -19433,15 +19439,15 @@ NULL
 ˛o£_time
 );
 
-3386 #i‡
+3387 #i‡
 PASS_THROUGH_CALLS
 
 
-3387 
+3388 
 num_˛o£
 ++;
 
-3388 
+3389 
 ªsu…
  = 
 _nvp_fûe›s
@@ -19451,7 +19457,7 @@ _nvp_fûe›s
 CALL_CLOSE
 );
 
-3390 
+3391 
 	`END_TIMING
 (
 ˛o£_t
@@ -19459,39 +19465,39 @@ CALL_CLOSE
 ˛o£_time
 );
 
-3392  
+3393  
 ªsu…
 ;
 
-3395 i‡(!
+3396 i‡(!
 async_˛o£_íabÀ
 )
 
-3396 
+3397 
 sync_˛o£_bg_íabÀd
 ;
 
-3398 #i‡
+3399 #i‡
 BG_CLOSING
 
 
-3399 
+3400 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-3400 
+3401 
 ö°rumíèti⁄_ty≥
  
 ˛f_lock_time
 ;
 
-3401 
+3402 
 ¥evious_˛o£d_fûedesc
  = -1;
 
-3402 
+3403 
 öo_t
  
 ¥evious_˛o£d_£rü o
@@ -19499,27 +19505,27 @@ _nvp_
 °Æe_£rü o
  = 0;
 
-3403 
+3404 
 ˝uid
 , 
 °Æe_fd
  = -1;
 
-3404 
+3405 
 hash_ödex
  = -1;
 
-3405 
+3406 
 node_li°_idx
  = 0;
 
-3406 #i‡
+3407 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3407 
+3408 
 Clo£dFûes
  *
 ˛f
@@ -19527,7 +19533,7 @@ Clo£dFûes
 NULL
 ;
 
-3409 
+3410 
 InodeClo£dFûe
  *
 tbl
@@ -19535,13 +19541,13 @@ tbl
 NULL
 ;
 
-3412 
+3413 
 	`DEBUG
 ("_nvp_CLOSE(%i)\n", 
 fûe
 );
 
-3416 
+3417 
 nvf
  = &
 _nvp_fd_lookup
@@ -19549,7 +19555,7 @@ _nvp_fd_lookup
 fûe
 ];
 
-3417 
+3418 
 node_li°_idx
  = 
 nvf
@@ -19559,31 +19565,31 @@ node
 ‰ì_li°_idx
 ;
 
-3419 i‡(
+3420 i‡(
 nvf
 ->
 posix
 ) {
 
-3420 
+3421 
 nvf
 ->
 vÆid
  = 0;
 
-3421 
+3422 
 nvf
 ->
 posix
  = 0;
 
-3422 
+3423 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-3423 
+3424 
 nvf
 ->
 node
@@ -19591,13 +19597,13 @@ node
 ª„ªn˚
 --;
 
-3424 
+3425 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-3425 i‡(
+3426 i‡(
 nvf
 ->
 node
@@ -19605,7 +19611,7 @@ node
 ª„ªn˚
  == 0) {
 
-3426 
+3427 
 nvf
 ->
 node
@@ -19613,7 +19619,7 @@ node
 £rü o
  = 0;
 
-3427 
+3428 
 ödex
  = 
 nvf
@@ -19621,13 +19627,13 @@ nvf
 £rü o
  % 1024;
 
-3428 
+3429 
 _nvp_öo_lookup
 [
 ödex
 ] = 0;
 
-3429 
+3430 
 	`push_ö_°ack
 (1, 0, 
 nvf
@@ -19639,13 +19645,13 @@ node
 node_li°_idx
 );
 
-3431 
+3432 
 nvf
 ->
 £rü o
  = 0;
 
-3432 
+3433 
 	`DEBUG
 ("CÆ»posix CLOSE f‹ fd %d\n", 
 nvf
@@ -19653,7 +19659,7 @@ nvf
 fd
 );
 
-3433 
+3434 
 ªsu…
  = 
 _nvp_fûe›s
@@ -19663,7 +19669,7 @@ _nvp_fûe›s
 CALL_CLOSE
 );
 
-3435 
+3436 
 	`END_TIMING
 (
 ˛o£_t
@@ -19671,11 +19677,11 @@ CALL_CLOSE
 ˛o£_time
 );
 
-3437  
+3438  
 ªsu…
 ;
 
-3440 
+3441 
 £rü o
  = 
 nvf
@@ -19683,11 +19689,11 @@ nvf
 node
 ->serialno;
 
-3441 
+3442 
 	`GLOBAL_LOCK_CLOSE_WR
 ();
 
-3443 
+3444 
 hash_ödex
  = 
 £rü o
@@ -19695,13 +19701,13 @@ hash_ödex
 TOTAL_CLOSED_INODES
 ;
 
-3445 #i‡
+3446 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3446 
+3447 
 ˛f
  = &
 _nvp_˛o£d_fûes
@@ -19709,11 +19715,11 @@ _nvp_˛o£d_fûes
 hash_ödex
 ];
 
-3448 #i‡
+3449 #i‡
 PRINT_CONTENTION_MSGS
 
 
-3449 
+3450 
 	`¥ötf
 ("%s:ácquúögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -19723,19 +19729,19 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-3450 
+3451 
 	`fÊush
 (
 NULL
 );
 
-3454 
+3455 
 	`LRU_NODE_LOCK_WR
 (
 ˛f
 );
 
-3457 
+3458 
 tbl
  = &
 öode_to_˛o£d_fûe
@@ -19743,19 +19749,19 @@ tbl
 hash_ödex
 ];
 
-3458 
+3459 
 	`NVP_LOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3460 
+3461 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-3461 
+3462 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -19763,7 +19769,7 @@ nvf
 ˝uid
 );
 
-3463 if(
+3464 if(
 nvf
 ->
 node
@@ -19771,7 +19777,7 @@ node
 ª„ªn˚
  == 1) {
 
-3464 
+3465 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -19779,7 +19785,7 @@ nvf
 ˝uid
 );
 
-3465 
+3466 
 	`__©omic_„tch_add
 (&
 ™⁄_mem_˛o£d_fûes
@@ -19793,13 +19799,13 @@ node
 __ATOMIC_SEQ_CST
 );
 
-3467 #i‡
+3468 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3468 
+3469 
 °Æe_fd
  = 
 	`ö£π_ö_£q_li°
@@ -19813,7 +19819,7 @@ fûe
 £rü o
 );
 
-3470 
+3471 
 °Æe_fd
  = 
 	`ö£π_ö_Ãu_li°
@@ -19825,29 +19831,29 @@ fûe
 °Æe_£rü o
 );
 
-3472 if(
+3473 if(
 °Æe_fd
  >0 && 
 °Æe_£rü o
  > 0) {
 
-3473 
+3474 
 ¥evious_˛o£d_fûedesc
  = 
 °Æe_fd
 ;
 
-3474 
+3475 
 ¥evious_˛o£d_£rü o
  = 
 °Æe_£rü o
 ;
 
-3477 if(
+3478 if(
 ¥evious_˛o£d_fûedesc
  != -1) {
 
-3478 
+3479 
 	`_nvp_REAL_CLOSE
 (
 ¥evious_˛o£d_fûedesc
@@ -19855,7 +19861,7 @@ fûe
 ¥evious_˛o£d_£rü o
 , 1);
 
-3481 
+3482 
 	`__©omic_„tch_add
 (&
 num_fûes_˛o£d
@@ -19863,17 +19869,17 @@ num_fûes_˛o£d
 __ATOMIC_SEQ_CST
 );
 
-3483 #i‡
+3484 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3484 #i‡
+3485 #i‡
 PRINT_CONTENTION_MSGS
 
 
-3485 
+3486 
 	`¥ötf
 ("%s:ÑñósögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -19883,29 +19889,29 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-3486 
+3487 
 	`fÊush
 (
 NULL
 );
 
-3488 
+3489 
 	`LRU_NODE_UNLOCK_WR
 (
 ˛f
 );
 
-3490 
+3491 
 	`NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3492 
+3493 
 	`GLOBAL_UNLOCK_CLOSE_WR
 ();
 
-3494 
+3495 
 	`END_TIMING
 (
 ˛o£_t
@@ -19913,7 +19919,7 @@ tbl
 ˛o£_time
 );
 
-3499 
+3500 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -19921,29 +19927,29 @@ nvf
 ˝uid
 );
 
-3500 #i‡
+3501 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-3501 
+3502 
 	`LRU_NODE_UNLOCK_WR
 (
 ˛f
 );
 
-3503 
+3504 
 	`NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-3505 
+3506 
 	`GLOBAL_UNLOCK_CLOSE_WR
 ();
 
-3507 
+3508 
 nvf
  = &
 _nvp_fd_lookup
@@ -19951,7 +19957,7 @@ _nvp_fd_lookup
 fûe
 ];
 
-3508 
+3509 
 £rü o
  = 
 nvf
@@ -19959,7 +19965,7 @@ nvf
 node
 ->serialno;
 
-3510 
+3511 
 ªsu…
  = 
 	`_nvp_REAL_CLOSE
@@ -19969,7 +19975,7 @@ CALL_CLOSE
 £rü o
 , 0);
 
-3512 
+3513 
 	`END_TIMING
 (
 ˛o£_t
@@ -19977,15 +19983,15 @@ CALL_CLOSE
 ˛o£_time
 );
 
-3514  
+3515  
 ªsu…
 ;
 
-3516 
+3517 
 sync_˛o£_bg_íabÀd
 :
 
-3518 
+3519 
 nvf
  = &
 _nvp_fd_lookup
@@ -19993,23 +19999,23 @@ _nvp_fd_lookup
 fûe
 ];
 
-3520 i‡(
+3521 i‡(
 fûe
  == 0 || file == 1 || file == 2) {
 
-3521 
+3522 
 nvf
 ->
 vÆid
  = 0;
 
-3522 
+3523 
 nvf
 ->
 £rü o
  = 0;
 
-3523 
+3524 
 ªsu…
  = 
 _nvp_fûe›s
@@ -20019,7 +20025,7 @@ _nvp_fûe›s
 CALL_CLOSE
 );
 
-3524 
+3525 
 	`END_TIMING
 (
 ˛o£_t
@@ -20027,11 +20033,11 @@ CALL_CLOSE
 ˛o£_time
 );
 
-3525  
+3526  
 ªsu…
 ;
 
-3528 
+3529 
 £rü o
  = 
 nvf
@@ -20039,7 +20045,7 @@ nvf
 node
 ->serialno;
 
-3529 
+3530 
 ªsu…
  = 
 	`_nvp_REAL_CLOSE
@@ -20049,7 +20055,7 @@ CALL_CLOSE
 £rü o
 , 0);
 
-3531 
+3532 
 	`END_TIMING
 (
 ˛o£_t
@@ -20057,15 +20063,15 @@ CALL_CLOSE
 ˛o£_time
 );
 
-3532  
+3533  
 ªsu…
 ;
 
-3533 
+3534 
 	}
 }
 
-3535 
+3536 
 RETT_OPENAT
  
 	$_nvp_OPENAT
@@ -20073,7 +20079,7 @@ RETT_OPENAT
 INTF_OPENAT
 ) {
 
-3536  
+3537  
 _nvp_fûe›s
 ->
 	`OPENAT
@@ -20081,11 +20087,11 @@ _nvp_fûe›s
 CALL_OPENAT
 );
 
-3537 
+3538 
 	}
 }
 
-3539 
+3540 
 RETT_EXECVE
  
 	$_nvp_EXECVE
@@ -20093,21 +20099,21 @@ RETT_EXECVE
 INTF_EXECVE
 ) {
 
-3541 
+3542 
 exec_Àdgî_fd
  = -1, 
 i
  = 0;
 
-3542 
+3543 
 off£t_ö_m≠
  = 0;
 
-3548 
+3549 
 i
  = 0; i < 1024; i++) {
 
-3549 i‡(
+3550 i‡(
 _nvp_fd_lookup
 [
 i
@@ -20117,7 +20123,7 @@ off£t
 NULL
 )
 
-3550 
+3551 
 execve_fd_∑ssög
 [
 i
@@ -20127,13 +20133,13 @@ _nvp_fd_lookup
 off£t
 );
 
-3552 
+3553 
 execve_fd_∑ssög
 [
 i
 ] = 0;
 
-3555 
+3556 
 exec_Àdgî_fd
  = 
 	`shm_›í
@@ -20147,11 +20153,11 @@ S_IRUSR
 S_IWUSR
 );
 
-3556 i‡(
+3557 i‡(
 exec_Àdgî_fd
  == -1) {
 
-3557 
+3558 
 	`¥ötf
 ("%s: %s\n", 
 __func__
@@ -20161,11 +20167,11 @@ __func__
 î∫o
 ));
 
-3558 
+3559 
 	`as£π
 (0);
 
-3561 
+3562 
 ªs
  = 
 _nvp_fûe›s
@@ -20175,11 +20181,11 @@ _nvp_fûe›s
 exec_Àdgî_fd
 , (10*1024*1024));
 
-3562 i‡(
+3563 i‡(
 ªs
  == -1) {
 
-3563 
+3564 
 	`¥ötf
 ("%s: fåunˇã faûed. Eº = %s\n", 
 __func__
@@ -20189,11 +20195,11 @@ __func__
 î∫o
 ));
 
-3564 
+3565 
 	`as£π
 (0);
 
-3567 *
+3568 *
 shm_¨ó
  = 
 	`mm≠
@@ -20209,13 +20215,13 @@ MAP_SHARED
 exec_Àdgî_fd
 , 0);
 
-3568 i‡(
+3569 i‡(
 shm_¨ó
  =
 NULL
 ) {
 
-3569 
+3570 
 	`¥ötf
 ("%s: mm≠ faûed. Eº = %s\n", 
 __func__
@@ -20225,11 +20231,11 @@ __func__
 î∫o
 ));
 
-3570 
+3571 
 	`as£π
 (0);
 
-3573 i‡(
+3574 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20243,7 +20249,7 @@ NVFûe
 NULL
 ) {
 
-3574 
+3575 
 	`¥ötf
 ("%s: mem˝y o‡fdÜooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20253,17 +20259,17 @@ __func__
 î∫o
 ));
 
-3575 
+3576 
 	`as£π
 (0);
 
-3578 
+3579 
 off£t_ö_m≠
  +(1024 * (
 NVFûe
 ));
 
-3580 i‡(
+3581 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20275,7 +20281,7 @@ execve_fd_∑ssög
 NULL
 ) {
 
-3581 
+3582 
 	`¥ötf
 ("%s: mem˝y o‡execvêoff£àÁûed. Eº = %s\n", 
 __func__
@@ -20285,15 +20291,15 @@ __func__
 î∫o
 ));
 
-3582 
+3583 
 	`as£π
 (0);
 
-3585 
+3586 
 off£t_ö_m≠
  += (1024 * ());
 
-3588 i‡(
+3589 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20307,7 +20313,7 @@ NVNode
 NULL
 ) {
 
-3589 
+3590 
 	`¥ötf
 ("%s: mem˝y o‡nodêlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20317,17 +20323,17 @@ __func__
 î∫o
 ));
 
-3590 
+3591 
 	`as£π
 (0);
 
-3593 
+3594 
 off£t_ö_m≠
  +(1024*(
 NVNode
 ));
 
-3595 i‡(
+3596 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20339,7 +20345,7 @@ _nvp_öo_lookup
 NULL
 ) {
 
-3596 
+3597 
 	`¥ötf
 ("%s: mem˝y o‡öÿlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20349,15 +20355,15 @@ __func__
 î∫o
 ));
 
-3597 
+3598 
 	`as£π
 (0);
 
-3600 
+3601 
 off£t_ö_m≠
  += (1024 * ());
 
-3602 i‡(
+3603 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20371,7 +20377,7 @@ SèckNode
 NULL
 ) {
 
-3603 
+3604 
 	`¥ötf
 ("%s: mem˝y o‡‰ìÇodêli° faûed. Eº = %s\n", 
 __func__
@@ -20381,17 +20387,17 @@ __func__
 î∫o
 ));
 
-3604 
+3605 
 	`as£π
 (0);
 
-3607 
+3608 
 off£t_ö_m≠
  +(1024 * (
 SèckNode
 ));
 
-3610  
+3611  
 _nvp_fûe›s
 ->
 	`EXECVE
@@ -20399,11 +20405,11 @@ _nvp_fûe›s
 CALL_EXECVE
 );
 
-3612 
+3613 
 	}
 }
 
-3614 
+3615 
 RETT_EXECVP
  
 	$_nvp_EXECVP
@@ -20411,21 +20417,21 @@ RETT_EXECVP
 INTF_EXECVP
 ) {
 
-3616 
+3617 
 exec_Àdgî_fd
  = -1, 
 i
  = 0;
 
-3617 
+3618 
 off£t_ö_m≠
  = 0;
 
-3619 
+3620 
 i
  = 0; i < 1024; i++) {
 
-3620 i‡(
+3621 i‡(
 _nvp_fd_lookup
 [
 i
@@ -20435,7 +20441,7 @@ off£t
 NULL
 )
 
-3621 
+3622 
 execve_fd_∑ssög
 [
 i
@@ -20445,13 +20451,13 @@ _nvp_fd_lookup
 off£t
 );
 
-3623 
+3624 
 execve_fd_∑ssög
 [
 i
 ] = 0;
 
-3626 
+3627 
 exec_Àdgî_fd
  = 
 	`shm_›í
@@ -20465,11 +20471,11 @@ S_IRUSR
 S_IWUSR
 );
 
-3627 i‡(
+3628 i‡(
 exec_Àdgî_fd
  == -1) {
 
-3628 
+3629 
 	`¥ötf
 ("%s: %s\n", 
 __func__
@@ -20479,11 +20485,11 @@ __func__
 î∫o
 ));
 
-3629 
+3630 
 	`as£π
 (0);
 
-3632 
+3633 
 ªs
  = 
 _nvp_fûe›s
@@ -20493,11 +20499,11 @@ _nvp_fûe›s
 exec_Àdgî_fd
 , (10*1024*1024));
 
-3633 i‡(
+3634 i‡(
 ªs
  == -1) {
 
-3634 
+3635 
 	`¥ötf
 ("%s: fåunˇã faûed. Eº = %s\n", 
 __func__
@@ -20507,11 +20513,11 @@ __func__
 î∫o
 ));
 
-3635 
+3636 
 	`as£π
 (0);
 
-3638 *
+3639 *
 shm_¨ó
  = 
 	`mm≠
@@ -20527,13 +20533,13 @@ MAP_SHARED
 exec_Àdgî_fd
 , 0);
 
-3639 i‡(
+3640 i‡(
 shm_¨ó
  =
 NULL
 ) {
 
-3640 
+3641 
 	`¥ötf
 ("%s: mm≠ faûed. Eº = %s\n", 
 __func__
@@ -20543,11 +20549,11 @@ __func__
 î∫o
 ));
 
-3641 
+3642 
 	`as£π
 (0);
 
-3644 i‡(
+3645 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20561,7 +20567,7 @@ NVFûe
 NULL
 ) {
 
-3645 
+3646 
 	`¥ötf
 ("%s: mem˝y o‡fdÜooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20571,17 +20577,17 @@ __func__
 î∫o
 ));
 
-3646 
+3647 
 	`as£π
 (0);
 
-3649 
+3650 
 off£t_ö_m≠
  +(1024 * (
 NVFûe
 ));
 
-3651 i‡(
+3652 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20593,7 +20599,7 @@ execve_fd_∑ssög
 NULL
 ) {
 
-3652 
+3653 
 	`¥ötf
 ("%s: mem˝y o‡execvêoff£àÁûed. Eº = %s\n", 
 __func__
@@ -20603,15 +20609,15 @@ __func__
 î∫o
 ));
 
-3653 
+3654 
 	`as£π
 (0);
 
-3656 
+3657 
 off£t_ö_m≠
  += (1024 * ());
 
-3659 i‡(
+3660 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20625,7 +20631,7 @@ NVNode
 NULL
 ) {
 
-3660 
+3661 
 	`¥ötf
 ("%s: mem˝y o‡nodêlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20635,17 +20641,17 @@ __func__
 î∫o
 ));
 
-3661 
+3662 
 	`as£π
 (0);
 
-3664 
+3665 
 off£t_ö_m≠
  +(1024*(
 NVNode
 ));
 
-3666 i‡(
+3667 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20657,7 +20663,7 @@ _nvp_öo_lookup
 NULL
 ) {
 
-3667 
+3668 
 	`¥ötf
 ("%s: mem˝y o‡öÿlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20667,15 +20673,15 @@ __func__
 î∫o
 ));
 
-3668 
+3669 
 	`as£π
 (0);
 
-3671 
+3672 
 off£t_ö_m≠
  += (1024 * ());
 
-3673 i‡(
+3674 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20689,7 +20695,7 @@ SèckNode
 NULL
 ) {
 
-3674 
+3675 
 	`¥ötf
 ("%s: mem˝y o‡‰ìÇodêli° faûed. Eº = %s\n", 
 __func__
@@ -20699,17 +20705,17 @@ __func__
 î∫o
 ));
 
-3675 
+3676 
 	`as£π
 (0);
 
-3678 
+3679 
 off£t_ö_m≠
  +(1024 * (
 SèckNode
 ));
 
-3681  
+3682  
 _nvp_fûe›s
 ->
 	`EXECVP
@@ -20717,11 +20723,11 @@ _nvp_fûe›s
 CALL_EXECVP
 );
 
-3682 
+3683 
 	}
 }
 
-3684 
+3685 
 RETT_EXECV
  
 	$_nvp_EXECV
@@ -20729,21 +20735,21 @@ RETT_EXECV
 INTF_EXECV
 ) {
 
-3686 
+3687 
 exec_Àdgî_fd
  = -1, 
 i
  = 0;
 
-3687 
+3688 
 off£t_ö_m≠
  = 0;
 
-3689 
+3690 
 i
  = 0; i < 1024; i++) {
 
-3690 i‡(
+3691 i‡(
 _nvp_fd_lookup
 [
 i
@@ -20753,7 +20759,7 @@ off£t
 NULL
 )
 
-3691 
+3692 
 execve_fd_∑ssög
 [
 i
@@ -20763,13 +20769,13 @@ _nvp_fd_lookup
 off£t
 );
 
-3693 
+3694 
 execve_fd_∑ssög
 [
 i
 ] = 0;
 
-3696 
+3697 
 exec_Àdgî_fd
  = 
 	`shm_›í
@@ -20783,11 +20789,11 @@ S_IRUSR
 S_IWUSR
 );
 
-3697 i‡(
+3698 i‡(
 exec_Àdgî_fd
  == -1) {
 
-3698 
+3699 
 	`¥ötf
 ("%s: %s\n", 
 __func__
@@ -20797,11 +20803,11 @@ __func__
 î∫o
 ));
 
-3699 
+3700 
 	`as£π
 (0);
 
-3702 
+3703 
 ªs
  = 
 _nvp_fûe›s
@@ -20811,11 +20817,11 @@ _nvp_fûe›s
 exec_Àdgî_fd
 , (10*1024*1024));
 
-3703 i‡(
+3704 i‡(
 ªs
  == -1) {
 
-3704 
+3705 
 	`¥ötf
 ("%s: fåunˇã faûed. Eº = %s\n", 
 __func__
@@ -20825,11 +20831,11 @@ __func__
 î∫o
 ));
 
-3705 
+3706 
 	`as£π
 (0);
 
-3708 *
+3709 *
 shm_¨ó
  = 
 	`mm≠
@@ -20845,13 +20851,13 @@ MAP_SHARED
 exec_Àdgî_fd
 , 0);
 
-3709 i‡(
+3710 i‡(
 shm_¨ó
  =
 NULL
 ) {
 
-3710 
+3711 
 	`¥ötf
 ("%s: mm≠ faûed. Eº = %s\n", 
 __func__
@@ -20861,11 +20867,11 @@ __func__
 î∫o
 ));
 
-3711 
+3712 
 	`as£π
 (0);
 
-3714 i‡(
+3715 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20879,7 +20885,7 @@ NVFûe
 NULL
 ) {
 
-3715 
+3716 
 	`¥ötf
 ("%s: mem˝y o‡fdÜooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20889,17 +20895,17 @@ __func__
 î∫o
 ));
 
-3716 
+3717 
 	`as£π
 (0);
 
-3719 
+3720 
 off£t_ö_m≠
  +(1024 * (
 NVFûe
 ));
 
-3721 i‡(
+3722 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20911,7 +20917,7 @@ execve_fd_∑ssög
 NULL
 ) {
 
-3722 
+3723 
 	`¥ötf
 ("%s: mem˝y o‡execvêoff£àÁûed. Eº = %s\n", 
 __func__
@@ -20921,15 +20927,15 @@ __func__
 î∫o
 ));
 
-3723 
+3724 
 	`as£π
 (0);
 
-3726 
+3727 
 off£t_ö_m≠
  += (1024 * ());
 
-3729 i‡(
+3730 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20943,7 +20949,7 @@ NVNode
 NULL
 ) {
 
-3730 
+3731 
 	`¥ötf
 ("%s: mem˝y o‡nodêlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20953,17 +20959,17 @@ __func__
 î∫o
 ));
 
-3731 
+3732 
 	`as£π
 (0);
 
-3734 
+3735 
 off£t_ö_m≠
  +(1024*(
 NVNode
 ));
 
-3736 i‡(
+3737 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -20975,7 +20981,7 @@ _nvp_öo_lookup
 NULL
 ) {
 
-3737 
+3738 
 	`¥ötf
 ("%s: mem˝y o‡öÿlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -20985,15 +20991,15 @@ __func__
 î∫o
 ));
 
-3738 
+3739 
 	`as£π
 (0);
 
-3741 
+3742 
 off£t_ö_m≠
  += (1024 * ());
 
-3743 i‡(
+3744 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21007,7 +21013,7 @@ SèckNode
 NULL
 ) {
 
-3744 
+3745 
 	`¥ötf
 ("%s: mem˝y o‡‰ìÇodêli° faûed. Eº = %s\n", 
 __func__
@@ -21017,17 +21023,17 @@ __func__
 î∫o
 ));
 
-3745 
+3746 
 	`as£π
 (0);
 
-3748 
+3749 
 off£t_ö_m≠
  +(1024 * (
 SèckNode
 ));
 
-3751  
+3752  
 _nvp_fûe›s
 ->
 	`EXECV
@@ -21035,11 +21041,11 @@ _nvp_fûe›s
 CALL_EXECV
 );
 
-3752 
+3753 
 	}
 }
 
-3754 
+3755 
 RETT_EXECL
  
 	$_nvp_EXECL
@@ -21047,35 +21053,35 @@ RETT_EXECL
 INTF_EXECL
 ) {
 
-3756 
+3757 
 exec_Àdgî_fd
  = -1, 
 i
  = 0;
 
-3757 
+3758 
 off£t_ö_m≠
  = 0;
 
-3758 c⁄° *
+3759 c⁄° *
 ¨gv1
  = 
 NULL
 ;
 
-3759 c⁄° *
+3760 c⁄° *
 ¨gv2
  = 
 NULL
 ;
 
-3761 
+3762 
 va_li°
  
 ¨gli°
 ;
 
-3762 
+3763 
 	`va_°¨t
 (
 ¨gli°
@@ -21083,16 +21089,8 @@ va_li°
 ¨g
 );
 
-3763 
-¨gv1
- = 
-	`va_¨g
-(
-¨gli°
-, const *);
-
 3764 
-¨gv2
+¨gv1
  = 
 	`va_¨g
 (
@@ -21100,12 +21098,20 @@ va_li°
 , const *);
 
 3765 
+¨gv2
+ = 
+	`va_¨g
+(
+¨gli°
+, const *);
+
+3766 
 	`va_íd
 (
 ¨gli°
 );
 
-3768 
+3769 
 	`DEBUG_FILE
 ("%s:árgumíà1 = %s\n", 
 __func__
@@ -21113,7 +21119,7 @@ __func__
 ¨gv1
 );
 
-3769 
+3770 
 	`DEBUG_FILE
 ("%s:árgumíà2 = %s\n", 
 __func__
@@ -21121,11 +21127,11 @@ __func__
 ¨gv2
 );
 
-3771 
+3772 
 i
  = 0; i < 1024; i++) {
 
-3772 i‡(
+3773 i‡(
 _nvp_fd_lookup
 [
 i
@@ -21135,7 +21141,7 @@ off£t
 NULL
 )
 
-3773 
+3774 
 execve_fd_∑ssög
 [
 i
@@ -21145,13 +21151,13 @@ _nvp_fd_lookup
 off£t
 );
 
-3775 
+3776 
 execve_fd_∑ssög
 [
 i
 ] = 0;
 
-3778 
+3779 
 exec_Àdgî_fd
  = 
 	`shm_›í
@@ -21165,11 +21171,11 @@ S_IRUSR
 S_IWUSR
 );
 
-3779 i‡(
+3780 i‡(
 exec_Àdgî_fd
  == -1) {
 
-3780 
+3781 
 	`¥ötf
 ("%s: %s\n", 
 __func__
@@ -21179,11 +21185,11 @@ __func__
 î∫o
 ));
 
-3781 
+3782 
 	`as£π
 (0);
 
-3784 
+3785 
 ªs
  = 
 _nvp_fûe›s
@@ -21193,11 +21199,11 @@ _nvp_fûe›s
 exec_Àdgî_fd
 , (10*1024*1024));
 
-3785 i‡(
+3786 i‡(
 ªs
  == -1) {
 
-3786 
+3787 
 	`¥ötf
 ("%s: fåunˇã faûed. Eº = %s\n", 
 __func__
@@ -21207,11 +21213,11 @@ __func__
 î∫o
 ));
 
-3787 
+3788 
 	`as£π
 (0);
 
-3790 *
+3791 *
 shm_¨ó
  = 
 	`mm≠
@@ -21227,13 +21233,13 @@ MAP_SHARED
 exec_Àdgî_fd
 , 0);
 
-3791 i‡(
+3792 i‡(
 shm_¨ó
  =
 NULL
 ) {
 
-3792 
+3793 
 	`¥ötf
 ("%s: mm≠ faûed. Eº = %s\n", 
 __func__
@@ -21243,11 +21249,11 @@ __func__
 î∫o
 ));
 
-3793 
+3794 
 	`as£π
 (0);
 
-3796 i‡(
+3797 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21261,7 +21267,7 @@ NVFûe
 NULL
 ) {
 
-3797 
+3798 
 	`¥ötf
 ("%s: mem˝y o‡fdÜooku∞Áûed. Eº = %s\n", 
 __func__
@@ -21271,17 +21277,17 @@ __func__
 î∫o
 ));
 
-3798 
+3799 
 	`as£π
 (0);
 
-3801 
+3802 
 off£t_ö_m≠
  +(1024 * (
 NVFûe
 ));
 
-3803 i‡(
+3804 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21293,7 +21299,7 @@ execve_fd_∑ssög
 NULL
 ) {
 
-3804 
+3805 
 	`¥ötf
 ("%s: mem˝y o‡execvêoff£àÁûed. Eº = %s\n", 
 __func__
@@ -21303,15 +21309,15 @@ __func__
 î∫o
 ));
 
-3805 
+3806 
 	`as£π
 (0);
 
-3808 
+3809 
 off£t_ö_m≠
  += (1024 * ());
 
-3811 i‡(
+3812 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21325,7 +21331,7 @@ NVNode
 NULL
 ) {
 
-3812 
+3813 
 	`¥ötf
 ("%s: mem˝y o‡nodêlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -21335,17 +21341,17 @@ __func__
 î∫o
 ));
 
-3813 
+3814 
 	`as£π
 (0);
 
-3816 
+3817 
 off£t_ö_m≠
  +(1024*(
 NVNode
 ));
 
-3818 i‡(
+3819 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21357,7 +21363,7 @@ _nvp_öo_lookup
 NULL
 ) {
 
-3819 
+3820 
 	`¥ötf
 ("%s: mem˝y o‡öÿlooku∞Áûed. Eº = %s\n", 
 __func__
@@ -21367,15 +21373,15 @@ __func__
 î∫o
 ));
 
-3820 
+3821 
 	`as£π
 (0);
 
-3823 
+3824 
 off£t_ö_m≠
  += (1024 * ());
 
-3825 i‡(
+3826 i‡(
 	`mem˝y
 (
 shm_¨ó
@@ -21389,7 +21395,7 @@ SèckNode
 NULL
 ) {
 
-3826 
+3827 
 	`¥ötf
 ("%s: mem˝y o‡‰ìÇodêli° faûed. Eº = %s\n", 
 __func__
@@ -21399,17 +21405,17 @@ __func__
 î∫o
 ));
 
-3827 
+3828 
 	`as£π
 (0);
 
-3830 
+3831 
 off£t_ö_m≠
  +(1024 * (
 SèckNode
 ));
 
-3833  
+3834  
 _nvp_fûe›s
 ->
 	`EXECL
@@ -21423,15 +21429,15 @@ CALL_EXECL
 NULL
 );
 
-3834 
+3835 
 	}
 }
 
-3839 #ifde‡
+3840 #ifde‡
 TRACE_FP_CALLS
 
 
-3840 
+3841 
 RETT_FCLOSE
  
 	$_nvp_FCLOSE
@@ -21439,29 +21445,29 @@ RETT_FCLOSE
 INTF_FCLOSE
 )
 
-3842 
+3843 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-3843 
+3844 
 RETT_FCLOSE
  
 ªsu…
 ;
 
-3844 
+3845 
 fd
  = -1;
 
-3845 
+3846 
 ö°rumíèti⁄_ty≥
  
 ˛o£_time
 ;
 
-3847 
+3848 
 	`START_TIMING
 (
 ˛o£_t
@@ -21469,11 +21475,11 @@ fd
 ˛o£_time
 );
 
-3849 #i‡
+3850 #i‡
 PASS_THROUGH_CALLS
 
 
-3850 
+3851 
 ªsu…
  = 
 _nvp_fûe›s
@@ -21483,7 +21489,7 @@ _nvp_fûe›s
 CALL_FCLOSE
 );
 
-3851 
+3852 
 	`END_TIMING
 (
 ˛o£_t
@@ -21491,11 +21497,11 @@ CALL_FCLOSE
 ˛o£_time
 );
 
-3852  
+3853  
 ªsu…
 ;
 
-3855 
+3856 
 fd
  = 
 	`fûío
@@ -21503,7 +21509,7 @@ fd
 Â
 );
 
-3856 
+3857 
 ªsu…
  = 
 	`_nvp_CLOSE
@@ -21511,15 +21517,15 @@ fd
 fd
 );
 
-3857  
+3858  
 ªsu…
 ;
 
-3858 
+3859 
 	}
 }
 
-3860 
+3861 
 RETT_FREAD
  
 	$_nvp_FREAD
@@ -21527,7 +21533,7 @@ RETT_FREAD
 INTF_FREAD
 )
 
-3862 
+3863 
 	`DEBUG
 ("_nvp_READ %d\n", 
 	`fûío
@@ -21535,19 +21541,19 @@ INTF_FREAD
 Â
 ));
 
-3863 
+3864 
 RETT_READ
  
 ªsu…
 ;
 
-3864 
+3865 
 ö°rumíèti⁄_ty≥
  
 ªad_time
 ;
 
-3866 
+3867 
 	`START_TIMING
 (
 ªad_t
@@ -21555,15 +21561,15 @@ RETT_READ
 ªad_time
 );
 
-3868 #i‡
+3869 #i‡
 PASS_THROUGH_CALLS
 
 
-3869 
+3870 
 num_ªad
 ++;
 
-3870 
+3871 
 ªsu…
  = 
 _nvp_fûe›s
@@ -21573,7 +21579,7 @@ _nvp_fûe›s
 CALL_FREAD
 );
 
-3871 
+3872 
 	`END_TIMING
 (
 ªad_t
@@ -21581,11 +21587,11 @@ CALL_FREAD
 ªad_time
 );
 
-3872  
+3873  
 ªsu…
 ;
 
-3878 
+3879 
 NVFûe
 * 
 nvf
@@ -21597,13 +21603,13 @@ _nvp_fd_lookup
 Â
 )];
 
-3880 i‡(
+3881 i‡(
 nvf
 ->
 posix
 ) {
 
-3881 
+3882 
 	`DEBUG
 ("CÆ»posix READ f‹ fd %d\n", 
 nvf
@@ -21611,7 +21617,7 @@ nvf
 fd
 );
 
-3882 
+3883 
 ªsu…
  = 
 _nvp_fûe›s
@@ -21621,27 +21627,27 @@ _nvp_fûe›s
 CALL_FREAD
 );
 
-3883 
+3884 
 ªad_size
  +
 ªsu…
 ;
 
-3884 
+3885 
 num_posix_ªad
 ++;
 
-3885 
+3886 
 posix_ªad_size
  +
 ªsu…
 ;
 
-3886  
+3887  
 ªsu…
 ;
 
-3889 
+3890 
 ªsu…
  = 
 	`_nvp_check_ªad_size_vÆid
@@ -21649,21 +21655,21 @@ posix_ªad_size
 Àngth
 );
 
-3890 i‡(
+3891 i‡(
 ªsu…
  <= 0) {
 
-3891  
+3892  
 ªsu…
 ;
 
-3894 
+3895 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-3896 
+3897 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -21671,13 +21677,13 @@ nvf
 ˝uid
 );
 
-3897 
+3898 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-3898 
+3899 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -21685,7 +21691,7 @@ nvf
 ˝uid
 );
 
-3900 
+3901 
 ªsu…
  = 
 	`_nvp_do_¥ód
@@ -21701,7 +21707,7 @@ buf
 nmemb
 ,
 
-3901 
+3902 
 	`__sync_„tch_™d_add
 (
 nvf
@@ -21713,7 +21719,7 @@ off£t
 ˝uid
 ,Çvf);
 
-3903 
+3904 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -21721,17 +21727,17 @@ nvf
 ˝uid
 );
 
-3905 if(
+3906 if(
 ªsu…
  =
 Àngth
 ) {
 
-3906 
+3907 
 	`DEBUG
 ("PREAD succeeded:Éxtending offset from %liÅo %li\n",
 
-3907 *
+3908 *
 nvf
 ->
 off£t
@@ -21739,19 +21745,19 @@ off£t
 ªsu…
 , *nvf->offset);
 
-3909 i‡(
+3910 i‡(
 ªsu…
  <= 0){
 
-3910 
+3911 
 	`DEBUG
 ("_nvp_READ: PREAD failed;Çot changing offset. "
 
-3911 "‘ëu∫ed %i)\n", 
+3912 "‘ëu∫ed %i)\n", 
 ªsu…
 );
 
-3913 
+3914 
 	`__sync_„tch_™d_sub
 (
 nvf
@@ -21761,15 +21767,15 @@ off£t
 Àngth
 );
 
-3915 
+3916 
 	`DEBUG
 ("_nvp_READ: PREAD failed; Not fullyÑead. "
 
-3916 "‘ëu∫ed %i)\n", 
+3917 "‘ëu∫ed %i)\n", 
 ªsu…
 );
 
-3918 
+3919 
 	`__sync_„tch_™d_sub
 (
 nvf
@@ -21781,7 +21787,7 @@ off£t
 ªsu…
 );
 
-3921 
+3922 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -21789,25 +21795,25 @@ nvf
 ˝uid
 );
 
-3923 
+3924 
 num_ªad
 ++;
 
-3924 
+3925 
 ªad_size
  +
 ªsu…
 ;
 
-3926  
+3927  
 ªsu…
 ;
 
-3927 
+3928 
 	}
 }
 
-3930 
+3931 
 RETT_READ
  
 	$_nvp_READ
@@ -21815,35 +21821,35 @@ RETT_READ
 INTF_READ
 )
 
-3932 
+3933 
 	`DEBUG
 ("_nvp_READ %d\n", 
 fûe
 );
 
-3933 
+3934 
 num_ªad
 ++;
 
-3934 
+3935 
 RETT_READ
  
 ªsu…
 ;
 
-3935 
+3936 
 ö°rumíèti⁄_ty≥
  
 ªad_time
 ;
 
-3936 
+3937 
 pid
 , 
 µid
 ;
 
-3938 
+3939 
 	`START_TIMING
 (
 ªad_t
@@ -21851,11 +21857,11 @@ pid
 ªad_time
 );
 
-3940 #i‡
+3941 #i‡
 PASS_THROUGH_CALLS
 
 
-3941 
+3942 
 ªsu…
  = 
 _nvp_fûe›s
@@ -21865,7 +21871,7 @@ _nvp_fûe›s
 CALL_READ
 );
 
-3942 
+3943 
 	`END_TIMING
 (
 ªad_t
@@ -21873,11 +21879,11 @@ CALL_READ
 ªad_time
 );
 
-3943  
+3944  
 ªsu…
 ;
 
-3949 
+3950 
 NVFûe
 * 
 nvf
@@ -21887,13 +21893,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-3951 if(
+3952 if(
 nvf
 ->
 posix
 ) {
 
-3952 
+3953 
 	`DEBUG
 ("CÆ»posix READ f‹ fd %d\n", 
 nvf
@@ -21901,7 +21907,7 @@ nvf
 fd
 );
 
-3953 
+3954 
 ªsu…
  = 
 _nvp_fûe›s
@@ -21911,23 +21917,23 @@ _nvp_fûe›s
 CALL_READ
 );
 
-3954 
+3955 
 ªad_size
  +
 ªsu…
 ;
 
-3955 
+3956 
 num_posix_ªad
 ++;
 
-3956 
+3957 
 posix_ªad_size
  +
 ªsu…
 ;
 
-3957 
+3958 
 	`END_TIMING
 (
 ªad_t
@@ -21935,11 +21941,11 @@ posix_ªad_size
 ªad_time
 );
 
-3958  
+3959  
 ªsu…
 ;
 
-3961 
+3962 
 ªsu…
  = 
 	`_nvp_check_ªad_size_vÆid
@@ -21947,11 +21953,11 @@ posix_ªad_size
 Àngth
 );
 
-3962 i‡(
+3963 i‡(
 ªsu…
  <= 0) {
 
-3963 
+3964 
 	`END_TIMING
 (
 ªad_t
@@ -21959,17 +21965,17 @@ posix_ªad_size
 ªad_time
 );
 
-3964  
+3965  
 ªsu…
 ;
 
-3967 
+3968 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-3969 
+3970 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -21977,13 +21983,13 @@ nvf
 ˝uid
 );
 
-3970 
+3971 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-3971 
+3972 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -21991,7 +21997,7 @@ nvf
 ˝uid
 );
 
-3973 
+3974 
 ªsu…
  = 
 	`_nvp_do_¥ód
@@ -21999,7 +22005,7 @@ nvf
 CALL_READ
 ,
 
-3974 
+3975 
 	`__sync_„tch_™d_add
 (
 nvf
@@ -22011,7 +22017,7 @@ off£t
 ˝uid
 ,Çvf);
 
-3976 
+3977 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -22019,17 +22025,17 @@ nvf
 ˝uid
 );
 
-3978 if(
+3979 if(
 ªsu…
  =
 Àngth
 ) {
 
-3979 
+3980 
 	`DEBUG
 ("PREAD succeeded:Éxtending offset from %liÅo %li\n",
 
-3980 *
+3981 *
 nvf
 ->
 off£t
@@ -22037,19 +22043,19 @@ off£t
 ªsu…
 , *nvf->offset);
 
-3982 i‡(
+3983 i‡(
 ªsu…
  <= 0){
 
-3983 
+3984 
 	`DEBUG
 ("_nvp_READ: PREAD failed;Çot changing offset. "
 
-3984 "‘ëu∫ed %i)\n", 
+3985 "‘ëu∫ed %i)\n", 
 ªsu…
 );
 
-3986 
+3987 
 	`__sync_„tch_™d_sub
 (
 nvf
@@ -22059,15 +22065,15 @@ off£t
 Àngth
 );
 
-3988 
+3989 
 	`DEBUG
 ("_nvp_READ: PREAD failed; Not fullyÑead. "
 
-3989 "‘ëu∫ed %i)\n", 
+3990 "‘ëu∫ed %i)\n", 
 ªsu…
 );
 
-3991 
+3992 
 	`__sync_„tch_™d_sub
 (
 nvf
@@ -22079,7 +22085,7 @@ off£t
 ªsu…
 );
 
-3994 
+3995 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -22087,13 +22093,13 @@ nvf
 ˝uid
 );
 
-3996 
+3997 
 ªad_size
  +
 ªsu…
 ;
 
-3998 
+3999 
 	`END_TIMING
 (
 ªad_t
@@ -22101,19 +22107,19 @@ nvf
 ªad_time
 );
 
-3999  
+4000  
 ªsu…
 ;
 
-4000 
+4001 
 	}
 }
 
-4003 #ifde‡
+4004 #ifde‡
 TRACE_FP_CALLS
 
 
-4004 
+4005 
 RETT_FWRITE
  
 	$_nvp_FWRITE
@@ -22121,7 +22127,7 @@ RETT_FWRITE
 INTF_FWRITE
 )
 
-4006 
+4007 
 	`DEBUG
 ("_nvp_WRITE %d\n", 
 	`fûío
@@ -22129,23 +22135,23 @@ INTF_FWRITE
 Â
 ));
 
-4007 
+4008 
 num_wrôe
 ++;
 
-4008 
+4009 
 RETT_FWRITE
  
 ªsu…
 ;
 
-4009 
+4010 
 ö°rumíèti⁄_ty≥
  
 wrôe_time
 ;
 
-4011 
+4012 
 	`DEBUG_FILE
 ("%s: CÆlög fwrôêwôh f∞%p, fd = %d,Üígth = %lu,Çmemb = %d\n", 
 __func__
@@ -22159,7 +22165,7 @@ __func__
 nmemb
 );
 
-4013 
+4014 
 	`START_TIMING
 (
 wrôe_t
@@ -22167,11 +22173,11 @@ wrôe_t
 wrôe_time
 );
 
-4015 #i‡
+4016 #i‡
 PASS_THROUGH_CALLS
 
 
-4017 
+4018 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22189,7 +22195,7 @@ buf
 nmemb
 ));
 
-4018 
+4019 
 	`DEBUG_FILE
 ("%s: Resu… o‡thêwrôê%d\n", 
 __func__
@@ -22197,13 +22203,13 @@ __func__
 ªsu…
 );
 
-4019 
+4020 
 wrôe_size
  +
 ªsu…
 ;
 
-4020 
+4021 
 	`END_TIMING
 (
 wrôe_t
@@ -22211,17 +22217,17 @@ wrôe_t
 wrôe_time
 );
 
-4021  
+4022  
 ªsu…
 ;
 
-4028 i‡(
+4029 i‡(
 	`fûío
 (
 Â
 ) == 1) {
 
-4029 
+4030 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22239,7 +22245,7 @@ buf
 nmemb
 ));
 
-4030 
+4031 
 	`DEBUG_FILE
 ("%s: Resu… o‡thêwrôê%d\n", 
 __func__
@@ -22247,23 +22253,23 @@ __func__
 ªsu…
 );
 
-4031 
+4032 
 wrôe_size
  +
 ªsu…
 ;
 
-4032 
+4033 
 num_posix_wrôe
 ++;
 
-4033 
+4034 
 posix_wrôe_size
  +
 ªsu…
 ;
 
-4034 
+4035 
 	`END_TIMING
 (
 wrôe_t
@@ -22271,11 +22277,11 @@ wrôe_t
 wrôe_time
 );
 
-4035  
+4036  
 ªsu…
 ;
 
-4038 
+4039 
 NVFûe
 * 
 nvf
@@ -22287,13 +22293,13 @@ _nvp_fd_lookup
 Â
 )];
 
-4040 i‡(
+4041 i‡(
 nvf
 ->
 posix
 ) {
 
-4041 
+4042 
 	`DEBUG
 ("CÆ»posix WRITE f‹ fd %d\n", 
 nvf
@@ -22301,7 +22307,7 @@ nvf
 fd
 );
 
-4042 
+4043 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22311,23 +22317,23 @@ _nvp_fûe›s
 CALL_FWRITE
 );
 
-4043 
+4044 
 wrôe_size
  +
 ªsu…
 ;
 
-4044 
+4045 
 num_posix_wrôe
 ++;
 
-4045 
+4046 
 posix_wrôe_size
  +
 ªsu…
 ;
 
-4046 
+4047 
 	`END_TIMING
 (
 wrôe_t
@@ -22335,17 +22341,17 @@ wrôe_t
 wrôe_time
 );
 
-4047  
+4048  
 ªsu…
 ;
 
-4050 
+4051 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4052 
+4053 
 ªsu…
  = 
 	`_nvp_check_wrôe_size_vÆid
@@ -22353,11 +22359,11 @@ wrôe_time
 Àngth
 );
 
-4053 i‡(
+4054 i‡(
 ªsu…
  <= 0) {
 
-4054 
+4055 
 	`END_TIMING
 (
 wrôe_t
@@ -22365,11 +22371,11 @@ wrôe_t
 wrôe_time
 );
 
-4055  
+4056  
 ªsu…
 ;
 
-4058 
+4059 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -22377,13 +22383,13 @@ nvf
 ˝uid
 );
 
-4059 
+4060 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-4060 
+4061 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -22391,7 +22397,7 @@ nvf
 ˝uid
 );
 
-4062 
+4063 
 ªsu…
  = 
 	`_nvp_do_pwrôe
@@ -22407,7 +22413,7 @@ buf
 nmemb
 ,
 
-4063 
+4064 
 	`__sync_„tch_™d_add
 (
 nvf
@@ -22419,7 +22425,7 @@ off£t
 ˝uid
 ,Çvf);
 
-4065 
+4066 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -22427,21 +22433,21 @@ nvf
 ˝uid
 );
 
-4067 if(
+4068 if(
 ªsu…
  >= 0)
 
-4069 if(
+4070 if(
 nvf
 ->
 ≠≥nd
 )
 
-4071 
+4072 
 	`DEBUG
 ("PWRITE succeededándáppend ==Årue. "
 
-4073 
+4074 
 	`as£π
 (
 	`_nvp_do_£ek64
@@ -22453,15 +22459,15 @@ fd
 SEEK_END
 ,Çvf)
 
-4074 !(
+4075 !(
 RETT_SEEK64
 )-1);
 
-4078 
+4079 
 	`DEBUG
 ("PWRITE succeeded:Éxtending offset "
 
-4080 *
+4081 *
 nvf
 ->
 off£t
@@ -22469,19 +22475,19 @@ off£t
 ªsu…
 , *nvf->offset);
 
-4084 
+4085 
 	`DEBUG
 ("_nvp_WRITE: PWRITE failed;Çot changing offset. "
 
-4085 "‘ëu∫ed %i)\n", 
+4086 "‘ëu∫ed %i)\n", 
 ªsu…
 );
 
-4088 
+4089 
 	`DEBUG_FILE
 ("AboutÅoÑeturn from _nvp_WRITE withÑet val %i (errno %i). "
 
-4090 
+4091 
 ªsu…
 , 
 î∫o
@@ -22495,7 +22501,7 @@ node
 off£t
 );
 
-4092 
+4093 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -22503,13 +22509,13 @@ nvf
 ˝uid
 );
 
-4093 
+4094 
 wrôe_size
  +
 ªsu…
 ;
 
-4094 
+4095 
 	`END_TIMING
 (
 wrôe_t
@@ -22517,19 +22523,19 @@ wrôe_t
 wrôe_time
 );
 
-4095  
+4096  
 ªsu…
 ;
 
-4096 
+4097 
 	}
 }
 
-4099 #ifde‡
+4100 #ifde‡
 TRACE_FP_CALLS
 
 
-4100 
+4101 
 RETT_FSEEK
  
 	$_nvp_FSEEK
@@ -22537,17 +22543,17 @@ RETT_FSEEK
 INTF_FSEEK
 )
 
-4102 
+4103 
 RETT_WRITE
  
 ªsu…
 ;
 
-4103 
+4104 
 fd
  = -1;
 
-4105 
+4106 
 fd
  = 
 	`fûío
@@ -22555,7 +22561,7 @@ fd
 Â
 );
 
-4106 
+4107 
 ªsu…
  = 
 	`_nvp_SEEK
@@ -22567,19 +22573,19 @@ off£t
 whí˚
 );
 
-4107  
+4108  
 ªsu…
 ;
 
-4108 
+4109 
 	}
 }
 
-4111 #ifde‡
+4112 #ifde‡
 TRACE_FP_CALLS
 
 
-4112 
+4113 
 RETT_FTELL
  
 	$_nvp_FTELL
@@ -22587,17 +22593,17 @@ RETT_FTELL
 INTF_FTELL
 )
 
-4114 
+4115 
 RETT_FTELL
  
 ªsu…
 ;
 
-4115 
+4116 
 fd
  = -1;
 
-4116 
+4117 
 NVFûe
  *
 nvf
@@ -22605,7 +22611,7 @@ nvf
 NULL
 ;
 
-4118 
+4119 
 fd
  = 
 	`fûío
@@ -22613,7 +22619,7 @@ fd
 Â
 );
 
-4119 
+4120 
 nvf
  = &
 _nvp_fd_lookup
@@ -22621,7 +22627,7 @@ _nvp_fd_lookup
 fd
 ];
 
-4121 
+4122 
 ªsu…
  = 
 	`_nvp_SEEK
@@ -22635,19 +22641,19 @@ off£t
 SEEK_CUR
 );
 
-4122  
+4123  
 ªsu…
 ;
 
-4123 
+4124 
 	}
 }
 
-4126 #ifde‡
+4127 #ifde‡
 TRACE_FP_CALLS
 
 
-4127 
+4128 
 RETT_FTELLO
  
 	$_nvp_FTELLO
@@ -22655,13 +22661,13 @@ RETT_FTELLO
 INTF_FTELLO
 )
 
-4129 
+4130 
 RETT_FTELLO
  
 ªsu…
 ;
 
-4131 
+4132 
 ªsu…
  = 
 	`_nvp_FTELL
@@ -22669,15 +22675,15 @@ RETT_FTELLO
 CALL_FTELLO
 );
 
-4132  
+4133  
 ªsu…
 ;
 
-4133 
+4134 
 	}
 }
 
-4136 
+4137 
 RETT_WRITE
  
 	$_nvp_WRITE
@@ -22685,23 +22691,23 @@ RETT_WRITE
 INTF_WRITE
 )
 
-4138 
+4139 
 	`DEBUG
 ("_nvp_WRITE %d\n", 
 fûe
 );
 
-4139 
+4140 
 num_wrôe
 ++;
 
-4140 
+4141 
 RETT_WRITE
  
 ªsu…
 ;
 
-4141 
+4142 
 ö°rumíèti⁄_ty≥
  
 wrôe_time
@@ -22709,7 +22715,7 @@ wrôe_time
 wrôe_sysˇŒ_time
 ;
 
-4143 
+4144 
 	`START_TIMING
 (
 wrôe_t
@@ -22717,11 +22723,11 @@ wrôe_t
 wrôe_time
 );
 
-4145 #i‡
+4146 #i‡
 PASS_THROUGH_CALLS
 
 
-4146 
+4147 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22731,13 +22737,13 @@ _nvp_fûe›s
 CALL_WRITE
 );
 
-4147 
+4148 
 wrôe_size
  +
 ªsu…
 ;
 
-4148 
+4149 
 	`END_TIMING
 (
 wrôe_t
@@ -22745,11 +22751,11 @@ wrôe_t
 wrôe_time
 );
 
-4149  
+4150  
 ªsu…
 ;
 
-4155 
+4156 
 NVFûe
 * 
 nvf
@@ -22759,13 +22765,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4157 i‡(
+4158 i‡(
 nvf
 ->
 posix
 ) {
 
-4158 
+4159 
 	`DEBUG
 ("CÆ»posix WRITE f‹ fd %d\n", 
 nvf
@@ -22773,7 +22779,7 @@ nvf
 fd
 );
 
-4159 
+4160 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22783,23 +22789,23 @@ _nvp_fûe›s
 CALL_WRITE
 );
 
-4160 
+4161 
 wrôe_size
  +
 ªsu…
 ;
 
-4161 
+4162 
 num_posix_wrôe
 ++;
 
-4162 
+4163 
 posix_wrôe_size
  +
 ªsu…
 ;
 
-4163 
+4164 
 	`END_TIMING
 (
 wrôe_t
@@ -22807,17 +22813,17 @@ wrôe_t
 wrôe_time
 );
 
-4164  
+4165  
 ªsu…
 ;
 
-4167 
+4168 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4169 
+4170 
 ªsu…
  = 
 	`_nvp_check_wrôe_size_vÆid
@@ -22825,11 +22831,11 @@ wrôe_time
 Àngth
 );
 
-4170 i‡(
+4171 i‡(
 ªsu…
  <= 0) {
 
-4171 
+4172 
 	`END_TIMING
 (
 wrôe_t
@@ -22837,11 +22843,11 @@ wrôe_t
 wrôe_time
 );
 
-4172  
+4173  
 ªsu…
 ;
 
-4175 
+4176 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -22849,13 +22855,13 @@ nvf
 ˝uid
 );
 
-4176 
+4177 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-4177 
+4178 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -22863,7 +22869,11 @@ nvf
 ˝uid
 );
 
-4180 i‡((*(
+4181 #i‡!
+ANON_MEM_HANDLE
+
+
+4182 i‡((*(
 nvf
 ->
 off£t
@@ -22875,11 +22885,11 @@ node
 åue_Àngth
 ) {
 
-4182 
+4184 
 _nvp_wr_tŸÆ
 ++;
 
-4184 
+4186 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -22887,13 +22897,13 @@ nvf
 ˝uid
 );
 
-4185 
+4187 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-4187 
+4189 
 nvf
 ->
 node
@@ -22903,7 +22913,7 @@ node
 off£t
 ) +Üength;
 
-4188 
+4190 
 nvf
 ->
 node
@@ -22915,7 +22925,7 @@ off£t
 Àngth
 ;
 
-4189 
+4191 
 nvf
 ->
 node
@@ -22927,7 +22937,7 @@ off£t
 Àngth
 ;
 
-4191 
+4193 
 	`START_TIMING
 (
 wrôe_sysˇŒ_t
@@ -22935,7 +22945,7 @@ wrôe_sysˇŒ_t
 wrôe_sysˇŒ_time
 );
 
-4193 
+4195 
 ªsu…
  = 
 _nvp_fûe›s
@@ -22953,7 +22963,7 @@ off£t
 Àngth
 ));
 
-4195 
+4197 
 	`END_TIMING
 (
 wrôe_sysˇŒ_t
@@ -22961,35 +22971,35 @@ wrôe_sysˇŒ_t
 wrôe_sysˇŒ_time
 );
 
-4197 
+4199 
 num_posix_wrôe
 ++;
 
-4198 
+4200 
 posix_wrôe_size
  +
 ªsu…
 ;
 
-4199 
+4201 
 num_m„n˚
 ++;
 
-4200 
+4202 
 num_wrôe_n⁄ãmp‹Æ
 ++;
 
-4201 
+4203 
 _nvp_wr_exãnded
 ++;
 
-4203 
+4205 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4204 
+4206 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -22997,7 +23007,7 @@ nvf
 ˝uid
 );
 
-4206 
+4208 
 	`END_TIMING
 (
 wrôe_t
@@ -23005,11 +23015,11 @@ wrôe_t
 wrôe_time
 );
 
-4207  
+4209  
 ªsu…
 ;
 
-4210 
+4213 
 ªsu…
  = 
 	`_nvp_do_pwrôe
@@ -23017,7 +23027,7 @@ wrôe_time
 CALL_WRITE
 ,
 
-4211 
+4214 
 	`__sync_„tch_™d_add
 (
 nvf
@@ -23029,7 +23039,7 @@ off£t
 ˝uid
 ,Çvf);
 
-4212 
+4215 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -23037,21 +23047,21 @@ nvf
 ˝uid
 );
 
-4213 if(
+4216 if(
 ªsu…
  >= 0)
 
-4215 if(
+4218 if(
 nvf
 ->
 ≠≥nd
 )
 
-4217 
+4220 
 	`DEBUG
 ("PWRITE succeededándáppend ==Årue. "
 
-4219 
+4222 
 	`as£π
 (
 	`_nvp_do_£ek64
@@ -23063,15 +23073,15 @@ fd
 SEEK_END
 ,Çvf)
 
-4220 !(
+4223 !(
 RETT_SEEK64
 )-1);
 
-4224 
+4227 
 	`DEBUG
 ("PWRITE succeeded:Éxtending offset "
 
-4226 *
+4229 *
 nvf
 ->
 off£t
@@ -23079,17 +23089,17 @@ off£t
 ªsu…
 , *nvf->offset);
 
-4229 
+4232 
 wrôe_size
  +
 ªsu…
 ;
 
-4232 
+4235 
 	`DEBUG
 ("AboutÅoÑeturn from _nvp_WRITE withÑet val %i (errno %i). "
 
-4234 
+4237 
 ªsu…
 , 
 î∫o
@@ -23103,7 +23113,7 @@ node
 off£t
 ,
 
-4235 
+4238 
 nvf
 ->
 node
@@ -23111,7 +23121,7 @@ node
 m≠Àngth
 );
 
-4237 
+4240 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -23119,7 +23129,7 @@ nvf
 ˝uid
 );
 
-4239 
+4242 
 	`END_TIMING
 (
 wrôe_t
@@ -23127,15 +23137,15 @@ wrôe_t
 wrôe_time
 );
 
-4240  
+4243  
 ªsu…
 ;
 
-4241 
+4244 
 	}
 }
 
-4243 
+4246 
 RETT_PREAD
  
 	$_nvp_PREAD
@@ -23143,35 +23153,35 @@ RETT_PREAD
 INTF_PREAD
 )
 
-4245 
+4248 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4246 
+4249 
 	`DEBUG
 ("_nvp_PREAD %d\n", 
 fûe
 );
 
-4247 
+4250 
 num_ªad
 ++;
 
-4248 
+4251 
 ö°rumíèti⁄_ty≥
  
 ªad_time
 ;
 
-4249 
+4252 
 RETT_PREAD
  
 ªsu…
 ;
 
-4251 
+4254 
 	`START_TIMING
 (
 ¥ód_t
@@ -23179,11 +23189,11 @@ RETT_PREAD
 ªad_time
 );
 
-4253 #i‡
+4256 #i‡
 PASS_THROUGH_CALLS
 
 
-4254 
+4257 
 ªsu…
  = 
 _nvp_fûe›s
@@ -23193,7 +23203,7 @@ _nvp_fûe›s
 CALL_PREAD
 );
 
-4256 
+4259 
 	`END_TIMING
 (
 ¥ód_t
@@ -23201,11 +23211,11 @@ CALL_PREAD
 ªad_time
 );
 
-4257  
+4260  
 ªsu…
 ;
 
-4263 
+4266 
 NVFûe
 * 
 nvf
@@ -23215,13 +23225,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4265 i‡(
+4268 i‡(
 nvf
 ->
 posix
 ) {
 
-4266 
+4269 
 	`DEBUG
 ("CÆ»posix PREAD f‹ fd %d\n", 
 nvf
@@ -23229,7 +23239,7 @@ nvf
 fd
 );
 
-4267 
+4270 
 ªsu…
  = 
 _nvp_fûe›s
@@ -23239,23 +23249,23 @@ _nvp_fûe›s
 CALL_PREAD
 );
 
-4268 
+4271 
 ªad_size
  +
 ªsu…
 ;
 
-4269 
+4272 
 num_posix_ªad
 ++;
 
-4270 
+4273 
 posix_ªad_size
  +
 ªsu…
 ;
 
-4272 
+4275 
 	`END_TIMING
 (
 ¥ód_t
@@ -23263,11 +23273,11 @@ posix_ªad_size
 ªad_time
 );
 
-4273  
+4276  
 ªsu…
 ;
 
-4276 
+4279 
 ªsu…
  = 
 	`_nvp_check_ªad_size_vÆid
@@ -23275,11 +23285,11 @@ posix_ªad_size
 cou¡
 );
 
-4277 i‡(
+4280 i‡(
 ªsu…
  <= 0) {
 
-4278 
+4281 
 	`END_TIMING
 (
 ¥ód_t
@@ -23287,17 +23297,17 @@ cou¡
 ªad_time
 );
 
-4279  
+4282  
 ªsu…
 ;
 
-4282 
+4285 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4284 
+4287 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -23305,13 +23315,13 @@ nvf
 ˝uid
 );
 
-4285 
+4288 
 	`NVP_CHECK_NVF_VALID
 (
 nvf
 );
 
-4286 
+4289 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -23319,7 +23329,7 @@ nvf
 ˝uid
 );
 
-4288 
+4291 
 ªsu…
  = 
 	`_nvp_do_¥ód
@@ -23331,7 +23341,7 @@ CALL_PREAD
 nvf
 );
 
-4290 
+4293 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -23339,7 +23349,7 @@ nvf
 ˝uid
 );
 
-4291 
+4294 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -23347,13 +23357,13 @@ nvf
 ˝uid
 );
 
-4293 
+4296 
 ªad_size
  +
 ªsu…
 ;
 
-4295 
+4298 
 	`END_TIMING
 (
 ¥ód_t
@@ -23361,15 +23371,15 @@ nvf
 ªad_time
 );
 
-4296  
+4299  
 ªsu…
 ;
 
-4297 
+4300 
 	}
 }
 
-4299 
+4302 
 RETT_PWRITE
  
 	$_nvp_PWRITE
@@ -23377,35 +23387,35 @@ RETT_PWRITE
 INTF_PWRITE
 )
 
-4301 
+4304 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4302 
+4305 
 	`DEBUG
 ("_nvp_PWRITE %d\n", 
 fûe
 );
 
-4303 
+4306 
 num_wrôe
 ++;
 
-4304 
+4307 
 ö°rumíèti⁄_ty≥
  
 wrôe_time
 ;
 
-4305 
+4308 
 RETT_PWRITE
  
 ªsu…
 ;
 
-4307 
+4310 
 	`START_TIMING
 (
 pwrôe_t
@@ -23413,11 +23423,11 @@ pwrôe_t
 wrôe_time
 );
 
-4309 #i‡
+4312 #i‡
 PASS_THROUGH_CALLS
 
 
-4310 
+4313 
 ªsu…
  = 
 _nvp_fûe›s
@@ -23427,13 +23437,13 @@ _nvp_fûe›s
 CALL_PWRITE
 );
 
-4312 
+4315 
 wrôe_size
  +
 ªsu…
 ;
 
-4313 
+4316 
 	`END_TIMING
 (
 pwrôe_t
@@ -23441,11 +23451,11 @@ pwrôe_t
 wrôe_time
 );
 
-4314  
+4317  
 ªsu…
 ;
 
-4320 
+4323 
 NVFûe
 * 
 nvf
@@ -23455,13 +23465,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4322 i‡(
+4325 i‡(
 nvf
 ->
 posix
 ) {
 
-4323 
+4326 
 	`DEBUG
 ("CÆ»posix PWRITE f‹ fd %d\n", 
 nvf
@@ -23469,7 +23479,7 @@ nvf
 fd
 );
 
-4324 
+4327 
 ªsu…
  = 
 _nvp_fûe›s
@@ -23479,23 +23489,23 @@ _nvp_fûe›s
 CALL_PWRITE
 );
 
-4325 
+4328 
 wrôe_size
  +
 ªsu…
 ;
 
-4326 
+4329 
 num_posix_wrôe
 ++;
 
-4327 
+4330 
 posix_wrôe_size
  +
 ªsu…
 ;
 
-4328 
+4331 
 	`END_TIMING
 (
 pwrôe_t
@@ -23503,11 +23513,11 @@ pwrôe_t
 wrôe_time
 );
 
-4329  
+4332  
 ªsu…
 ;
 
-4332 
+4335 
 ªsu…
  = 
 	`_nvp_check_wrôe_size_vÆid
@@ -23515,11 +23525,11 @@ wrôe_time
 cou¡
 );
 
-4333 i‡(
+4336 i‡(
 ªsu…
  <= 0) {
 
-4334 
+4337 
 	`END_TIMING
 (
 pwrôe_t
@@ -23527,17 +23537,17 @@ pwrôe_t
 wrôe_time
 );
 
-4335  
+4338  
 ªsu…
 ;
 
-4337 
+4340 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4338 
+4341 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -23545,13 +23555,13 @@ nvf
 ˝uid
 );
 
-4339 
+4342 
 	`NVP_CHECK_NVF_VALID
 (
 nvf
 );
 
-4340 
+4343 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -23559,7 +23569,7 @@ nvf
 ˝uid
 );
 
-4342 
+4345 
 ssize_t
  
 avaûabÀ_Àngth
@@ -23573,7 +23583,7 @@ node
 off£t
 ;
 
-4359 
+4362 
 ªsu…
  = 
 	`_nvp_do_pwrôe
@@ -23585,7 +23595,7 @@ CALL_PWRITE
 nvf
 );
 
-4360 
+4363 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -23593,7 +23603,7 @@ nvf
 ˝uid
 );
 
-4362 
+4365 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -23601,13 +23611,13 @@ nvf
 ˝uid
 );
 
-4364 
+4367 
 wrôe_size
  +
 ªsu…
 ;
 
-4366 
+4369 
 	`END_TIMING
 (
 pwrôe_t
@@ -23615,15 +23625,15 @@ pwrôe_t
 wrôe_time
 );
 
-4367  
+4370  
 ªsu…
 ;
 
-4368 
+4371 
 	}
 }
 
-4371 
+4374 
 RETT_SEEK
  
 	$_nvp_SEEK
@@ -23631,21 +23641,21 @@ RETT_SEEK
 INTF_SEEK
 )
 
-4373 
+4376 
 	`DEBUG
 ("_nvp_SEEK\n");
 
-4375  
+4378  
 	`_nvp_SEEK64
 (
 CALL_SEEK
 );
 
-4376 
+4379 
 	}
 }
 
-4378 
+4381 
 RETT_SEEK64
  
 	$_nvp_SEEK64
@@ -23653,31 +23663,31 @@ RETT_SEEK64
 INTF_SEEK64
 )
 
-4381 
+4384 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4382 
+4385 
 ö°rumíèti⁄_ty≥
  
 £ek_time
 ;
 
-4383 
+4386 
 RETT_SEEK64
  
 ªt
  = 0;
 
-4384 
+4387 
 	`DEBUG
 ("_nvp_SEEK64 %d\n", 
 fûe
 );
 
-4386 
+4389 
 	`START_TIMING
 (
 £ek_t
@@ -23685,11 +23695,11 @@ fûe
 £ek_time
 );
 
-4388 #i‡
+4391 #i‡
 PASS_THROUGH_CALLS
 
 
-4389 
+4392 
 ªt
  = 
 _nvp_fûe›s
@@ -23699,7 +23709,7 @@ _nvp_fûe›s
 CALL_SEEK
 );
 
-4390 
+4393 
 	`END_TIMING
 (
 £ek_t
@@ -23707,11 +23717,11 @@ CALL_SEEK
 £ek_time
 );
 
-4391  
+4394  
 ªt
 ;
 
-4394 
+4397 
 NVFûe
 * 
 nvf
@@ -23721,36 +23731,18 @@ _nvp_fd_lookup
 fûe
 ];
 
-4396 i‡(
+4399 i‡(
 nvf
 ->
 posix
 ) {
 
-4397 
+4400 
 	`DEBUG
 ("CÆ»posix SEEK64 f‹ fd %d\n", 
 nvf
 ->
 fd
-);
-
-4398 
-	`END_TIMING
-(
-£ek_t
-, 
-£ek_time
-);
-
-4399 
-ªt
- = 
-_nvp_fûe›s
-->
-	`SEEK64
-(
-CALL_SEEK64
 );
 
 4401 
@@ -23761,29 +23753,47 @@ CALL_SEEK64
 £ek_time
 );
 
-4402  
+4402 
+ªt
+ = 
+_nvp_fûe›s
+->
+	`SEEK64
+(
+CALL_SEEK64
+);
+
+4404 
+	`END_TIMING
+(
+£ek_t
+, 
+£ek_time
+);
+
+4405  
 ªt
 ;
 
-4405 
+4408 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4407 
+4410 
 	`NVP_LOCK_FD_WR
 (
 nvf
 );
 
-4408 
+4411 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-4409 
+4412 
 	`NVP_LOCK_NODE_RD
 (
 nvf
@@ -23791,7 +23801,7 @@ nvf
 ˝uid
 );
 
-4411 
+4414 
 	`DEBUG_FILE
 ("%s: CÆlög sìk wôh fûê%d, off£à%lu, whí˚ = %d\n", 
 __func__
@@ -23803,7 +23813,7 @@ off£t
 whí˚
 );
 
-4412 
+4415 
 RETT_SEEK64
  
 ªsu…
@@ -23815,7 +23825,7 @@ CALL_SEEK64
 nvf
 );
 
-4414 
+4417 
 	`NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -23823,13 +23833,13 @@ nvf
 ˝uid
 );
 
-4415 
+4418 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4417 
+4420 
 	`END_TIMING
 (
 £ek_t
@@ -23837,15 +23847,15 @@ nvf
 £ek_time
 );
 
-4418  
+4421  
 ªsu…
 ;
 
-4419 
+4422 
 	}
 }
 
-4421 
+4424 
 RETT_TRUNC
  
 	$_nvp_TRUNC
@@ -23853,17 +23863,17 @@ RETT_TRUNC
 INTF_TRUNC
 )
 
-4423 
+4426 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4425 #i‡
+4428 #i‡
 PASS_THROUGH_CALLS
 
 
-4426  
+4429  
 _nvp_fûe›s
 ->
 	`TRUNC
@@ -23871,21 +23881,21 @@ _nvp_fûe›s
 CALL_TRUNC
 );
 
-4429 
+4432 
 	`DEBUG
 ("_nvp_TRUNC\n");
 
-4431  
+4434  
 	`_nvp_TRUNC64
 (
 CALL_TRUNC
 );
 
-4432 
+4435 
 	}
 }
 
-4434 
+4437 
 RETT_TRUNC64
  
 	$_nvp_TRUNC64
@@ -23893,21 +23903,21 @@ RETT_TRUNC64
 INTF_TRUNC64
 )
 
-4436 
+4439 
 i
  = 0;
 
-4437 
+4440 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4439 #i‡
+4442 #i‡
 PASS_THROUGH_CALLS
 
 
-4440  
+4443  
 _nvp_fûe›s
 ->
 	`TRUNC64
@@ -23915,11 +23925,11 @@ _nvp_fûe›s
 CALL_TRUNC
 );
 
-4443 
+4446 
 	`DEBUG
 ("_nvp_TRUNC64\n");
 
-4445 
+4448 
 NVFûe
 * 
 nvf
@@ -23929,13 +23939,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4447 i‡(
+4450 i‡(
 nvf
 ->
 posix
 ) {
 
-4448 
+4451 
 	`DEBUG
 ("CÆ»posix TRUNC64 f‹ fd %d\n", 
 nvf
@@ -23943,7 +23953,7 @@ nvf
 fd
 );
 
-4449  
+4452  
 _nvp_fûe›s
 ->
 	`TRUNC64
@@ -23951,13 +23961,13 @@ _nvp_fûe›s
 CALL_TRUNC64
 );
 
-4452 
+4455 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4453 
+4456 
 	`NVP_LOCK_FD_RD
 (
 nvf
@@ -23965,43 +23975,43 @@ nvf
 ˝uid
 );
 
-4454 
+4457 
 	`NVP_CHECK_NVF_VALID
 (
 nvf
 );
 
-4455 
+4458 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-4457 if(!
+4460 if(!
 nvf
 ->
 ˇnWrôe
 ) {
 
-4458 
+4461 
 	`DEBUG
 ("FDÇŸ o≥¿f‹ wrôög: %i\n", 
 fûe
 );
 
-4459 
+4462 
 î∫o
  = 
 EINVAL
 ;
 
-4460 
+4463 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4461 
+4464 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -24009,7 +24019,7 @@ nvf
 ˝uid
 );
 
-4465 if(
+4468 if(
 Àngth
  =
 nvf
@@ -24017,11 +24027,11 @@ nvf
 node
 ->length)
 
-4467 
+4470 
 	`DEBUG
 ("_nvp_TRUNC64:ÑequestedÜength wasÅhe sameás old "
 
-4468 "Àngth (%li).\n", 
+4471 "Àngth (%li).\n", 
 nvf
 ->
 node
@@ -24029,13 +24039,13 @@ node
 Àngth
 );
 
-4469 
+4472 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4470 
+4473 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -24043,13 +24053,13 @@ nvf
 ˝uid
 );
 
-4474 
+4477 
 	`DO_MSYNC
 (
 nvf
 );
 
-4476 
+4479 
 ªsu…
  = 
 _nvp_fûe›s
@@ -24059,15 +24069,15 @@ _nvp_fûe›s
 CALL_TRUNC64
 );
 
-4478 if(
+4481 if(
 ªsu…
  != 0)
 
-4480 
+4483 
 	`ERROR
 ("%s->TRUNC64 failed (returned %li,Ñequested %li): %s\n",
 
-4481 
+4484 
 _nvp_fûe›s
 ->
 «me
@@ -24081,11 +24091,11 @@ _nvp_fûe›s
 î∫o
 ));
 
-4482 
+4485 
 	`as£π
 (0);
 
-4485 if(
+4488 if(
 Àngth
  > 
 nvf
@@ -24093,11 +24103,11 @@ nvf
 node
 ->length)
 
-4487 
+4490 
 	`DEBUG_FILE
 ("TRUNC64Éxtended file from %liÅo %li\n",
 
-4488 
+4491 
 nvf
 ->
 node
@@ -24105,17 +24115,9 @@ node
 Àngth
 ,Üength);
 
-4492 
+4495 
 	`DEBUG_FILE
 ("TRUNC64 shortened file from %liÅo %li\n",
-
-4493 
-nvf
-->
-node
-->
-Àngth
-,Üength);
 
 4496 
 nvf
@@ -24123,9 +24125,17 @@ nvf
 node
 ->
 Àngth
+,Üength);
+
+4499 
+nvf
+->
+node
+->
+Àngth
  =Üength;
 
-4497 
+4500 
 nvf
 ->
 node
@@ -24135,7 +24145,7 @@ node
 Àngth
 ;
 
-4498 
+4501 
 nvf
 ->
 node
@@ -24145,7 +24155,7 @@ node
 Àngth
 ;
 
-4499 
+4502 
 nvf
 ->
 node
@@ -24153,7 +24163,7 @@ node
 roŸ_dúty_num
  = 0;
 
-4501 
+4504 
 i
 =
 nvf
@@ -24165,7 +24175,7 @@ node
 ™⁄ymous_roŸ_dúty_íd
 ; i++) {
 
-4502 
+4505 
 nvf
 ->
 node
@@ -24175,7 +24185,7 @@ node
 i
 ] = 0;
 
-4503 
+4506 
 nvf
 ->
 node
@@ -24187,11 +24197,11 @@ i
 UINT32_MAX
 ;
 
-4506 
+4509 
 i
 =0; i<1024; i++) {
 
-4507 
+4510 
 nvf
 ->
 node
@@ -24201,7 +24211,7 @@ roŸ
 i
 ] = 0;
 
-4510 i‡(*(
+4513 i‡(*(
 nvf
 ->
 off£t
@@ -24211,7 +24221,7 @@ node
 åue_Àngth
 )
 
-4511 *(
+4514 *(
 nvf
 ->
 off£t
@@ -24221,19 +24231,19 @@ node
 åue_Àngth
 ;
 
-4513 
+4516 
 	`DO_MSYNC
 (
 nvf
 );
 
-4515 
+4518 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4516 
+4519 
 	`NVP_UNLOCK_FD_RD
 (
 nvf
@@ -24241,15 +24251,15 @@ nvf
 ˝uid
 );
 
-4518  
+4521  
 ªsu…
 ;
 
-4519 
+4522 
 	}
 }
 
-4521 
+4524 
 RETT_READV
  
 	$_nvp_READV
@@ -24257,31 +24267,31 @@ RETT_READV
 INTF_READV
 )
 
-4523 
+4526 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4525 
+4528 
 	`DEBUG
 ("CALL: _nvp_READV\n");
 
-4529 
+4532 
 Áû
  = 0;
 
-4531 
+4534 
 i
 ;
 
-4532 
+4535 
 i
 =0; i<
 iov˙t
 ; i++)
 
-4534 
+4537 
 Áû
  |
 	`_nvp_READ
@@ -24297,25 +24307,25 @@ iov_ba£
 iov_Àn
 );
 
-4535 if(
+4538 if(
 Áû
 ) { ; }
 
-4538 if(
+4541 if(
 Áû
  != 0) {
 
-4539 
+4542 
 	`DEBUG
 ("_nvp_READV faûed o¿iov %i\n", 
 i
 );
 
-4544 
+4547 
 	}
 }
 
-4546 
+4549 
 RETT_WRITEV
  
 	$_nvp_WRITEV
@@ -24323,31 +24333,31 @@ RETT_WRITEV
 INTF_WRITEV
 )
 
-4548 
+4551 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4550 
+4553 
 	`DEBUG
 ("CALL: _nvp_WRITEV\n");
 
-4554 
+4557 
 Áû
  = 0;
 
-4556 
+4559 
 i
 ;
 
-4557 
+4560 
 i
 =0; i<
 iov˙t
 ; i++)
 
-4559 
+4562 
 Áû
  |
 	`_nvp_WRITE
@@ -24363,25 +24373,25 @@ iov_ba£
 iov_Àn
 );
 
-4560 if(
+4563 if(
 Áû
 ) { ; }
 
-4563 if(
+4566 if(
 Áû
  != 0) {
 
-4564 
+4567 
 	`DEBUG
 ("_nvp_WRITEV faûed o¿iov %i\n", 
 i
 );
 
-4569 
+4572 
 	}
 }
 
-4571 
+4574 
 RETT_FCNTL
  
 	$_nvp_FCNTL
@@ -24389,7 +24399,7 @@ RETT_FCNTL
 INTF_FCNTL
 )
 
-4573 
+4576 
 	`DEBUG
 ("%s: f˙é cÆÀd. Fd = %d\n", 
 __func__
@@ -24397,7 +24407,7 @@ __func__
 fûe
 );
 
-4574 
+4577 
 NVFûe
  *
 nvf
@@ -24405,17 +24415,17 @@ nvf
 NULL
 ;
 
-4575 
+4578 
 ªsu…
  = 0;
 
-4577 
+4580 
 va_li°
  
 ¨g
 ;
 
-4578 
+4581 
 	`va_°¨t
 (
 ¨g
@@ -24423,7 +24433,7 @@ va_li°
 cmd
 );
 
-4579 
+4582 
 ¨g3
  = 
 	`va_¨g
@@ -24431,17 +24441,17 @@ cmd
 ¨g
 , );
 
-4580 
+4583 
 	`va_íd
 (
 ¨g
 );
 
-4582 #i‡
+4585 #i‡
 PASS_THROUGH_CALLS
 
 
-4583 
+4586 
 ªsu…
  = 
 _nvp_fûe›s
@@ -24455,11 +24465,11 @@ cmd
 ¨g3
 );
 
-4584  
+4587  
 ªsu…
 ;
 
-4586 
+4589 
 nvf
  = &
 _nvp_fd_lookup
@@ -24467,13 +24477,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4587 i‡(
+4590 i‡(
 nvf
 ->
 fd
  == 0)
 
-4588 
+4591 
 nvf
 ->
 fd
@@ -24481,7 +24491,7 @@ fd
 fûe
 ;
 
-4590 
+4593 
 ªsu…
  = 
 _nvp_fûe›s
@@ -24495,11 +24505,11 @@ cmd
 ¨g3
 );
 
-4591 i‡(
+4594 i‡(
 ªsu…
  == -1) {
 
-4592 
+4595 
 	`DEBUG_FILE
 ("%s:Çeg©ivêªsu…. Eº = %s\n", 
 __func__
@@ -24509,11 +24519,11 @@ __func__
 î∫o
 ));
 
-4594 
+4597 
 	}
 }
 
-4597 
+4600 
 RETT_DUP
  
 	$_nvp_DUP
@@ -24521,7 +24531,7 @@ RETT_DUP
 INTF_DUP
 )
 
-4601 
+4604 
 	`DEBUG
 ("_nvp_DUP(" 
 PFFS_DUP
@@ -24529,11 +24539,11 @@ PFFS_DUP
 CALL_DUP
 );
 
-4603 #i‡
+4606 #i‡
 PASS_THROUGH_CALLS
 
 
-4604  
+4607  
 _nvp_fûe›s
 ->
 	`DUP
@@ -24541,11 +24551,11 @@ _nvp_fûe›s
 CALL_DUP
 );
 
-4608 if(
+4611 if(
 fûe
  < 0) {
 
-4609  
+4612  
 _nvp_fûe›s
 ->
 	`DUP
@@ -24553,7 +24563,7 @@ _nvp_fûe›s
 CALL_DUP
 );
 
-4613 
+4616 
 NVFûe
 * 
 nvf
@@ -24563,25 +24573,25 @@ _nvp_fd_lookup
 fûe
 ];
 
-4615 
+4618 
 	`NVP_LOCK_FD_WR
 (
 nvf
 );
 
-4616 
+4619 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf
 );
 
-4617 
+4620 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-4619 
+4622 
 ªsu…
  = 
 _nvp_fûe›s
@@ -24591,15 +24601,15 @@ _nvp_fûe›s
 CALL_DUP
 );
 
-4621 if(
+4624 if(
 ªsu…
  < 0)
 
-4623 
+4626 
 	`DEBUG
 ("CallÅo _nvp_DUP->%s->DUP failed: %s\n",
 
-4624 
+4627 
 _nvp_fûe›s
 ->
 «me
@@ -24609,23 +24619,23 @@ _nvp_fûe›s
 î∫o
 ));
 
-4625 
+4628 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4626 
+4629 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4627  
+4630  
 ªsu…
 ;
 
-4630 
+4633 
 NVFûe
 * 
 nvf2
@@ -24635,25 +24645,25 @@ _nvp_fd_lookup
 ªsu…
 ];
 
-4632 
+4635 
 nvf
 ->
 vÆid
  = 0;
 
-4633 
+4636 
 nvf2
 ->
 vÆid
  = 0;
 
-4635 i‡(
+4638 i‡(
 nvf
 ->
 posix
 ) {
 
-4636 
+4639 
 	`DEBUG
 ("CÆ»posix DUP f‹ fd %d\n", 
 nvf
@@ -24661,7 +24671,7 @@ nvf
 fd
 );
 
-4637 
+4640 
 nvf2
 ->
 posix
@@ -24669,41 +24679,41 @@ posix
 nvf
 ->posix;
 
-4638 
+4641 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4639 
+4642 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4640  
+4643  
 ªsu…
 ;
 
-4643 
+4646 
 	`NVP_LOCK_FD_WR
 (
 nvf2
 );
 
-4645 if(
+4648 if(
 nvf2
 ->
 vÆid
 ) {
 
-4646 
+4649 
 	`ERROR
 ("fd %òwa†Æªady i¿u£!\n", 
 ªsu…
 );
 
-4647 
+4650 
 	`as£π
 (!
 nvf2
@@ -24711,7 +24721,7 @@ nvf2
 vÆid
 );
 
-4652 
+4655 
 nvf2
 ->
 fd
@@ -24719,7 +24729,7 @@ fd
 ªsu…
 ;
 
-4653 
+4656 
 nvf2
 ->
 off£t
@@ -24727,7 +24737,7 @@ off£t
 nvf
 ->offset;
 
-4654 
+4657 
 nvf2
 ->
 ˇnRód
@@ -24735,7 +24745,7 @@ nvf2
 nvf
 ->canRead;
 
-4655 
+4658 
 nvf2
 ->
 ˇnWrôe
@@ -24743,7 +24753,7 @@ nvf2
 nvf
 ->canWrite;
 
-4656 
+4659 
 nvf2
 ->
 ≠≥nd
@@ -24751,7 +24761,7 @@ nvf2
 nvf
 ->append;
 
-4657 
+4660 
 nvf2
 ->
 Æig√d
@@ -24759,7 +24769,7 @@ nvf2
 nvf
 ->aligned;
 
-4658 
+4661 
 nvf2
 ->
 £rü o
@@ -24767,7 +24777,7 @@ nvf2
 nvf
 ->serialno;
 
-4659 
+4662 
 nvf2
 ->
 node
@@ -24775,7 +24785,7 @@ node
 nvf
 ->node;
 
-4660 
+4663 
 nvf2
 ->
 posix
@@ -24783,7 +24793,7 @@ posix
 nvf
 ->posix;
 
-4662 
+4665 
 	`SANITYCHECK
 (
 nvf2
@@ -24793,7 +24803,7 @@ node
 NULL
 );
 
-4664 
+4667 
 nvf
 ->
 node
@@ -24801,59 +24811,59 @@ node
 ª„ªn˚
 ++;
 
-4665 
-nvf
-->
-vÆid
- = 1;
-
-4666 
-nvf2
-->
-vÆid
- = 1;
-
 4668 
-	`DO_MSYNC
-(
 nvf
-);
+->
+vÆid
+ = 1;
 
 4669 
-	`DO_MSYNC
-(
 nvf2
-);
+->
+vÆid
+ = 1;
 
 4671 
-	`NVP_UNLOCK_NODE_WR
+	`DO_MSYNC
 (
 nvf
 );
 
 4672 
+	`DO_MSYNC
+(
+nvf2
+);
+
+4674 
+	`NVP_UNLOCK_NODE_WR
+(
+nvf
+);
+
+4675 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4673 
+4676 
 	`NVP_UNLOCK_FD_WR
 (
 nvf2
 );
 
-4675  
+4678  
 nvf2
 ->
 fd
 ;
 
-4676 
+4679 
 	}
 }
 
-4678 
+4681 
 RETT_DUP2
  
 	$_nvp_DUP2
@@ -24861,13 +24871,13 @@ RETT_DUP2
 INTF_DUP2
 )
 
-4680 
+4683 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4681 
+4684 
 	`DEBUG
 ("_nvp_DUP2(" 
 PFFS_DUP2
@@ -24875,11 +24885,11 @@ PFFS_DUP2
 CALL_DUP2
 );
 
-4683 #i‡
+4686 #i‡
 PASS_THROUGH_CALLS
 
 
-4684  
+4687  
 _nvp_fûe›s
 ->
 	`DUP2
@@ -24887,11 +24897,11 @@ _nvp_fûe›s
 CALL_DUP2
 );
 
-4687 if(
+4690 if(
 fûe
 <0) {
 
-4688  
+4691  
 _nvp_fûe›s
 ->
 	`DUP
@@ -24899,37 +24909,37 @@ _nvp_fûe›s
 CALL_DUP
 );
 
-4691 if(
+4694 if(
 fd2
 <0) {
 
-4692 
+4695 
 	`DEBUG
 ("Invalid fd2\n");
 
-4693 
+4696 
 î∫o
  = 
 EBADF
 ;
 
-4697 if(
+4700 if(
 fûe
  =
 fd2
 )
 
-4699 
+4702 
 	`DEBUG
 ("I≈uà™d ouçuàfûe†wîêthêßmê(%i)\n", 
 fûe
 );
 
-4700  
+4703  
 fûe
 ;
 
-4703 
+4706 
 NVFûe
 * 
 nvf
@@ -24939,7 +24949,7 @@ _nvp_fd_lookup
 fûe
 ];
 
-4704 
+4707 
 NVFûe
 * 
 nvf2
@@ -24949,13 +24959,13 @@ _nvp_fd_lookup
 fd2
 ];
 
-4706 i‡(
+4709 i‡(
 nvf
 ->
 posix
 ) {
 
-4707 
+4710 
 	`DEBUG
 ("CÆ»posix DUP2 f‹ fd %d\n", 
 nvf
@@ -24963,7 +24973,7 @@ nvf
 fd
 );
 
-4708 
+4711 
 nvf2
 ->
 posix
@@ -24971,7 +24981,7 @@ posix
 nvf
 ->posix;
 
-4709 
+4712 
 ªsu…
  = 
 _nvp_fûe›s
@@ -24981,7 +24991,7 @@ _nvp_fûe›s
 CALL_DUP2
 );
 
-4710 
+4713 
 nvf2
 ->
 fd
@@ -24989,41 +24999,41 @@ fd
 ªsu…
 ;
 
-4711  
+4714  
 ªsu…
 ;
 
-4716 if(
+4719 if(
 fûe
  > 
 fd2
 )
 
-4718 
-	`NVP_LOCK_FD_WR
-(
-nvf
-);
-
-4719 
-	`NVP_LOCK_FD_WR
-(
-nvf2
-);
-
 4721 
 	`NVP_LOCK_FD_WR
 (
-nvf2
+nvf
 );
 
 4722 
 	`NVP_LOCK_FD_WR
 (
+nvf2
+);
+
+4724 
+	`NVP_LOCK_FD_WR
+(
+nvf2
+);
+
+4725 
+	`NVP_LOCK_FD_WR
+(
 nvf
 );
 
-4725 if–(!
+4728 if–(!
 nvf
 ->
 vÆid
@@ -25031,13 +25041,13 @@ vÆid
 nvf2
 ->valid) ) {
 
-4726 
+4729 
 î∫o
  = 
 EBADF
 ;
 
-4727 
+4730 
 	`DEBUG
 ("InvÆid FD1 %ò‹ FD2 %i\n", 
 fûe
@@ -25045,7 +25055,7 @@ fûe
 fd2
 );
 
-4732 if(
+4735 if(
 nvf
 ->
 node
@@ -25053,13 +25063,13 @@ node
 nvf2
 ->node || !nvf2->node) {
 
-4733 
+4736 
 	`NVP_LOCK_NODE_WR
 (
 nvf
 );
 
-4735 if(
+4738 if(
 nvf
 ->
 node
@@ -25067,31 +25077,31 @@ node
 nvf2
 ->node) {
 
-4736 
-	`NVP_LOCK_NODE_WR
-(
-nvf
-);
-
-4737 
-	`NVP_LOCK_NODE_WR
-(
-nvf2
-);
-
 4739 
 	`NVP_LOCK_NODE_WR
 (
-nvf2
+nvf
 );
 
 4740 
 	`NVP_LOCK_NODE_WR
 (
+nvf2
+);
+
+4742 
+	`NVP_LOCK_NODE_WR
+(
+nvf2
+);
+
+4743 
+	`NVP_LOCK_NODE_WR
+(
 nvf
 );
 
-4744 
+4747 
 ªsu…
  = 
 _nvp_fûe›s
@@ -25101,15 +25111,15 @@ _nvp_fûe›s
 CALL_DUP2
 );
 
-4746 if(
+4749 if(
 ªsu…
  < 0)
 
-4748 
+4751 
 	`DEBUG
 ("_nvp_DUP2 failedÅo %s->DUP2(%i, %i) "
 
-4749 "‘ëu∫ed %i): %s\n", 
+4752 "‘ëu∫ed %i): %s\n", 
 _nvp_fûe›s
 ->
 «me
@@ -25117,7 +25127,7 @@ _nvp_fûe›s
 fûe
 ,
 
-4750 
+4753 
 fd2
 , 
 ªsu…
@@ -25127,13 +25137,13 @@ fd2
 î∫o
 ));
 
-4751 
+4754 
 	`NVP_UNLOCK_NODE_WR
 (
 nvf
 );
 
-4752 if(
+4755 if(
 nvf
 ->
 node
@@ -25143,29 +25153,29 @@ nvf2
 	`NVP_UNLOCK_NODE_WR
 (nvf2); }
 
-4753 
+4756 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4754 
+4757 
 	`NVP_UNLOCK_FD_WR
 (
 nvf2
 );
 
-4755  
+4758  
 ªsu…
 ;
 
-4762 
+4765 
 nvf2
 ->
 vÆid
  = 0;
 
-4764 if(
+4767 if(
 nvf2
 ->
 node
@@ -25175,23 +25185,23 @@ nvf
 	`NVP_UNLOCK_NODE_WR
 (nvf2); }
 
-4766 
+4769 
 	`_nvp_ã°_övÆid©e_node
 (
 nvf2
 );
 
-4768 if(
+4771 if(
 ªsu…
  !
 fd2
 )
 
-4770 
+4773 
 	`WARNING
 ("result of _nvp_DUP2(%i, %i) didn'tÑeturnÅhe fd2 "
 
-4774 
+4777 
 fûe
 , 
 fd2
@@ -25199,17 +25209,17 @@ fd2
 ªsu…
 , fd2);
 
-4775 
+4778 
 	`as£π
 (0);
 
-4777 
+4780 
 	`NVP_UNLOCK_FD_WR
 (
 nvf2
 );
 
-4779 
+4782 
 nvf2
  = &
 _nvp_fd_lookup
@@ -25217,29 +25227,29 @@ _nvp_fd_lookup
 ªsu…
 ];
 
-4781 
+4784 
 	`NVP_LOCK_FD_WR
 (
 nvf2
 );
 
-4783 if(
+4786 if(
 nvf2
 ->
 vÆid
 )
 
-4785 
+4788 
 	`DEBUG
 ("%s->DUP2ÑeturnedáÑesult which corresponds "
 
-4787 "ªtu∫ed %i\n", 
+4790 "ªtu∫ed %i\n", 
 _nvp_fûe›s
 ->
 «me
 ,
 
-4788 
+4791 
 fûe
 , 
 fd2
@@ -25247,11 +25257,11 @@ fd2
 ªsu…
 );
 
-4789 
+4792 
 	`as£π
 (0);
 
-4793 
+4796 
 nvf2
 ->
 fd
@@ -25259,7 +25269,7 @@ fd
 ªsu…
 ;
 
-4794 
+4797 
 nvf2
 ->
 off£t
@@ -25267,7 +25277,7 @@ off£t
 nvf
 ->offset;
 
-4795 
+4798 
 nvf2
 ->
 ˇnRód
@@ -25275,7 +25285,7 @@ nvf2
 nvf
 ->canRead;
 
-4796 
+4799 
 nvf2
 ->
 ˇnWrôe
@@ -25283,7 +25293,7 @@ nvf2
 nvf
 ->canWrite;
 
-4797 
+4800 
 nvf2
 ->
 ≠≥nd
@@ -25291,7 +25301,7 @@ nvf2
 nvf
 ->append;
 
-4798 
+4801 
 nvf2
 ->
 Æig√d
@@ -25299,7 +25309,7 @@ nvf2
 nvf
 ->aligned;
 
-4799 
+4802 
 nvf2
 ->
 £rü o
@@ -25307,7 +25317,7 @@ nvf2
 nvf
 ->serialno;
 
-4800 
+4803 
 nvf2
 ->
 node
@@ -25315,7 +25325,7 @@ node
 nvf
 ->node;
 
-4801 
+4804 
 nvf2
 ->
 node
@@ -25323,7 +25333,7 @@ node
 ª„ªn˚
 ++;
 
-4802 
+4805 
 nvf2
 ->
 vÆid
@@ -25331,7 +25341,7 @@ vÆid
 nvf
 ->valid;
 
-4803 
+4806 
 nvf2
 ->
 posix
@@ -25339,7 +25349,7 @@ posix
 nvf
 ->posix;
 
-4805 
+4808 
 	`SANITYCHECK
 (
 nvf2
@@ -25349,7 +25359,7 @@ node
 NULL
 );
 
-4806 
+4809 
 	`SANITYCHECK
 (
 nvf2
@@ -25357,57 +25367,57 @@ nvf2
 vÆid
 );
 
-4808 
+4811 
 	`DEBUG
 ("fd2 shouldÇow match fd1. "
 
-4811 
+4814 
 	`NVP_CHECK_NVF_VALID_WR
 (
 nvf2
 );
 
-4813 
-	`DO_MSYNC
-(
-nvf
-);
-
-4814 
-	`DO_MSYNC
-(
-nvf2
-);
-
 4816 
-	`NVP_UNLOCK_NODE_WR
+	`DO_MSYNC
 (
 nvf
 );
 
 4817 
+	`DO_MSYNC
+(
+nvf2
+);
+
+4819 
+	`NVP_UNLOCK_NODE_WR
+(
+nvf
+);
+
+4820 
 	`NVP_UNLOCK_FD_WR
 (
 nvf2
 );
 
-4818 
+4821 
 	`NVP_UNLOCK_FD_WR
 (
 nvf
 );
 
-4820  
+4823  
 nvf2
 ->
 fd
 ;
 
-4821 
+4824 
 	}
 }
 
-4823 
+4826 
 RETT_IOCTL
  
 	$_nvp_IOCTL
@@ -25415,23 +25425,23 @@ RETT_IOCTL
 INTF_IOCTL
 )
 
-4825 
+4828 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4827 
+4830 
 	`DEBUG
 ("CALL: _nvp_IOCTL\n");
 
-4829 
+4832 
 va_li°
  
 ¨g
 ;
 
-4830 
+4833 
 	`va_°¨t
 (
 ¨g
@@ -25439,7 +25449,7 @@ va_li°
 ªque°
 );
 
-4831 * 
+4834 * 
 thúd
  = 
 	`va_¨g
@@ -25447,7 +25457,7 @@ thúd
 ¨g
 , *);
 
-4833 
+4836 
 RETT_IOCTL
  
 ªsu…
@@ -25463,15 +25473,15 @@ fûe
 thúd
 );
 
-4835  
+4838  
 ªsu…
 ;
 
-4836 
+4839 
 	}
 }
 
-4838 
+4841 
 RETT_UNLINK
  
 	$_nvp_UNLINK
@@ -25479,23 +25489,23 @@ RETT_UNLINK
 INTF_UNLINK
 )
 
-4840 
+4843 
 °©
  
 fûe_°
 ;
 
-4841 
+4844 
 ödex
 ;
 
-4842 
+4845 
 InodeToM≠pög
 * 
 m≠pögToBeRemoved
 ;
 
-4843 
+4846 
 ö°rumíèti⁄_ty≥
  
 u∆ök_time
@@ -25503,13 +25513,13 @@ u∆ök_time
 ˛f_lock_time
 ;
 
-4844 
+4847 
 RETT_UNLINK
  
 ªsu…
  = 0;
 
-4846 
+4849 
 	`START_TIMING
 (
 u∆ök_t
@@ -25517,15 +25527,15 @@ u∆ök_t
 u∆ök_time
 );
 
-4848 #i‡
+4851 #i‡
 PASS_THROUGH_CALLS
 
 
-4849 
+4852 
 num_u∆ök
 ++;
 
-4850 
+4853 
 ªsu…
  = 
 _nvp_fûe›s
@@ -25535,7 +25545,7 @@ _nvp_fûe›s
 CALL_UNLINK
 );
 
-4851 
+4854 
 	`END_TIMING
 (
 u∆ök_t
@@ -25543,15 +25553,15 @@ u∆ök_t
 u∆ök_time
 );
 
-4852  
+4855  
 ªsu…
 ;
 
-4855 #i‡
+4858 #i‡
 BG_CLOSING
 
 
-4856 
+4859 
 hash_ödex
  = -1, 
 ˛o£d_fûedesc
@@ -25559,19 +25569,19 @@ hash_ödex
 °Æe_fd
  = 0;
 
-4857 
+4860 
 öo_t
  
 ˛o£d_£rü o
  = 0;
 
-4858 #i‡
+4861 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-4859 
+4862 
 Clo£dFûes
  *
 ˛f
@@ -25579,7 +25589,7 @@ Clo£dFûes
 NULL
 ;
 
-4861 
+4864 
 InodeClo£dFûe
  *
 tbl
@@ -25587,25 +25597,25 @@ tbl
 NULL
 ;
 
-4865 
+4868 
 num_°©
 ++;
 
-4866 
+4869 
 num_u∆ök
 ++;
 
-4869 
+4872 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4870 
+4873 
 	`DEBUG
 ("CALL: _nvp_UNLINK\n");
 
-4872 i‡(
+4875 i‡(
 	`°©
 (
 ∑th
@@ -25613,7 +25623,7 @@ _nvp_
 fûe_°
 ) == 0) {
 
-4873 
+4876 
 ödex
  = 
 fûe_°
@@ -25621,15 +25631,15 @@ fûe_°
 °_öo
  % 1024;
 
-4874 #i‡
+4877 #i‡
 BG_CLOSING
 
 
-4875 
+4878 
 	`GLOBAL_LOCK_CLOSE_WR
 ();
 
-4876 
+4879 
 hash_ödex
  = 
 fûe_°
@@ -25639,13 +25649,13 @@ fûe_°
 TOTAL_CLOSED_INODES
 ;
 
-4877 #i‡
+4880 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-4878 
+4881 
 ˛f
  = &
 _nvp_˛o£d_fûes
@@ -25653,11 +25663,11 @@ _nvp_˛o£d_fûes
 hash_ödex
 ];
 
-4880 #i‡
+4883 #i‡
 PRINT_CONTENTION_MSGS
 
 
-4881 
+4884 
 	`¥ötf
 ("%s:ácquúögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -25667,19 +25677,19 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-4882 
+4885 
 	`fÊush
 (
 NULL
 );
 
-4885 
+4888 
 	`LRU_NODE_LOCK_WR
 (
 ˛f
 );
 
-4888 
+4891 
 °Æe_fd
  = 
 	`ªmove_‰om_£q_li°_hash
@@ -25691,7 +25701,7 @@ fûe_°
 °_öo
 );
 
-4890 
+4893 
 tbl
  = &
 öode_to_˛o£d_fûe
@@ -25699,13 +25709,13 @@ tbl
 hash_ödex
 ];
 
-4891 
+4894 
 	`NVP_LOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-4892 
+4895 
 °Æe_fd
  = 
 	`ªmove_‰om_Ãu_li°_hash
@@ -25715,17 +25725,17 @@ fûe_°
 °_öo
 , 0);
 
-4894 if(
+4897 if(
 °Æe_fd
  >= 0) {
 
-4895 
+4898 
 ˛o£d_fûedesc
  = 
 °Æe_fd
 ;
 
-4896 
+4899 
 ˛o£d_£rü o
  = 
 fûe_°
@@ -25733,7 +25743,7 @@ fûe_°
 °_öo
 ;
 
-4898 if(!
+4901 if(!
 	`_nvp_REAL_CLOSE
 (
 ˛o£d_fûedesc
@@ -25741,7 +25751,7 @@ fûe_°
 ˛o£d_£rü o
 , 1))
 
-4899 
+4902 
 	`__©omic_„tch_sub
 (&
 num_fûes_˛o£d
@@ -25749,17 +25759,17 @@ num_fûes_˛o£d
 __ATOMIC_SEQ_CST
 );
 
-4902 #i‡
+4905 #i‡
 SEQ_LIST
  || 
 RAND_LIST
 
 
-4903 #i‡
+4906 #i‡
 PRINT_CONTENTION_MSGS
 
 
-4904 
+4907 
 	`¥ötf
 ("%s:ÑñósögÜock f‹ cl‡íåy = %d,Åhªad id = %lu\n", 
 __func__
@@ -25769,29 +25779,29 @@ hash_ödex
 	`±hªad_£lf
 ());
 
-4905 
+4908 
 	`fÊush
 (
 NULL
 );
 
-4907 
+4910 
 	`LRU_NODE_UNLOCK_WR
 (
 ˛f
 );
 
-4909 
+4912 
 	`NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
 );
 
-4911 
+4914 
 	`GLOBAL_UNLOCK_CLOSE_WR
 ();
 
-4914 
+4917 
 m≠pögToBeRemoved
  = &
 _nvp_öo_m≠pög
@@ -25799,7 +25809,7 @@ _nvp_öo_m≠pög
 ödex
 ];
 
-4916 if(
+4919 if(
 fûe_°
 .
 °_öo
@@ -25811,7 +25821,7 @@ m≠pögToBeRemoved
 roŸ_dúty_num
 ) {
 
-4917 
+4920 
 	`nvp_‰ì_båì
 (
 m≠pögToBeRemoved
@@ -25829,13 +25839,13 @@ roŸ_dúty_num
 tŸÆ_dúty_mm≠s
 );
 
-4919 
+4922 
 m≠pögToBeRemoved
 ->
 £rü o
  = 0;
 
-4923 
+4926 
 ªsu…
  = 
 _nvp_fûe›s
@@ -25845,7 +25855,7 @@ _nvp_fûe›s
 CALL_UNLINK
 );
 
-4925 
+4928 
 	`END_TIMING
 (
 u∆ök_t
@@ -25853,15 +25863,15 @@ u∆ök_t
 u∆ök_time
 );
 
-4927  
+4930  
 ªsu…
 ;
 
-4928 
+4931 
 	}
 }
 
-4930 
+4933 
 RETT_UNLINKAT
  
 	$_nvp_UNLINKAT
@@ -25869,17 +25879,17 @@ RETT_UNLINKAT
 INTF_UNLINKAT
 )
 
-4932 
+4935 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4934 
+4937 
 	`DEBUG
 ("CALL: _nvp_UNLINKAT\n");
 
-4936 
+4939 
 RETT_UNLINKAT
  
 ªsu…
@@ -25891,15 +25901,15 @@ _nvp_fûe›s
 CALL_UNLINKAT
 );
 
-4938  
+4941  
 ªsu…
 ;
 
-4939 
+4942 
 	}
 }
 
-4941 
+4944 
 RETT_FSYNC
  
 	$_nvp_FSYNC
@@ -25907,29 +25917,29 @@ RETT_FSYNC
 INTF_FSYNC
 )
 
-4943 
+4946 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4944 
+4947 
 RETT_FSYNC
  
 ªsu…
  = 0;
 
-4945 
+4948 
 ˝uid
  = -1;
 
-4946 
+4949 
 ö°rumíèti⁄_ty≥
  
 fsync_time
 ;
 
-4948 
+4951 
 	`START_TIMING
 (
 fsync_t
@@ -25937,15 +25947,15 @@ fsync_t
 fsync_time
 );
 
-4950 #i‡
+4953 #i‡
 PASS_THROUGH_CALLS
 
 
-4951 
+4954 
 num_fsync
 ++;
 
-4952 
+4955 
 ªsu…
  = 
 _nvp_fûe›s
@@ -25955,7 +25965,7 @@ _nvp_fûe›s
 fûe
 );
 
-4953 
+4956 
 	`END_TIMING
 (
 fsync_t
@@ -25963,13 +25973,13 @@ fsync_t
 fsync_time
 );
 
-4958 
+4961 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4959 
+4962 
 NVFûe
 * 
 nvf
@@ -25979,7 +25989,7 @@ _nvp_fd_lookup
 fûe
 ];
 
-4962 
+4965 
 	`FSYNC_FSYNC
 (
 nvf
@@ -25987,11 +25997,11 @@ nvf
 ˝uid
 , 0, 0);
 
-4963 
+4966 
 num_fsync
 ++;
 
-4965 
+4968 
 	`END_TIMING
 (
 fsync_t
@@ -25999,15 +26009,15 @@ fsync_t
 fsync_time
 );
 
-4967  
+4970  
 ªsu…
 ;
 
-4968 
+4971 
 	}
 }
 
-4970 
+4973 
 RETT_FDSYNC
  
 	$_nvp_FDSYNC
@@ -26015,29 +26025,29 @@ RETT_FDSYNC
 INTF_FDSYNC
 )
 
-4972 
+4975 
 	`CHECK_RESOLVE_FILEOPS
 (
 _nvp_
 );
 
-4973 
+4976 
 RETT_FDSYNC
  
 ªsu…
  = 0;
 
-4974 
+4977 
 ˝uid
  = -1;
 
-4975 
+4978 
 ö°rumíèti⁄_ty≥
  
 fsync_time
 ;
 
-4977 
+4980 
 	`START_TIMING
 (
 fsync_t
@@ -26045,15 +26055,15 @@ fsync_t
 fsync_time
 );
 
-4979 #i‡
+4982 #i‡
 PASS_THROUGH_CALLS
 
 
-4980 
+4983 
 num_fsync
 ++;
 
-4981 
+4984 
 ªsu…
  = 
 _nvp_fûe›s
@@ -26063,7 +26073,7 @@ _nvp_fûe›s
 fûe
 );
 
-4982 
+4985 
 	`END_TIMING
 (
 fsync_t
@@ -26071,7 +26081,7 @@ fsync_t
 fsync_time
 );
 
-4986 
+4989 
 NVFûe
 * 
 nvf
@@ -26081,13 +26091,13 @@ _nvp_fd_lookup
 fûe
 ];
 
-4988 
+4991 
 ˝uid
  = 
 	`GET_CPUID
 ();
 
-4989 
+4992 
 	`FSYNC_FSYNC
 (
 nvf
@@ -26095,11 +26105,11 @@ nvf
 ˝uid
 , 0, 1);
 
-4990 
+4993 
 num_fsync
 ++;
 
-4992 
+4995 
 	`END_TIMING
 (
 fsync_t
@@ -26107,11 +26117,11 @@ fsync_t
 fsync_time
 );
 
-4994  
+4997  
 ªsu…
 ;
 
-4995 
+4998 
 	}
 }
 
@@ -26446,12 +26456,6 @@ lfds711_queue_umm_ñemít
 [16];
 
 101 
-	#BG_CLOSING
- 0
-
-	)
-
-102 
 	#ASYNC_CLOSING
  
 async_˛o£_íabÀ
@@ -26459,88 +26463,80 @@ async_˛o£_íabÀ
 
 	)
 
-103 
+102 
 	#SEQ_LIST
  0
 
 	)
 
-104 
+103 
 	#RAND_LIST
  1
 
 	)
 
-105 
+104 
 	#DIRTY_TRACKING
  1
 
 	)
 
-106 
-	#PASS_THROUGH_CALLS
- 0
-
-	)
-
-107 
-	#NON_TEMPORAL_WRITES
- 1
-
-	)
-
-108 
+105 
 	#NUM_NODE_LISTS
  1
 
 	)
 
-109 
+106 
 	#PRINT_DEBUG_MSGS
  0
 
 	)
 
-110 
+107 
 	#PRINT_CONTENTION_MSGS
  0
 
 	)
 
-111 
+108 
 	#TOTAL_CLOSED_INODES
  4096
 
 	)
 
-112 
-	#ANON_MEM_HANDLE
- 1
-
-	)
-
-114 vﬁ©ûê
+110 vﬁ©ûê
 	gasync_˛o£_íabÀ
 ;
 
-115 
+111 
 	gnum_async_˛o£
 ;
 
-117 
+113 
 	#GLOBAL_LOCKING
  0
 
 	)
 
-118 #i‡
+114 #i‡
 GLOBAL_LOCKING
 
 
-120 
+116 
 	#GLOBAL_LOCK_WR
 (Ë{
 	`±hªad_•ö_lock
+(&
+globÆ_lock
+);}
+
+	)
+
+117 
+	#GLOBAL_UNLOCK_WR
+(Ë{
+	`±hªad_•ö_u∆ock
 (&
 globÆ_lock
 );}
@@ -26548,16 +26544,6 @@ globÆ_lock
 	)
 
 121 
-	#GLOBAL_UNLOCK_WR
-(Ë{
-	`±hªad_•ö_u∆ock
-(&
-globÆ_lock
-);}
-
-	)
-
-125 
 	#GLOBAL_LOCK_WR
 (Ë{()(
 globÆ_lock
@@ -26565,7 +26551,7 @@ globÆ_lock
 
 	)
 
-126 
+122 
 	#GLOBAL_UNLOCK_WR
 (Ë{()(
 globÆ_lock
@@ -26573,20 +26559,30 @@ globÆ_lock
 
 	)
 
-129 
+125 
 	#GLOBAL_CLOSE_LOCKING
  0
 
 	)
 
-130 #i‡
+126 #i‡
 GLOBAL_CLOSE_LOCKING
 
 
-132 
+128 
 	#GLOBAL_LOCK_CLOSE_WR
 (Ë{
 	`±hªad_•ö_lock
+(&
+globÆ_lock_˛o£d_fûes
+);}
+
+	)
+
+129 
+	#GLOBAL_UNLOCK_CLOSE_WR
+(Ë{
+	`±hªad_•ö_u∆ock
 (&
 globÆ_lock_˛o£d_fûes
 );}
@@ -26594,16 +26590,6 @@ globÆ_lock_˛o£d_fûes
 	)
 
 133 
-	#GLOBAL_UNLOCK_CLOSE_WR
-(Ë{
-	`±hªad_•ö_u∆ock
-(&
-globÆ_lock_˛o£d_fûes
-);}
-
-	)
-
-137 
 	#GLOBAL_LOCK_CLOSE_WR
 (Ë{()(
 globÆ_lock_˛o£d_fûes
@@ -26611,7 +26597,7 @@ globÆ_lock_˛o£d_fûes
 
 	)
 
-138 
+134 
 	#GLOBAL_UNLOCK_CLOSE_WR
 (Ë{()(
 globÆ_lock_˛o£d_fûes
@@ -26619,20 +26605,30 @@ globÆ_lock_˛o£d_fûes
 
 	)
 
-141 
+137 
 	#LRU_HEAD_LOCKING
  0
 
 	)
 
-142 #i‡
+138 #i‡
 LRU_HEAD_LOCKING
 
 
-144 
+140 
 	#LRU_LOCK_HEAD_WR
 (Ë{
 	`±hªad_•ö_lock
+(&
+globÆ_lock_Ãu_hód
+);}
+
+	)
+
+141 
+	#LRU_UNLOCK_HEAD_WR
+(Ë{
+	`±hªad_•ö_u∆ock
 (&
 globÆ_lock_Ãu_hód
 );}
@@ -26640,16 +26636,6 @@ globÆ_lock_Ãu_hód
 	)
 
 145 
-	#LRU_UNLOCK_HEAD_WR
-(Ë{
-	`±hªad_•ö_u∆ock
-(&
-globÆ_lock_Ãu_hód
-);}
-
-	)
-
-149 
 	#LRU_LOCK_HEAD_WR
 (Ë{()(
 globÆ_lock_Ãu_hód
@@ -26657,7 +26643,7 @@ globÆ_lock_Ãu_hód
 
 	)
 
-150 
+146 
 	#LRU_UNLOCK_HEAD_WR
 (Ë{()(
 globÆ_lock_Ãu_hód
@@ -26665,17 +26651,17 @@ globÆ_lock_Ãu_hód
 
 	)
 
-153 
+149 
 	#LRU_NODE_LOCKING
  1
 
 	)
 
-154 #i‡
+150 #i‡
 LRU_NODE_LOCKING
 
 
-156 
+152 
 	#LRU_NODE_LOCK_WR
 (
 ˙ode
@@ -26687,7 +26673,7 @@ lock
 
 	)
 
-157 
+153 
 	#LRU_NODE_UNLOCK_WR
 (
 ˙ode
@@ -26699,7 +26685,7 @@ lock
 
 	)
 
-161 
+157 
 	#LRU_NODE_LOCK_WR
 (
 ˙ode
@@ -26709,7 +26695,7 @@ lock
 
 	)
 
-162 
+158 
 	#LRU_NODE_UNLOCK_WR
 (
 ˙ode
@@ -26719,17 +26705,17 @@ lock
 
 	)
 
-165 
+161 
 	#HASH_TABLE_LOCKING
  0
 
 	)
 
-166 #i‡
+162 #i‡
 HASH_TABLE_LOCKING
 
 
-168 
+164 
 	#NVP_LOCK_HASH_TABLE_RD
 (
 tbl
@@ -26743,7 +26729,7 @@ lock
 
 	)
 
-169 
+165 
 	#NVP_UNLOCK_HASH_TABLE_RD
 (
 tbl
@@ -26757,7 +26743,7 @@ lock
 
 	)
 
-170 
+166 
 	#NVP_LOCK_HASH_TABLE_WR
 (
 tbl
@@ -26769,7 +26755,7 @@ lock
 
 	)
 
-171 
+167 
 	#NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
@@ -26781,7 +26767,7 @@ lock
 
 	)
 
-175 
+171 
 	#NVP_LOCK_HASH_TABLE_RD
 (
 tbl
@@ -26791,7 +26777,7 @@ tbl
 
 	)
 
-176 
+172 
 	#NVP_UNLOCK_HASH_TABLE_RD
 (
 tbl
@@ -26801,7 +26787,7 @@ tbl
 
 	)
 
-177 
+173 
 	#NVP_LOCK_HASH_TABLE_WR
 (
 tbl
@@ -26811,7 +26797,7 @@ lock
 
 	)
 
-178 
+174 
 	#NVP_UNLOCK_HASH_TABLE_WR
 (
 tbl
@@ -26821,17 +26807,17 @@ lock
 
 	)
 
-181 
+177 
 	#STACK_LOCKING
  0
 
 	)
 
-182 #i‡
+178 #i‡
 STACK_LOCKING
 
 
-184 
+180 
 	#STACK_LOCK_WR
 (Ë{
 	`±hªad_•ö_lock
@@ -26841,7 +26827,7 @@ STACK_LOCKING
 
 	)
 
-185 
+181 
 	#STACK_UNLOCK_WR
 (Ë{
 	`±hªad_•ö_u∆ock
@@ -26851,7 +26837,7 @@ STACK_LOCKING
 
 	)
 
-189 
+185 
 	#STACK_LOCK_WR
 (Ë{()(
 °ack_lock
@@ -26859,7 +26845,7 @@ STACK_LOCKING
 
 	)
 
-190 
+186 
 	#STACK_UNLOCK_WR
 (Ë{()(
 °ack_lock
@@ -26867,17 +26853,17 @@ STACK_LOCKING
 
 	)
 
-193 
+189 
 	#CLOSE_LOCKING
  0
 
 	)
 
-194 #i‡
+190 #i‡
 CLOSE_LOCKING
 
 
-196 
+192 
 	#NVP_LOCK_CLOSE_RD
 (
 ˛f
@@ -26891,7 +26877,7 @@ lock
 
 	)
 
-197 
+193 
 	#NVP_UNLOCK_CLOSE_RD
 (
 ˛f
@@ -26905,7 +26891,7 @@ lock
 
 	)
 
-198 
+194 
 	#NVP_LOCK_CLOSE_WR
 (
 ˛f
@@ -26917,7 +26903,7 @@ lock
 
 	)
 
-199 
+195 
 	#NVP_UNLOCK_CLOSE_WR
 (
 ˛f
@@ -26929,7 +26915,7 @@ lock
 
 	)
 
-203 
+199 
 	#NVP_LOCK_CLOSE_RD
 (
 ˛f
@@ -26939,7 +26925,7 @@ lock
 
 	)
 
-204 
+200 
 	#NVP_UNLOCK_CLOSE_RD
 (
 ˛f
@@ -26949,7 +26935,7 @@ lock
 
 	)
 
-205 
+201 
 	#NVP_LOCK_CLOSE_WR
 (
 ˛f
@@ -26959,7 +26945,7 @@ lock
 
 	)
 
-206 
+202 
 	#NVP_UNLOCK_CLOSE_WR
 (
 ˛f
@@ -26969,17 +26955,17 @@ lock
 
 	)
 
-209 
+205 
 	#FD_LOCKING
  1
 
 	)
 
-210 #i‡
+206 #i‡
 FD_LOCKING
 
 
-212 
+208 
 	#NVP_LOCK_FD_RD
 (
 nvf
@@ -26993,7 +26979,7 @@ lock
 
 	)
 
-213 
+209 
 	#NVP_UNLOCK_FD_RD
 (
 nvf
@@ -27007,7 +26993,7 @@ lock
 
 	)
 
-214 
+210 
 	#NVP_LOCK_FD_WR
 (
 nvf
@@ -27019,7 +27005,7 @@ lock
 
 	)
 
-215 
+211 
 	#NVP_UNLOCK_FD_WR
 (
 nvf
@@ -27031,7 +27017,7 @@ lock
 
 	)
 
-219 
+215 
 	#NVP_LOCK_FD_RD
 (
 nvf
@@ -27041,7 +27027,7 @@ nvf
 
 	)
 
-220 
+216 
 	#NVP_UNLOCK_FD_RD
 (
 nvf
@@ -27051,7 +27037,7 @@ nvf
 
 	)
 
-221 
+217 
 	#NVP_LOCK_FD_WR
 (
 nvf
@@ -27061,7 +27047,7 @@ lock
 
 	)
 
-222 
+218 
 	#NVP_UNLOCK_FD_WR
 (
 nvf
@@ -27071,17 +27057,17 @@ lock
 
 	)
 
-225 
+221 
 	#NODE_LOCKING
  1
 
 	)
 
-226 #i‡
+222 #i‡
 NODE_LOCKING
 
 
-228 
+224 
 	#NVP_LOCK_NODE_RD
 (
 nvf
@@ -27097,7 +27083,7 @@ lock
 
 	)
 
-229 
+225 
 	#NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -27113,13 +27099,27 @@ lock
 
 	)
 
-230 
+226 
 	#NVP_LOCK_NODE_WR
 (
 nvf
 Ë
 	`NVP_LOCK_WR
 –nvf->
+node
+->
+lock
+)
+
+	)
+
+227 
+	#NVP_UNLOCK_NODE_WR
+(
+nvf
+Ë
+	`NVP_LOCK_UNLOCK_WR
+“vf->
 node
 ->
 lock
@@ -27128,20 +27128,6 @@ lock
 	)
 
 231 
-	#NVP_UNLOCK_NODE_WR
-(
-nvf
-Ë
-	`NVP_LOCK_UNLOCK_WR
-“vf->
-node
-->
-lock
-)
-
-	)
-
-235 
 	#NVP_LOCK_NODE_RD
 (
 nvf
@@ -27151,7 +27137,7 @@ nvf
 
 	)
 
-236 
+232 
 	#NVP_UNLOCK_NODE_RD
 (
 nvf
@@ -27161,7 +27147,7 @@ nvf
 
 	)
 
-237 
+233 
 	#NVP_LOCK_NODE_WR
 (
 nvf
@@ -27173,7 +27159,7 @@ lock
 
 	)
 
-238 
+234 
 	#NVP_UNLOCK_NODE_WR
 (
 nvf
@@ -27185,7 +27171,7 @@ lock
 
 	)
 
-243 
+239 
 	#IS_ERR
 (
 x
@@ -27193,211 +27179,211 @@ x
 
 	)
 
-245 
+241 
 	#MAP_SIZE
  16
 
 	)
 
-247 #i‡
+243 #i‡
 MAP_SIZE
  == 512
 
-248 
+244 
 	#MAX_MMAP_SIZE
  536870912
+
+	)
+
+245 #ñi‡
+MAP_SIZE
+ == 256
+
+246 
+	#MAX_MMAP_SIZE
+ 268435456
+
+	)
+
+247 #ñi‡
+MAP_SIZE
+ == 128
+
+248 
+	#MAX_MMAP_SIZE
+ 134217728
 
 	)
 
 249 #ñi‡
 MAP_SIZE
- == 256
+ == 64
 
 250 
 	#MAX_MMAP_SIZE
- 268435456
+ 67108864
 
 	)
 
 251 #ñi‡
 MAP_SIZE
- == 128
+ == 32
 
 252 
 	#MAX_MMAP_SIZE
- 134217728
+ 33554432
 
 	)
 
 253 #ñi‡
 MAP_SIZE
- == 64
+ == 16
 
 254 
 	#MAX_MMAP_SIZE
- 67108864
+ 16777216
 
 	)
 
 255 #ñi‡
 MAP_SIZE
- == 32
+ == 8
 
 256 
 	#MAX_MMAP_SIZE
- 33554432
+ 8388608
 
 	)
 
 257 #ñi‡
 MAP_SIZE
- == 16
+ == 4
 
 258 
 	#MAX_MMAP_SIZE
- 16777216
+ 4194304
 
 	)
 
 259 #ñi‡
 MAP_SIZE
- == 8
-
-260 
-	#MAX_MMAP_SIZE
- 8388608
-
-	)
-
-261 #ñi‡
-MAP_SIZE
- == 4
-
-262 
-	#MAX_MMAP_SIZE
- 4194304
-
-	)
-
-263 #ñi‡
-MAP_SIZE
  == 2
 
-264 
+260 
 	#MAX_MMAP_SIZE
  2097152
 
 	)
 
-266 
+262 
 	#MAX_MMAP_SIZE
  536870912
 
 	)
 
-269 
+265 
 	#ANON_MAP_SIZE
  16
 
 	)
 
-271 #i‡
+267 #i‡
 ANON_MAP_SIZE
  == 512
 
-272 
+268 
 	#ANON_MAX_MMAP_SIZE
  536870912
 
 	)
 
-273 #ñi‡
+269 #ñi‡
 ANON_MAP_SIZE
  == 256
 
-274 
+270 
 	#ANON_MAX_MMAP_SIZE
  268435456
 
 	)
 
-275 #ñi‡
+271 #ñi‡
 ANON_MAP_SIZE
  == 128
 
-276 
+272 
 	#ANON_MAX_MMAP_SIZE
  134217728
 
 	)
 
-277 #ñi‡
+273 #ñi‡
 ANON_MAP_SIZE
  == 64
 
-278 
+274 
 	#ANON_MAX_MMAP_SIZE
  67108864
 
 	)
 
-279 #ñi‡
+275 #ñi‡
 ANON_MAP_SIZE
  == 32
 
-280 
+276 
 	#ANON_MAX_MMAP_SIZE
  33554432
 
 	)
 
-281 #ñi‡
+277 #ñi‡
 ANON_MAP_SIZE
  == 16
 
-282 
+278 
 	#ANON_MAX_MMAP_SIZE
  16777216
 
 	)
 
-283 #ñi‡
+279 #ñi‡
 ANON_MAP_SIZE
  == 8
 
-284 
+280 
 	#ANON_MAX_MMAP_SIZE
  8388608
 
 	)
 
-285 #ñi‡
+281 #ñi‡
 ANON_MAP_SIZE
  == 4
 
-286 
+282 
 	#ANON_MAX_MMAP_SIZE
  4194304
 
 	)
 
-287 #ñi‡
+283 #ñi‡
 ANON_MAP_SIZE
  == 2
 
-288 
+284 
 	#ANON_MAX_MMAP_SIZE
  2097152
 
 	)
 
-290 
+286 
 	#ANON_MAX_MMAP_SIZE
  536870912
 
 	)
 
-297 
+293 
 	#ALIGN_MMAP_DOWN
 (
 addr
@@ -27407,13 +27393,13 @@ MAX_MMAP_SIZE
 
 	)
 
-299 
+295 
 	#DO_ALIGNMENT_CHECKS
  0
 
 	)
 
-301 
+297 
 	#DO_MSYNC
 (
 nvf
@@ -27421,21 +27407,21 @@ nvf
 
 	)
 
-302 
+298 
 DEBUG
 ("NOT doingá msync\n"); }0)
 
-313 
+309 
 	#NOSANITYCHECK
  1
 
 	)
 
-314 #i‡
+310 #i‡
 NOSANITYCHECK
 
 
-315 
+311 
 	#SANITYCHECK
 (
 x
@@ -27443,7 +27429,7 @@ x
 
 	)
 
-317 
+313 
 	#SANITYCHECK
 (
 x
@@ -27459,7 +27445,7 @@ x
 	)
 }
 
-320 
+316 
 	#NVP_CHECK_NVF_VALID
 (
 nvf
@@ -27467,7 +27453,7 @@ nvf
 
 	)
 
-321 if(
+317 if(
 UNLIKELY
 (!
 nvf
@@ -27475,17 +27461,17 @@ nvf
 vÆid
 )) { \
 
-322 
+318 
 DEBUG
 ("InvÆid fûêdes¸ùt‹: %i\n", 
 fûe
 ); \
 
-323 
+319 
 	gî∫o
  = 0; \
 
-328 
+324 
 DEBUG
 ("thi†fun˘i⁄ i†›î©ög o¿nodê%p\n", 
 nvf
@@ -27493,19 +27479,19 @@ nvf
 node
 ); \
 
-329 
+325 
 SANITYCHECKNVF
 (
 nvf
 ); \
 
-330 
+326 
 DO_MSYNC
 (
 nvf
 ); \
 
-334 
+330 
 	#NVP_CHECK_NVF_VALID_WR
 (
 nvf
@@ -27513,7 +27499,7 @@ nvf
 
 	)
 
-335 if(
+331 if(
 	`UNLIKELY
 (!
 nvf
@@ -27521,17 +27507,17 @@ nvf
 vÆid
 )) { \
 
-336 
+332 
 	`DEBUG
 ("InvÆid fûêdes¸ùt‹: %i\n", 
 fûe
 ); \
 
-337 
+333 
 î∫o
  = 0; \
 
-342 
+338 
 	`DEBUG
 ("thi†fun˘i⁄ i†›î©ög o¿nodê%p\n", 
 nvf
@@ -27539,23 +27525,23 @@ nvf
 node
 ); \
 
-343 
+339 
 	`SANITYCHECKNVF
 (
 nvf
 ); \
 
-344 
+340 
 	`DO_MSYNC
 (
 nvf
 ); \
 
-346 
+342 
 	}
 } 0)
 
-348 
+344 
 	#SANITYCHECKNVF
 (
 nvf
@@ -27563,7 +27549,7 @@ nvf
 
 	)
 
-349 
+345 
 	`SANITYCHECK
 (
 nvf
@@ -27571,7 +27557,7 @@ nvf
 vÆid
 ); \
 
-350 
+346 
 	`SANITYCHECK
 (
 nvf
@@ -27581,7 +27567,7 @@ node
 NULL
 ); \
 
-351 
+347 
 	`SANITYCHECK
 (
 nvf
@@ -27589,7 +27575,7 @@ nvf
 fd
  >= 0); \
 
-352 
+348 
 	`SANITYCHECK
 (
 nvf
@@ -27599,7 +27585,7 @@ fd
 OPEN_MAX
 ); \
 
-353 
+349 
 	`SANITYCHECK
 (
 nvf
@@ -27609,7 +27595,7 @@ off£t
 NULL
 ); \
 
-354 
+350 
 	`SANITYCHECK
 (*
 nvf
@@ -27617,7 +27603,7 @@ nvf
 off£t
  >= 0); \
 
-355 
+351 
 	`SANITYCHECK
 (
 nvf
@@ -27627,7 +27613,7 @@ node
 Àngth
  >=0); \
 
-356 
+352 
 	`SANITYCHECK
 (
 nvf
@@ -27639,7 +27625,7 @@ m≠Àngth
 Àngth
 ); \
 
-357 
+353 
 	`SANITYCHECK
 (
 nvf
@@ -35580,18 +35566,12 @@ LEDGER_SRC_MMAN_H_
 "
 
 20 
-	#NVM_DELAY
- 0
-
-	)
-
-21 
 	#CLFLUSH_SIZE
  64
 
 	)
 
-22 
+21 
 	#_mm_˛Êush›t
 (
 addr
@@ -35599,13 +35579,13 @@ addr
 
 	)
 
-23 
+22 
 asm
  vﬁ©ûe("˛Êush›à%0" : "+m" (*(vﬁ©ûê*)(
 addr
 )))
 
-25 
+24 
 ölöe
  
 	$do_cÊush_Àn
@@ -35617,13 +35597,13 @@ size_t
 Àngth
 )
 
-29 
+28 
 size_t
  
 i
 ;
 
-31 
+30 
 i
  = 0; i < 
 Àngth
@@ -35631,7 +35611,7 @@ i
 CLFLUSH_SIZE
 ) {
 
-34 
+33 
 	`_mm_˛Êush
 ((c⁄°*)(
 addr
@@ -35639,11 +35619,11 @@ addr
 i
 ));
 
-38 
+37 
 	}
 }
 
-41 
+40 
 ölöe
  
 	$do_cÊush›t_Àn
@@ -35655,13 +35635,13 @@ size_t
 Àngth
 )
 
-44 
+43 
 size_t
  
 i
 ;
 
-45 
+44 
 i
  = 0; i < 
 Àngth
@@ -35669,7 +35649,7 @@ i
 CLFLUSH_SIZE
 ) {
 
-46 
+45 
 	`_mm_˛Êush›t
 ((*)(
 addr
@@ -35677,17 +35657,17 @@ addr
 i
 ));
 
-47 #i‡
+46 #i‡
 NVM_DELAY
 
 
-48 
+47 
 	`≥rfmodñ_add_dñay
 (0, 
 CLFLUSH_SIZE
 );
 
-51 
+50 
 	}
 }
 

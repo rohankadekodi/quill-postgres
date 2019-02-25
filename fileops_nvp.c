@@ -2526,6 +2526,7 @@ RETT_PWRITE _nvp_do_pwrite(INTF_PWRITE, int wr_lock, int cpuid, struct NVFile *n
 			}
 
 #if NVM_DELAY
+			DEBUG_FILE("%s: delaying\n", __func__);
 			perfmodel_add_delay(0, extent_length);
 #endif
 			_mm_mfence();

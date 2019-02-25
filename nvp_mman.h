@@ -17,7 +17,6 @@ void _mm_mfence(void) - Guarantees that every memory access that precedes, in pr
 */
 
 // TODO: what should this size be?
-#define NVM_DELAY 0
 #define CLFLUSH_SIZE 64
 #define _mm_clflushopt(addr)\
 	asm volatile("clflushopt %0" : "+m" (*(volatile char *)(addr)))
