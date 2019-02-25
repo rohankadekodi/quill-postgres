@@ -1,0 +1,1392 @@
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2683506.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 1603083.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2681071.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 1603509.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2683064.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 1603935.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2689420.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 2371199.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2691788.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 2373176.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2689074.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 8388608, size_of_buf = 64, total_data = 512 MB
+perform_experiment: time for read = 2371928.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 8388608, size 536870912, average 64
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 8388608, size 536870912, average 64
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2688801.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 224999.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2683372.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 224567.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2689642.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 223458.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2688755.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 364011.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2694546.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 360697.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2706956.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 1048576, size_of_buf = 512, total_data = 512 MB
+perform_experiment: time for read = 365107.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 1048576, size 536870912, average 512
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 1048576, size 536870912, average 512
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2694482.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 66733.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2692166.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 66774.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2699221.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 66787.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2687163.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 109482.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2690082.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 109523.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2683033.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 131072, size_of_buf = 4096, total_data = 512 MB
+perform_experiment: time for read = 109262.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 131072, size 536870912, average 4096
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 131072, size 536870912, average 4096
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2690400.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 52648.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2676969.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 52598.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2688153.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 1, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 52541.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 11, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2691484.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 94009.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2690008.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 93937.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+################ STARTING HERE ##################
+main: file not unlinked. err = No such file or directory
+################ FILE OPENED ##################
+################ INITIAL WRITES DONE ##################
+################ INITIAL FSYNC DONE ##################
+do_initial_writes: time for do_initial_writes = 2687804.000000
+################ STARTING MAIN WORKLOAD ##################
+perform_experiment: fd = 4, seq = 0, num_ops = 32768, size_of_buf = 16384, total_data = 512 MB
+perform_experiment: time for read = 94007.000000
+====================== NVP IO stats: ======================
+open 2, close 2, async close 0
+mmap 20, unlink 1, stat 1
+fsync 1, appendfsync: count 10 size 5368709120 average 536870912
+READ: count 32768, size 536870912, average 16384
+WRITE: count 5120, size 5368709120, average 1048576
+memcpy READ: count 32768, size 536870912, average 16384
+memcpy WRITE: count 5120, size 5368709120, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 5120, total 5120
+MFENCE: count 21
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 10, size 5368709120, average 536870912
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 4
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..

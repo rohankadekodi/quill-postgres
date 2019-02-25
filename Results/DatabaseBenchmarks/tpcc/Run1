@@ -1,0 +1,670 @@
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '4000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 139895853885184
+thread_main: opened db, thread id = 139895853885184
+
+MEASURING START.
+
+
+STOPPING THREADSSystem call times
+open_time = 56960 ns
+close_time = 5556 ns
+read_time = 26583371036 ns
+write_time = 50983508 ns
+sync_time = 14651070 ns
+
+Query times
+begin_time = 587 ns
+commit_time = 1833918 ns
+select_time = 42510579978 ns
+update_time = 138362091 ns
+insert_time = 58658604 ns
+
+.
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 42.793 seconds
+====================== NVP IO stats: ======================
+open 2, close 1, async close 0
+mmap 24, unlink 1, stat 1
+fsync 59, appendfsync: count 30 size 52590928 average 1753030
+READ: count 41730256, size 170927001716, average 4095
+WRITE: count 67009, size 173861548, average 2594
+memcpy READ: count 41721608, size 170891698292, average 4095
+memcpy WRITE: count 66192, size 170621300, average 2577
+posix READ: count 8619, size 35303424, average 4096
+posix WRITE: count 817, size 3240248, average 3966
+write extends 40662, total 67009
+MFENCE: count 1753
+CLFLUSHOPT: count 94656
+NON_TEMPORAL_WRITES: count 847, size 55831176, average 65916
+TEMPORAL WRITES: count 25530, size 104558628, average 4095
+TOTAL SYSCALLS (open + close + read + write + fsync): count 9439
+open: timing = 25692 nanoseconds
+close: timing = 2600 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 19445653880 nanoseconds
+write: timing = 38548976 nanoseconds
+seek: timing = 3861624582 nanoseconds
+fsync: timing = 14627257 nanoseconds
+unlink: timing = 59112 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 604 nanoseconds
+node_lookup_lock: timing = 1042 nanoseconds
+nvnode_lock: timing = 4616130 nanoseconds
+anon_mem_queue: timing = 6390 nanoseconds
+get_map_time: timing = 5447059 nanoseconds
+copy_data_time: timing = 6097130 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '4000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 140230792636160
+thread_main: opened db, thread id = 140230792636160
+
+MEASURING START.
+
+
+STOPPING THREADSSystem call times
+open_time = 58017 ns
+close_time = 6084 ns
+read_time = 25684626220 ns
+write_time = 50360579 ns
+sync_time = 14426215 ns
+
+Query times
+begin_time = 597 ns
+commit_time = 1541379 ns
+select_time = 40863046356 ns
+update_time = 137158334 ns
+insert_time = 55243291 ns
+
+.
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 41.142 seconds
+====================== NVP IO stats: ======================
+open 2, close 1, async close 0
+mmap 23, unlink 1, stat 1
+fsync 59, appendfsync: count 30 size 52049152 average 1734971
+READ: count 40503281, size 165901312116, average 4095
+WRITE: count 66548, size 173102684, average 2601
+memcpy READ: count 40494345, size 165864829044, average 4095
+memcpy WRITE: count 65805, size 170169624, average 2585
+posix READ: count 8907, size 36483072, average 4096
+posix WRITE: count 743, size 2933060, average 3947
+write extends 40256, total 66548
+MFENCE: count 1605
+CLFLUSHOPT: count 96768
+NON_TEMPORAL_WRITES: count 773, size 54982212, average 71128
+TEMPORAL WRITES: count 25549, size 104640536, average 4095
+TOTAL SYSCALLS (open + close + read + write + fsync): count 9653
+open: timing = 26120 nanoseconds
+close: timing = 2966 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 18987502130 nanoseconds
+write: timing = 38066190 nanoseconds
+seek: timing = 3642284598 nanoseconds
+fsync: timing = 14404329 nanoseconds
+unlink: timing = 55355 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 998 nanoseconds
+node_lookup_lock: timing = 885 nanoseconds
+nvnode_lock: timing = 4568903 nanoseconds
+anon_mem_queue: timing = 6204 nanoseconds
+get_map_time: timing = 5449389 nanoseconds
+copy_data_time: timing = 6040307 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '4000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 139871442163456
+thread_main: opened db, thread id = 139871442163456
+
+MEASURING START.
+
+
+STOPPING THREADSSystem call times
+open_time = 44561 ns
+close_time = 6191 ns
+read_time = 26490476629 ns
+write_time = 58893489 ns
+sync_time = 14463773 ns
+
+Query times
+begin_time = 591 ns
+commit_time = 1643393 ns
+select_time = 42040963582 ns
+update_time = 138277300 ns
+insert_time = 59315734 ns
+
+.
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 42.324 seconds
+====================== NVP IO stats: ======================
+open 2, close 1, async close 0
+mmap 23, unlink 1, stat 1
+fsync 59, appendfsync: count 30 size 52049192 average 1734973
+READ: count 41550109, size 170189119604, average 4095
+WRITE: count 66413, size 172508804, average 2597
+memcpy READ: count 41541982, size 170155950196, average 4095
+memcpy WRITE: count 65747, size 169891136, average 2584
+posix READ: count 8098, size 33169408, average 4096
+posix WRITE: count 666, size 2617668, average 3930
+write extends 40299, total 66413
+MFENCE: count 1451
+CLFLUSHOPT: count 98688
+NON_TEMPORAL_WRITES: count 696, size 54666860, average 78544
+TEMPORAL WRITES: count 25448, size 104226840, average 4095
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8767
+open: timing = 25530 nanoseconds
+close: timing = 2804 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 19522982673 nanoseconds
+write: timing = 46694694 nanoseconds
+seek: timing = 3796643847 nanoseconds
+fsync: timing = 14441580 nanoseconds
+unlink: timing = 58545 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 620 nanoseconds
+node_lookup_lock: timing = 1260 nanoseconds
+nvnode_lock: timing = 4806579 nanoseconds
+anon_mem_queue: timing = 7567 nanoseconds
+get_map_time: timing = 5482517 nanoseconds
+copy_data_time: timing = 6253302 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '4000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 139899446478592
+thread_main: opened db, thread id = 139899446478592
+
+MEASURING START.
+
+
+STOPPING THREADSSystem call times
+open_time = 44976 ns
+close_time = 6364 ns
+read_time = 25686790812 ns
+write_time = 50378130 ns
+sync_time = 14527242 ns
+
+Query times
+begin_time = 529 ns
+commit_time = 1632075 ns
+select_time = 40836647763 ns
+update_time = 138648343 ns
+insert_time = 56978052 ns
+
+.
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 41.119 seconds
+====================== NVP IO stats: ======================
+open 2, close 1, async close 0
+mmap 23, unlink 1, stat 1
+fsync 59, appendfsync: count 30 size 52484216 average 1749473
+READ: count 40490593, size 165849342068, average 4095
+WRITE: count 66794, size 173201876, average 2593
+memcpy READ: count 40481825, size 165813547124, average 4095
+memcpy WRITE: count 65849, size 169441424, average 2573
+posix READ: count 8739, size 35794944, average 4096
+posix WRITE: count 945, size 3760452, average 3979
+write extends 40760, total 66794
+MFENCE: count 2009
+CLFLUSHOPT: count 95552
+NON_TEMPORAL_WRITES: count 975, size 56244668, average 57686
+TEMPORAL WRITES: count 25089, size 102756376, average 4095
+TOTAL SYSCALLS (open + close + read + write + fsync): count 9687
+open: timing = 26415 nanoseconds
+close: timing = 3297 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 18956871070 nanoseconds
+write: timing = 38120434 nanoseconds
+seek: timing = 3650294447 nanoseconds
+fsync: timing = 14506226 nanoseconds
+unlink: timing = 56021 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 599 nanoseconds
+node_lookup_lock: timing = 773 nanoseconds
+nvnode_lock: timing = 4677688 nanoseconds
+anon_mem_queue: timing = 5846 nanoseconds
+get_map_time: timing = 5461685 nanoseconds
+copy_data_time: timing = 6054993 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = /home/rohan/projects/quill-modified
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+CHECKING IF SQLITE IS THREADSAFE: RETURN VALUE = 1
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option w with value '4'
+option c with value '1'
+option t (number of transactions) with value '4000'
+<Parameters>
+  [warehouse]: 4
+ [connection]: 1
+     [rampup]: 10 (sec.)
+    [measure]: 20 (sec.)
+
+RAMP-UP TIME.(10 sec.)
+thread_main: opening db, thread id = 139997897496320
+thread_main: opened db, thread id = 139997897496320
+
+MEASURING START.
+
+
+STOPPING THREADSSystem call times
+open_time = 44772 ns
+close_time = 5768 ns
+read_time = 25567969258 ns
+write_time = 50588422 ns
+sync_time = 14505512 ns
+
+Query times
+begin_time = 544 ns
+commit_time = 1797308 ns
+select_time = 40596016216 ns
+update_time = 136682375 ns
+insert_time = 59316755 ns
+
+.
+
+<Raw Results>
+  [0] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [1] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [2] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (5)
+  [3] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (80)
+  [4] sc:0 lt:0  rt:0  fl:0 avg_rt: inf (20)
+ in 20 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:0  rt:0  fl:0 
+  [1] sc:0  lt:0  rt:0  fl:0 
+  [2] sc:0  lt:0  rt:0  fl:0 
+  [3] sc:0  lt:0  rt:0  fl:0 
+  [4] sc:0  lt:0  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: -nan% (>=43.0%) [NG] *
+   Order-Status: -nan% (>= 4.0%) [NG] *
+       Delivery: -nan% (>= 4.0%) [NG] *
+    Stock-Level: -nan% (>= 4.0%) [NG] *
+ [response time (at least 90% passed)]
+      New-Order: -nan%  [NG] *
+        Payment: -nan%  [NG] *
+   Order-Status: -nan%  [NG] *
+       Delivery: -nan%  [NG] *
+    Stock-Level: -nan%  [NG] *
+
+<TpmC>
+                 0.000 TpmC
+
+Time taken
+                 40.878 seconds
+====================== NVP IO stats: ======================
+open 2, close 1, async close 0
+mmap 24, unlink 1, stat 1
+fsync 59, appendfsync: count 30 size 52603224 average 1753440
+READ: count 40183082, size 164589777012, average 4095
+WRITE: count 66915, size 173468340, average 2592
+memcpy READ: count 40174463, size 164554592372, average 4095
+memcpy WRITE: count 65990, size 169785724, average 2572
+posix READ: count 8590, size 35184640, average 4096
+posix WRITE: count 925, size 3682616, average 3981
+write extends 40725, total 66915
+MFENCE: count 1969
+CLFLUSHOPT: count 96128
+NON_TEMPORAL_WRITES: count 955, size 56285840, average 58938
+TEMPORAL WRITES: count 25265, size 103473188, average 4095
+TOTAL SYSCALLS (open + close + read + write + fsync): count 9518
+open: timing = 25750 nanoseconds
+close: timing = 2797 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 18801687759 nanoseconds
+write: timing = 38190177 nanoseconds
+seek: timing = 3620884525 nanoseconds
+fsync: timing = 14482939 nanoseconds
+unlink: timing = 56564 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 595 nanoseconds
+node_lookup_lock: timing = 933 nanoseconds
+nvnode_lock: timing = 4403540 nanoseconds
+anon_mem_queue: timing = 6723 nanoseconds
+get_map_time: timing = 5466594 nanoseconds
+copy_data_time: timing = 6143160 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..

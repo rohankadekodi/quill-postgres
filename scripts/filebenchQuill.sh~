@@ -1,0 +1,70 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: ./dirtyTrackingOverhead.sh runId"
+    exit
+fi
+
+runid=$1
+dirtyDataQuill=/home/rohan/projects/quill-modified
+noDirtyDataQuill=/home/rohan/projects/quill-no-tracking
+codeToRun=/home/rohan/projects/quill-microbenchmark/CachelineGranularity
+flatTrackingQuill=/home/rohan/projects/quill-flat-tracking
+filebench=/home/rohan/projects/filebench
+
+# Compile Dirty Tracking Quill
+cd $dirtyDataQuill
+make clean
+make
+
+# Compile Non dirty Tracking Quill
+cd $noDirtyDataQuill
+make clean
+make
+
+# Compile Flat dirty Tracking Quill
+cd $flatTrackingQuill
+make clean
+make
+
+# Compile c code
+cd $codeToRun
+gcc motivational_fsync.c -o quillTesting
+
+run_experiment()
+{
+    dir=$1
+    dirtyTracking=$2
+    
+    resultsDir=$dir/Results/Filebench/
+    mkdir -p $resultsDir
+    cd $dir
+    
+    for ctr in 1 2 3 4 5
+    do
+	rm -rf /mnt/pmem_emul/* && sync
+	sleep 5
+	taskset -c 3 ./run_quill.sh -p ./ -t nvp_nvp.tree $filebench/filebench -f $filebench/workloads/randomwrite.f >> $resultsDir/Run$runid
+	echo "$dirtyTracking filebench Run $ctr done" 
+    done
+}
+
+
+# main function
+# With dirty data tracking
+
+dir=$dirtyDataQuill
+run_experiment $dir DirtyTracking
+
+# Without dirty data tracking
+
+dir=$noDirtyDataQuill
+run_experiment $dir NoDirtyTracking
+
+# Flat dirty data tracking
+
+#dir=$flatTrackingQuill
+#for i in 4M 16M 64M 256M 400M
+#do
+#    run_experiment $i $dir FlatDirtyTracking
+#done

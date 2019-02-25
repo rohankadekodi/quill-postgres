@@ -1,0 +1,17 @@
+#include<stdlib.h>
+#include<signal.h>
+#include<unistd.h>
+#include<time.h>
+
+int main(int argc, char *argv[]) {
+
+	int i;
+
+	printf("Filename: %s, Receiver PID: %s\n", argv[1], argv[2]);
+
+	FILE *fp;
+	fp=fopen(argv[1], "w");
+
+	kill(atol(argv[1]),SIGUSR1);
+}
+

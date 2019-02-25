@@ -1,0 +1,1095 @@
+Rohan here
+Quill path = ./
+tree = ./bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Filebench Version 1.5-alpha3
+ipc_init: calling mmap
+ipc_init: performing memset, size = 37754880
+ipc_init: memset done
+0.000: Allocated 173MB of shared memory
+0.001: Openfiles Version 1.0 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.016: bigfileset populated: 50000 files, avg. dir. width = 100, avg. dir. depth = 2.3, 0 leafdirs, 0.000MB total size
+0.016: Removing bigfileset tree (if exists)
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+0.058: Pre-allocating directories in bigfileset tree
+0.063: Pre-allocating files in bigfileset tree
+0.511: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.511: Population and pre-allocation of filesets completed
+0.511: Starting 1 fileopen instances
+1.533: Running...
+11.534: Run took 10 seconds...
+11.534: Per-Operation Breakdown
+close1               4263767ops   426337ops/s   0.0mb/s    0.001ms/op [0.001ms - 0.706ms]
+open1                4263769ops   426337ops/s   0.0mb/s    0.003ms/op [0.001ms - 0.545ms]
+11.534: IO Summary: 8527536 ops 852674.131 ops/s 0/0 rd/wr   0.0mb/s 0.002ms/op
+11.534: Shutting down processes
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+====================== NVP IO stats: ======================
+open 4263150, close 4263766, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8526916
+_nvp_SIGUSR1_handler: BG THREAD CALLED 0 TIMES
+open: timing = 8967347535 nanoseconds
+close: timing = 3673947299 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 943552372 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+====================== NVP IO stats: ======================
+open 4263150, close 4263766, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8526916
+open: timing = 8967347535 nanoseconds
+close: timing = 3673947299 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 943552372 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+13.542: processes have been shut down
+13.542: Shutting down filebench
+====================== NVP IO stats: ======================
+open 50001, close 50000, async close 0
+mmap 1, unlink 2, stat 2
+fsync 50001, appendfsync: count 1 size 1048576 average 1048576
+READ: count 0, size 0, average 0
+WRITE: count 1, size 1048576, average 1048576
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 1, size 1048576, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 1, total 1
+MFENCE: count 50003
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1, size 1048576, average 1048576
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 100001
+open: timing = 304354135 nanoseconds
+close: timing = 37221116 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 497186 nanoseconds
+seek: timing = 1089 nanoseconds
+fsync: timing = 23482564 nanoseconds
+unlink: timing = 16884 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 6762087 nanoseconds
+anon_mem_queue: timing = 4240 nanoseconds
+get_map: timing = 4857 nanoseconds
+copy_data: timing = 490746 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = ./
+tree = ./bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Filebench Version 1.5-alpha3
+ipc_init: calling mmap
+ipc_init: performing memset, size = 37754880
+ipc_init: memset done
+0.000: Allocated 173MB of shared memory
+0.001: Openfiles Version 1.0 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.021: bigfileset populated: 50000 files, avg. dir. width = 100, avg. dir. depth = 2.3, 0 leafdirs, 0.000MB total size
+0.021: Removing bigfileset tree (if exists)
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+0.064: Pre-allocating directories in bigfileset tree
+0.069: Pre-allocating files in bigfileset tree
+0.509: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.509: Population and pre-allocation of filesets completed
+0.509: Starting 1 fileopen instances
+1.531: Running...
+11.532: Run took 10 seconds...
+11.532: Per-Operation Breakdown
+close1               4274767ops   427437ops/s   0.0mb/s    0.001ms/op [0.001ms - 0.488ms]
+open1                4274768ops   427437ops/s   0.0mb/s    0.003ms/op [0.002ms - 0.553ms]
+11.532: IO Summary: 8549535 ops 854874.082 ops/s 0/0 rd/wr   0.0mb/s 0.002ms/op
+11.532: Shutting down processes
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+====================== NVP IO stats: ======================
+open 4274113, close 4274766, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8548879
+_nvp_SIGUSR1_handler: BG THREAD CALLED 0 TIMES
+open: timing = 8980111144 nanoseconds
+close: timing = 3615626039 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 955941125 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+====================== NVP IO stats: ======================
+open 4274113, close 4274766, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8548879
+open: timing = 8980111144 nanoseconds
+close: timing = 3615626039 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 955941125 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+13.539: processes have been shut down
+13.539: Shutting down filebench
+====================== NVP IO stats: ======================
+open 50001, close 50000, async close 0
+mmap 1, unlink 2, stat 2
+fsync 50001, appendfsync: count 1 size 1048576 average 1048576
+READ: count 0, size 0, average 0
+WRITE: count 1, size 1048576, average 1048576
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 1, size 1048576, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 1, total 1
+MFENCE: count 50003
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1, size 1048576, average 1048576
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 100001
+open: timing = 297844581 nanoseconds
+close: timing = 37156477 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 551446 nanoseconds
+seek: timing = 1203 nanoseconds
+fsync: timing = 23506103 nanoseconds
+unlink: timing = 16014 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 6862002 nanoseconds
+anon_mem_queue: timing = 3933 nanoseconds
+get_map: timing = 4527 nanoseconds
+copy_data: timing = 545644 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = ./
+tree = ./bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Filebench Version 1.5-alpha3
+ipc_init: calling mmap
+ipc_init: performing memset, size = 37754880
+ipc_init: memset done
+0.000: Allocated 173MB of shared memory
+0.001: Openfiles Version 1.0 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.016: bigfileset populated: 50000 files, avg. dir. width = 100, avg. dir. depth = 2.3, 0 leafdirs, 0.000MB total size
+0.016: Removing bigfileset tree (if exists)
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+0.058: Pre-allocating directories in bigfileset tree
+0.063: Pre-allocating files in bigfileset tree
+0.507: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.507: Population and pre-allocation of filesets completed
+0.507: Starting 1 fileopen instances
+1.529: Running...
+11.530: Run took 10 seconds...
+11.530: Per-Operation Breakdown
+close1               4245727ops   424534ops/s   0.0mb/s    0.001ms/op [0.001ms - 0.502ms]
+open1                4245727ops   424534ops/s   0.0mb/s    0.003ms/op [0.002ms - 0.521ms]
+11.530: IO Summary: 8491454 ops 849067.286 ops/s 0/0 rd/wr   0.0mb/s 0.002ms/op
+11.530: Shutting down processes
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+====================== NVP IO stats: ======================
+open 4245236, close 4245724, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8490960
+_nvp_SIGUSR1_handler: BG THREAD CALLED 0 TIMES
+open: timing = 8931423810 nanoseconds
+close: timing = 3665158214 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 944272261 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+====================== NVP IO stats: ======================
+open 4245236, close 4245724, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8490960
+open: timing = 8931423810 nanoseconds
+close: timing = 3665158214 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 944272261 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+13.538: processes have been shut down
+13.538: Shutting down filebench
+====================== NVP IO stats: ======================
+open 50001, close 50000, async close 0
+mmap 1, unlink 2, stat 2
+fsync 50001, appendfsync: count 1 size 1048576 average 1048576
+READ: count 0, size 0, average 0
+WRITE: count 1, size 1048576, average 1048576
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 1, size 1048576, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 1, total 1
+MFENCE: count 50003
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1, size 1048576, average 1048576
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 100001
+open: timing = 302433365 nanoseconds
+close: timing = 36653129 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 542245 nanoseconds
+seek: timing = 1299 nanoseconds
+fsync: timing = 22362949 nanoseconds
+unlink: timing = 17043 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 7003978 nanoseconds
+anon_mem_queue: timing = 4001 nanoseconds
+get_map: timing = 4553 nanoseconds
+copy_data: timing = 536485 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = ./
+tree = ./bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Filebench Version 1.5-alpha3
+ipc_init: calling mmap
+ipc_init: performing memset, size = 37754880
+ipc_init: memset done
+0.000: Allocated 173MB of shared memory
+0.001: Openfiles Version 1.0 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.016: bigfileset populated: 50000 files, avg. dir. width = 100, avg. dir. depth = 2.3, 0 leafdirs, 0.000MB total size
+0.016: Removing bigfileset tree (if exists)
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+0.058: Pre-allocating directories in bigfileset tree
+0.063: Pre-allocating files in bigfileset tree
+0.503: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.503: Population and pre-allocation of filesets completed
+0.503: Starting 1 fileopen instances
+1.526: Running...
+11.527: Run took 10 seconds...
+11.527: Per-Operation Breakdown
+close1               4244973ops   424458ops/s   0.0mb/s    0.001ms/op [0.000ms - 0.549ms]
+open1                4244975ops   424458ops/s   0.0mb/s    0.003ms/op [0.002ms - 0.556ms]
+11.527: IO Summary: 8489948 ops 848916.360 ops/s 0/0 rd/wr   0.0mb/s 0.002ms/op
+11.527: Shutting down processes
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+====================== NVP IO stats: ======================
+open 4244304, close 4244934, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8489238
+_nvp_SIGUSR1_handler: BG THREAD CALLED 0 TIMES
+open: timing = 8954996659 nanoseconds
+close: timing = 3604820703 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 944021283 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+====================== NVP IO stats: ======================
+open 4244304, close 4244934, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8489238
+open: timing = 8954996659 nanoseconds
+close: timing = 3604820703 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 944021283 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+13.534: processes have been shut down
+13.534: Shutting down filebench
+====================== NVP IO stats: ======================
+open 50001, close 50000, async close 0
+mmap 1, unlink 2, stat 2
+fsync 50001, appendfsync: count 1 size 1048576 average 1048576
+READ: count 0, size 0, average 0
+WRITE: count 1, size 1048576, average 1048576
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 1, size 1048576, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 1, total 1
+MFENCE: count 50003
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1, size 1048576, average 1048576
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 100001
+open: timing = 298586259 nanoseconds
+close: timing = 37598261 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 469690 nanoseconds
+seek: timing = 1215 nanoseconds
+fsync: timing = 22953075 nanoseconds
+unlink: timing = 30567 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 7049292 nanoseconds
+anon_mem_queue: timing = 3215 nanoseconds
+get_map: timing = 3710 nanoseconds
+copy_data: timing = 464940 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+Rohan here
+Quill path = ./
+tree = ./bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Filebench Version 1.5-alpha3
+ipc_init: calling mmap
+ipc_init: performing memset, size = 37754880
+ipc_init: memset done
+0.000: Allocated 173MB of shared memory
+0.001: Openfiles Version 1.0 personality successfully loaded
+0.001: Populating and pre-allocating filesets
+0.016: bigfileset populated: 50000 files, avg. dir. width = 100, avg. dir. depth = 2.3, 0 leafdirs, 0.000MB total size
+0.016: Removing bigfileset tree (if exists)
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+0.058: Pre-allocating directories in bigfileset tree
+0.063: Pre-allocating files in bigfileset tree
+0.501: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+0.501: Population and pre-allocation of filesets completed
+0.501: Starting 1 fileopen instances
+1.523: Running...
+11.524: Run took 10 seconds...
+11.524: Per-Operation Breakdown
+close1               4257277ops   425688ops/s   0.0mb/s    0.001ms/op [0.000ms - 0.529ms]
+open1                4257279ops   425688ops/s   0.0mb/s    0.003ms/op [0.002ms - 0.546ms]
+11.524: IO Summary: 8514556 ops 851376.677 ops/s 0/0 rd/wr   0.0mb/s 0.002ms/op
+11.524: Shutting down processes
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+====================== NVP IO stats: ======================
+open 4256735, close 4257276, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8514011
+_nvp_SIGUSR1_handler: BG THREAD CALLED 0 TIMES
+open: timing = 8936734736 nanoseconds
+close: timing = 3668194686 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 951667332 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+====================== NVP IO stats: ======================
+open 4256735, close 4257276, async close 0
+mmap 0, unlink 0, stat 0
+fsync 0, appendfsync: count 0 size 0 average 0
+READ: count 0, size 0, average 0
+WRITE: count 0, size 0, average 0
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 0, size 0, average 0
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 0, total 0
+MFENCE: count 0
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 0, size 0, average 0
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 8514011
+open: timing = 8936734736 nanoseconds
+close: timing = 3668194686 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 0 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 0 nanoseconds
+unlink: timing = 0 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 951667332 nanoseconds
+anon_mem_queue: timing = 0 nanoseconds
+get_map: timing = 0 nanoseconds
+copy_data: timing = 0 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+13.532: processes have been shut down
+13.532: Shutting down filebench
+====================== NVP IO stats: ======================
+open 50001, close 50000, async close 0
+mmap 1, unlink 2, stat 2
+fsync 50001, appendfsync: count 1 size 1048576 average 1048576
+READ: count 0, size 0, average 0
+WRITE: count 1, size 1048576, average 1048576
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 1, size 1048576, average 1048576
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 1, total 1
+MFENCE: count 50003
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1, size 1048576, average 1048576
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 100001
+open: timing = 297709958 nanoseconds
+close: timing = 36420273 nanoseconds
+pread: timing = 0 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 0 nanoseconds
+write: timing = 490717 nanoseconds
+seek: timing = 1105 nanoseconds
+fsync: timing = 22216734 nanoseconds
+unlink: timing = 17528 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 0 nanoseconds
+node_lookup_lock: timing = 0 nanoseconds
+nvnode_lock: timing = 6717692 nanoseconds
+anon_mem_queue: timing = 4216 nanoseconds
+get_map: timing = 4704 nanoseconds
+copy_data: timing = 485002 nanoseconds
+close_syscall: timing = 0 nanoseconds
+copy_to_anon_pool: timing = 0 nanoseconds
+copy_to_mmap_cache: timing = 0 nanoseconds
+give_up_node: timing = 0 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..

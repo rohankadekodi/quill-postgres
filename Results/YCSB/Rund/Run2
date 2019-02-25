@@ -1,0 +1,136 @@
+Rohan here
+Quill path = /home/rohan/projects/quill-modified/
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = read
+function name = write
+function name = close
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread64
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+Keys:       16 bytes each
+Values:     1024 bytes each (1024 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   9918.2 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+LockFile: filename = /mnt/pmem_emul/leveldbtest-1000/LOCK, fd = 5
+Thread 0: Parsing trace ...
+Thread 0: Done parsing, 3000000 operations.
+Thread 0: Replaying trace ...
+memtable_read: timing = 1818379010 nanoseconds
+imm_memtable_read: timing = 29174430 nanoseconds
+file_read: timing = 2944503771 nanoseconds
+file_open_during_read: timing = 62535405 nanoseconds
+file_close_during_read: timing = 63167357 nanoseconds
+get_files: timing = 657334064 nanoseconds
+after_get_files: timing = 8651156950 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 4607945651 nanoseconds
+read_block: timing = 4044145276 nanoseconds
+insert_block_cache: timing = 616022771 nanoseconds
+new_iterator: timing = 258558211 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0        46
+  1        1        4         0       38       140
+  2        7       90         5     3495      3491
+  3       59      613         7     4988      4967
+  4      342     5239         0        0         0
+
+
+
+Thread 0: Done replaying 3000000 operations.
+YCSB splitup: R = 2850161, D = 0, I = 149839, U = 0, S = 0
+LevelDB/WiscKey splitup: P = 149839, G = 2850161, D = 0, ItSeek = 0, ItNext = 0
+Thread 0: Time taken = 12.639 seconds
+Thread 0: Total data: YCSB = 2.939347 GB, HyperLevelDB = 2.939347 GB
+Thread 0: Ops/s = 231.797 Kops/s
+Thread 0: YCSB throughput = 238.142652 MB/s
+Thread 0: HyperLevelDB throughput = 238.142652 MB/s
+ycsb         :       4.605 micros/op;
+memtable_read: timing = 1818379010 nanoseconds
+imm_memtable_read: timing = 29174430 nanoseconds
+file_read: timing = 2944503771 nanoseconds
+file_open_during_read: timing = 62535405 nanoseconds
+file_close_during_read: timing = 63167357 nanoseconds
+get_files: timing = 657334064 nanoseconds
+after_get_files: timing = 8651156950 nanoseconds
+find_table: timing = 0 nanoseconds
+block_reader: timing = 4607945651 nanoseconds
+read_block: timing = 4044145276 nanoseconds
+insert_block_cache: timing = 616022771 nanoseconds
+new_iterator: timing = 258558211 nanoseconds
+
+                               Compactions
+Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0        0        0         0        0        46
+  1        1        4         0       38       140
+  2        7       90         5     3495      3491
+  3       59      613         7     4988      4967
+  4      342     5239         0        0         0
+
+----------------------Current DB state-----------------------
+
+-------------------------------------------------------------
+printdb      :       1.000 micros/op;
+CompactMemTable: recording background error
+====================== NVP IO stats: ======================
+open 2204, close 1757, async close 0
+mmap 448, unlink 900, stat 900
+fsync 1006, appendfsync: count 1351 size 9286037433 average 6873454
+READ: count 3386428, size 14696477214, average 4339
+WRITE: count 2275378, size 9299549204, average 4087
+memcpy READ: count 3227429, size 13924803042, average 4314
+memcpy WRITE: count 2272430, size 9291768505, average 4088
+posix READ: count 152762, size 721551805, average 4723
+posix WRITE: count 127, size 100358, average 790
+write extends 2275280, total 2275403
+MFENCE: count 3708
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 1351, size 9286037433, average 6873454
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 156850
+open: timing = 33164655 nanoseconds
+close: timing = 1251711 nanoseconds
+pread: timing = 2662031693 nanoseconds
+pwrite: timing = 0 nanoseconds
+read: timing = 301223 nanoseconds
+write: timing = 1994578624 nanoseconds
+seek: timing = 0 nanoseconds
+fsync: timing = 2175094206 nanoseconds
+unlink: timing = 48223447 nanoseconds
+bg_thread: timing = 0 nanoseconds
+clf_lock: timing = 794038 nanoseconds
+node_lookup_lock: timing = 187176 nanoseconds
+nvnode_lock: timing = 255886322 nanoseconds
+anon_mem_queue: timing = 808013 nanoseconds
+get_map_time: timing = 331048399 nanoseconds
+copy_data_time: timing = 1088086536 nanoseconds
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..

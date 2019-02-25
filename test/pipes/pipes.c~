@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/syscall.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/wait.h>
+
+int child_process() {
+
+	pid_t my_pid = 0;
+
+}
+
+int main(int argc, char *argv[]) {
+
+	int file[2];
+	pid_t child_pid = 0, my_pid = 0;
+	int ret = 0;
+	char buf;
+	
+	ret = pipe(file);
+	if (ret != 0) {
+		printf("%s: pipe failed. Error = %s\n", __func__, strerror(errno));
+		exit(-1);
+	}
+
+	child_pid = fork();
+	if (child_pid == -1) {
+		printf("%s: fork failed. Error = %s\n", __func__, strerror(errno));
+	}
+
+	if (child_pid == 0) {
+
+		my_pid = getpid();
+		printf("%s: pid = %d\n", __func__, my_pid);
+
+		close(file[1]);
+		while (read(file[0], &buf, 1) > 0)
+			printf("Data read = %c\n", buf);
+		close(file[0]);
+		exit(0);
+
+		//child_process();
+	} else {
+
+		printf("%s: pid = %d\n", __func__, getpid());
+
+		close(file[0]);
+		write(file[1], argv[1], strlen(argv[1]));
+		close(file[1]);
+		wait(NULL);
+		exit(0);
+	}
+	
+}

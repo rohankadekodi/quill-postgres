@@ -1,0 +1,1832 @@
+
+/home/rohan/projects/quill-modified/Makefile,298
+COMMON_OBJ=nvp_printf.oCOMMON_OBJ8,136
+BANKSHOT2_OBJ=nvp_printf.o fileops_bankshot2_extent.o rbtree.oBANKSHOT2_OBJ38,1113
+	export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_compare_posix_posix.tree"; $(MAKE) testNVP_TREE_FILE95,2545
+PROFILE_LIBS = libnvp.so libfileops_nvp.soPROFILE_LIBS173,5016
+
+/home/rohan/projects/quill-modified/fileops_nvp.c,7528
+struct NVFile* _nvp_fd_lookup;_nvp_fd_lookup27,647
+struct NVNode* _nvp_node_lookup;_nvp_node_lookup28,679
+int _nvp_ino_lookup[1024];_nvp_ino_lookup29,713
+#define NVP_WRAP_HAS_FD(NVP_WRAP_HAS_FD35,825
+#define NVP_WRAP_NO_FD(NVP_WRAP_NO_FD46,1533
+#define NVP_WRAP_HAS_FD_IWRAP(NVP_WRAP_HAS_FD_IWRAP53,1761
+#define NVP_WRAP_NO_FD_IWRAP(NVP_WRAP_NO_FD_IWRAP54,1829
+static inline int copy_from_user_inatomic_nocache(void *dst, const void *src, unsigned size) {copy_from_user_inatomic_nocache64,2221
+static inline void* my_memcpy_nocache(void* dst, const void* src, unsigned size) {my_memcpy_nocache68,2369
+static inline void *intel_memcpy(void * __restrict__ b, const void * __restrict__ a, size_t n){intel_memcpy76,2558
+void *(*import_memcpy)(void * __restrict__ b, const void * __restrict__ a, size_t n);import_memcpy83,2742
+#define MMX2_MEMCPY_MIN_LEN MMX2_MEMCPY_MIN_LEN87,2926
+#define MMX_MMREG_SIZE MMX_MMREG_SIZE88,2960
+static void * mmx2_memcpy(void * __restrict__ to, const void * __restrict__ from, size_t len)mmx2_memcpy91,3065
+static char* memcpy1(char *to, char *from, size_t n)memcpy1164,5193
+#define MEMCPY MEMCPY187,5751
+#define MMAP MMAP189,5805
+#define FSYNC_POLICY_NONE FSYNC_POLICY_NONE192,5849
+#define FSYNC_POLICY_FLUSH_ON_FSYNC FSYNC_POLICY_FLUSH_ON_FSYNC193,5878
+#define FSYNC_POLICY_UNCACHEABLE_MAP FSYNC_POLICY_UNCACHEABLE_MAP194,5917
+#define FSYNC_POLICY_NONTEMPORAL_WRITES FSYNC_POLICY_NONTEMPORAL_WRITES195,5957
+#define FSYNC_POLICY_FLUSH_ON_WRITE FSYNC_POLICY_FLUSH_ON_WRITE196,6000
+#define FSYNC_POLICY FSYNC_POLICY198,6041
+	#define FSYNC_MEMCPY FSYNC_MEMCPY201,6132
+	#define FSYNC_MMAP FSYNC_MMAP202,6162
+	#define FSYNC_FSYNC FSYNC_FSYNC203,6188
+	#define FSYNC_MEMCPY FSYNC_MEMCPY205,6262
+	#define FSYNC_MMAP FSYNC_MMAP206,6292
+        #define FSYNC_FSYNC(FSYNC_FSYNC207,6318
+	#define FSYNC_MEMCPY FSYNC_MEMCPY209,6430
+	#define FSYNC_MMAP FSYNC_MMAP210,6460
+	#define FSYNC_FSYNC FSYNC_FSYNC211,6508
+	#define FSYNC_MEMCPY FSYNC_MEMCPY213,6586
+	#define FSYNC_MMAP FSYNC_MMAP214,6641
+	#define FSYNC_FSYNC FSYNC_FSYNC215,6667
+	#define FSYNC_MEMCPY FSYNC_MEMCPY217,6753
+	#define FSYNC_MMAP FSYNC_MMAP218,6804
+	#define FSYNC_FSYNC FSYNC_FSYNC219,6830
+static inline void fsync_flush_on_fsync(struct NVFile* nvf)fsync_flush_on_fsync228,7042
+void *mmap_fsync_uncacheable_map(void *start, size_t length, int prot, int flags, int fd, off_t offset)mmap_fsync_uncacheable_map274,8448
+void *memcpy_fsync_nontemporal_writes(void *dest, const void *src, size_t n)memcpy_fsync_nontemporal_writes284,8763
+void *memcpy_fsync_flush_on_write(void *dest, const void *src, size_t n)memcpy_fsync_flush_on_write295,9025
+enum timing_category {timing_category312,9439
+	do_pread_t = 0,do_pread_t313,9463
+	do_pwrite_t,do_pwrite_t314,9481
+	memcpyr_t,memcpyr_t315,9496
+	memcpyw_t,memcpyw_t316,9509
+	lookup_t,lookup_t317,9522
+	insert_t,insert_t318,9534
+	read_t,read_t319,9546
+	write_t,write_t320,9556
+	pread_t,pread_t321,9567
+	pwrite_t,pwrite_t322,9578
+	open_t,open_t323,9590
+	close_t,close_t324,9600
+	posix_open_t,posix_open_t325,9611
+	posix_close_t,posix_close_t326,9627
+	get_node_t,get_node_t327,9644
+	alloc_node_t,alloc_node_t328,9658
+	fsync_t,fsync_t329,9674
+	fdsync_t,fdsync_t330,9685
+	mmap_t,mmap_t331,9697
+	get_mmap_t,get_mmap_t332,9707
+	TIMING_NUM,	// Keep as last entryTIMING_NUM333,9721
+unsigned long long Countstats[TIMING_NUM];Countstats336,9763
+unsigned long long Timingstats[TIMING_NUM];Timingstats337,9807
+const char *Timingstring[TIMING_NUM] = Timingstring338,9852
+typedef struct timespec timing_type;timing_type362,10180
+#define	NVP_START_TIMING(NVP_START_TIMING366,10242
+#define	NVP_END_TIMING(NVP_END_TIMING369,10326
+void nvp_print_time_stats(void)nvp_print_time_stats377,10561
+#define NVP_START_TIMING(NVP_START_TIMING390,10898
+#define  NVP_END_TIMING(NVP_END_TIMING392,10956
+void nvp_print_time_stats(void)nvp_print_time_stats395,11022
+unsigned int num_open;num_open408,11337
+unsigned int num_close;num_close409,11361
+unsigned int num_read;num_read410,11386
+unsigned int num_write;num_write411,11410
+unsigned int num_mmap;num_mmap412,11435
+unsigned int num_memcpy_read;num_memcpy_read413,11459
+unsigned int num_memcpy_write;num_memcpy_write414,11490
+unsigned int num_posix_read;num_posix_read415,11522
+unsigned int num_posix_write;num_posix_write416,11552
+unsigned long long read_size;read_size417,11583
+unsigned long long write_size;write_size418,11614
+unsigned long long memcpy_read_size;memcpy_read_size419,11646
+unsigned long long memcpy_write_size;memcpy_write_size420,11684
+unsigned long long posix_read_size;posix_read_size421,11723
+unsigned long long posix_write_size;posix_write_size422,11760
+volatile size_t _nvp_wr_extended;_nvp_wr_extended423,11798
+volatile size_t _nvp_wr_total;_nvp_wr_total424,11833
+void nvp_print_io_stats(void)nvp_print_io_stats426,11867
+void nvp_cleanup(void)nvp_cleanup454,13140
+void nvp_exit_handler(void)nvp_exit_handler470,13401
+void _nvp_SIGUSR1_handler(int sig)_nvp_SIGUSR1_handler478,13535
+void _nvp_SIGBUS_handler(int sig)_nvp_SIGBUS_handler485,13662
+void _nvp_init2(void)_nvp_init2494,13906
+void nvp_free_btree(unsigned long *root, unsigned long height)nvp_free_btree534,14836
+void nvp_cleanup_node(struct NVNode *node, int free_root)nvp_cleanup_node563,15323
+void nvp_init_node(struct NVNode *node)nvp_init_node583,15747
+struct NVNode * nvp_allocate_node(void)nvp_allocate_node597,16144
+struct NVNode * nvp_get_node(const char *path, struct stat *file_st)nvp_get_node632,16938
+static unsigned long calculate_capacity(unsigned int height)calculate_capacity683,18210
+static unsigned int calculate_new_height(off_t offset)calculate_new_height695,18402
+static int nvp_get_mmap_address(struct NVFile *nvf, off_t offset, size_t count,nvp_get_mmap_address708,18649
+RETT_PREAD _nvp_do_pread(INTF_PREAD, int wr_lock, int cpuid)_nvp_do_pread907,24992
+RETT_PWRITE _nvp_do_pwrite(INTF_PWRITE, int wr_lock, int cpuid)_nvp_do_pwrite1052,28834
+void _nvp_test_invalidate_node(struct NVFile* nvf)_nvp_test_invalidate_node1247,34219
+RETT_SEEK64 _nvp_do_seek64(INTF_SEEK64)_nvp_do_seek641272,34760
+static ssize_t _nvp_check_read_size_valid(size_t count)_nvp_check_read_size_valid1332,36068
+static ssize_t _nvp_check_write_size_valid(size_t count)_nvp_check_write_size_valid1349,36370
+RETT_OPEN _nvp_OPEN(INTF_OPEN)_nvp_OPEN1370,36798
+RETT_CLOSE _nvp_CLOSE(INTF_CLOSE)_nvp_CLOSE1672,44423
+RETT_READ _nvp_READ(INTF_READ)_nvp_READ1736,46044
+RETT_WRITE _nvp_WRITE(INTF_WRITE)_nvp_WRITE1796,47536
+RETT_PREAD _nvp_PREAD(INTF_PREAD)_nvp_PREAD1883,49686
+RETT_PWRITE _nvp_PWRITE(INTF_PWRITE)_nvp_PWRITE1925,50603
+RETT_SEEK _nvp_SEEK(INTF_SEEK)_nvp_SEEK1981,51853
+RETT_SEEK64 _nvp_SEEK64(INTF_SEEK64)_nvp_SEEK641987,51950
+RETT_TRUNC _nvp_TRUNC(INTF_TRUNC)_nvp_TRUNC2013,52487
+RETT_TRUNC64 _nvp_TRUNC64(INTF_TRUNC64)_nvp_TRUNC642022,52626
+RETT_READV _nvp_READV(INTF_READV)_nvp_READV2090,54033
+RETT_WRITEV _nvp_WRITEV(INTF_WRITEV)_nvp_WRITEV2115,54440
+RETT_DUP _nvp_DUP(INTF_DUP)_nvp_DUP2140,54853
+RETT_DUP2 _nvp_DUP2(INTF_DUP2)_nvp_DUP22213,56439
+RETT_IOCTL _nvp_IOCTL(INTF_IOCTL)_nvp_IOCTL2353,59581
+RETT_UNLINK _nvp_UNLINK(INTF_UNLINK)_nvp_UNLINK2368,59852
+RETT_UNLINKAT _nvp_UNLINKAT(INTF_UNLINKAT)_nvp_UNLINKAT2379,60043
+RETT_FSYNC _nvp_FSYNC(INTF_FSYNC)_nvp_FSYNC2390,60248
+RETT_FDSYNC _nvp_FDSYNC(INTF_FDSYNC)_nvp_FDSYNC2406,60586
+
+/home/rohan/projects/quill-modified/timers.h,284
+typedef struct timespec rohan_timer_t;rohan_timer_t5,61
+static unsigned long long timeRequired;timeRequired7,101
+#define INITIALIZE_TIMER(INITIALIZE_TIMER9,142
+#define START_TIMING(START_TIMING14,256
+#define END_TIMING(END_TIMING17,334
+#define PRINT_TIME(PRINT_TIME26,620
+
+/home/rohan/projects/quill-modified/fileops_moneta.c,2023
+typedef size_t offset_t;offset_t5,92
+#define ENV_MONETA_FOP ENV_MONETA_FOP9,143
+#define CHECK_ALIGNMENT CHECK_ALIGNMENT12,188
+void _moneta_exit_cleanup(void);_moneta_exit_cleanup21,422
+struct Moneta_FD {Moneta_FD23,458
+	volatile off64_t *offset; // TODO: this needs a lockoffset24,478
+	int flags;flags26,560
+	void** channel;channel27,573
+	char* path;path28,591
+	ino_t serialno;serialno29,605
+	int managed;managed30,623
+struct Moneta_FD **_moneta_fd_lookup;_moneta_fd_lookup35,805
+void** _moneta_channel;_moneta_channel37,846
+#define MONETA_OPS_SIMPLEWRAP MONETA_OPS_SIMPLEWRAP43,1010
+#define MONETA_WRAP(MONETA_WRAP46,1154
+#define MONETA_WRAP_IWRAP(MONETA_WRAP_IWRAP53,1410
+BOOST_PP_SEQ_FOR_EACH(MONETA_WRAP_IWRAP, z, MONETA_OPS_SIMPLEWRAP)BOOST_PP_SEQ_FOR_EACH54,1470
+void _moneta_exit_cleanup(void)_moneta_exit_cleanup68,1808
+RETT_OPEN _moneta_OPEN(INTF_OPEN)_moneta_OPEN74,1971
+RETT_CLOSE _moneta_CLOSE(INTF_CLOSE)_moneta_CLOSE275,8659
+RETT_READ _moneta_READ(INTF_READ)_moneta_READ295,9079
+RETT_WRITE _moneta_WRITE(INTF_WRITE)_moneta_WRITE339,10084
+RETT_SEEK _moneta_SEEK(INTF_SEEK)_moneta_SEEK385,11028
+RETT_SEEK64 _moneta_SEEK64(INTF_SEEK64)_moneta_SEEK64401,11307
+RETT_TRUNC _moneta_TRUNC(INTF_TRUNC)_moneta_TRUNC461,12559
+RETT_TRUNC64 _moneta_TRUNC64(INTF_TRUNC64)_moneta_TRUNC64528,15560
+RETT_IOCTL _moneta_IOCTL(INTF_IOCTL)_moneta_IOCTL591,18532
+RETT_DUP _moneta_DUP(INTF_DUP)_moneta_DUP607,18819
+RETT_DUP2 _moneta_DUP2(INTF_DUP2)_moneta_DUP2654,20640
+RETT_READV _moneta_READV(INTF_READV)_moneta_READV695,21736
+RETT_WRITEV _moneta_WRITEV(INTF_WRITEV)_moneta_WRITEV725,22242
+RETT_FORK _moneta_FORK(INTF_FORK)_moneta_FORK754,22753
+RETT_PREAD _moneta_PREAD(INTF_PREAD)_moneta_PREAD784,23342
+RETT_PWRITE _moneta_PWRITE(INTF_PWRITE)_moneta_PWRITE821,24171
+RETT_FSYNC _moneta_FSYNC(INTF_FSYNC)_moneta_FSYNC859,25089
+RETT_FDSYNC _moneta_FDSYNC(INTF_FDSYNC)_moneta_FDSYNC872,25323
+RETT_MKSTEMP _moneta_MKSTEMP(INTF_MKSTEMP)_moneta_MKSTEMP885,25563
+
+/home/rohan/projects/quill-modified/perfcount.h,933
+#define PERF_COUNT_STATS_HPERF_COUNT_STATS_H2,28
+#define MAX_CPUS MAX_CPUS4,58
+typedef uint64_t timing_t;timing_t9,124
+#define MY_ALIGNED MY_ALIGNED11,154
+struct vm_timing_stat {vm_timing_stat13,211
+	timing_t count;count14,236
+	timing_t total_time;total_time15,254
+} MY_ALIGNED;MY_ALIGNED16,277
+typedef struct vm_timing_stat stat_per_cpu[MAX_CPUS];stat_per_cpu18,294
+static inline timing_t getcycles(void) {getcycles20,351
+#define cpuid(cpuid30,737
+static inline int get_cpuid() {get_cpuid34,867
+#define perf_clear_stat(perf_clear_stat46,1080
+static inline struct vm_timing_stat perf_condense_stat(stat_per_cpu s) {perf_condense_stat54,1213
+#define perf_start_timing perf_start_timing67,1542
+#define perf_end_timing(perf_end_timing70,1654
+#define perf_increment_count(perf_increment_count81,1982
+static inline void perf_print_stat(FILE* fd, stat_per_cpu s, const char* name)perf_print_stat83,2040
+
+/home/rohan/projects/quill-modified/common.mk,4959
+CC = gcc -gCC2,1
+LD = g++LD3,13
+CXX=g++CXX4,22
+MAKE = makeMAKE5,30
+LD = g++LD7,43
+CXX = g++CXX8,52
+SYSTEM_TYPE ?= SYSTEM_TYPE_BEE3 # SYSTEM_TYPE_BEE3 or SYSTEM_TYPE_XUPV5SYSTEM_TYPE10,63
+MONETA_LIB_BUILD=RELEASEMONETA_LIB_BUILD13,160
+SDSSD_LIB_BUILD=RELEASESDSSD_LIB_BUILD14,185
+MONETA_LIB_VERSION=MONETA_LIB_VERSION18,269
+MONETA_BUILD_TARGET=build-libMONETA_BUILD_TARGET19,289
+export BEE3HOME=/rootBEE3HOME21,320
+LOG_OUT_DIR=$(BEE3HOME)/test/PosixNVM/logsLOG_OUT_DIR23,343
+LIBNVP_DEBUG=0LIBNVP_DEBUG25,387
+LIBNVP_SPIN_ON_ERROR=0LIBNVP_SPIN_ON_ERROR26,402
+USE_PTHREAD_LOCK=0USE_PTHREAD_LOCK28,426
+USE_SCHED_GETCPU=1USE_SCHED_GETCPU29,445
+USE_SINGLE_LOCK=0USE_SINGLE_LOCK31,465
+INTEGRITY_CHECK=0INTEGRITY_CHECK33,484
+MEASURE_TIMING=0MEASURE_TIMING34,502
+USE_BTREE=1USE_BTREE36,520
+ENABLE_FSYNC_TO_BS=0ENABLE_FSYNC_TO_BS37,532
+ENABLE_FSYNC_TO_CACHE=0ENABLE_FSYNC_TO_CACHE38,553
+ENABLE_FALLOC=1ENABLE_FALLOC39,577
+UNMAP_ON_CLOSE=0UNMAP_ON_CLOSE41,594
+NVP_LIB_DIR=$(BEE3HOME)/test/PosixNVMNVP_LIB_DIR45,830
+MONETA_MOUNT_DIR = /mnt/beecubeMONETA_MOUNT_DIR47,869
+LOCAL_TEST_DIR = /tmp/memuram0/nvpLOCAL_TEST_DIR48,901
+RAMDISK_TEST_DIR = /tmp/memuram0/RAMDISK_TEST_DIR49,936
+NVP_TEST_DIR = /tmp/memuram0NVP_TEST_DIR51,971
+MY_LD_LIB_PATH=$(PWD):$(NVP_LIB_DIR):$(MONETA_LIB_DIR):$(SDSSD_LIB_DIR):$$LD_LIBRARY_PATHMY_LD_LIB_PATH53,1001
+LIBNVP_TREE_DIR=$(BEE3HOME)/test/PosixNVM/bin/LIBNVP_TREE_DIR55,1092
+COPTIMIZATIONS = -m64COPTIMIZATIONS59,1175
+CFLAGS = -DSHOW_DEBUG=$(LIBNVP_DEBUG) -DSPIN_ON_ERROR=$(LIBNVP_SPIN_ON_ERROR) -Wall -Wundef -pthread -fPIC  -g $(COPTIMIZATIONS) -D$(SYSTEM_TYPE) -DUSE_PTHREAD_LOCK=$(USE_PTHREAD_LOCK) -DUSE_SCHED_GETCPU=$(USE_SCHED_GETCPU) -DINTEGRITY_CHECK=$(INTEGRITY_CHECK) -DMEASURE_TIMING=$(MEASURE_TIMING) -DUSE_SINGLE_LOCK=$(USE_SINGLE_LOCK) -DENABLE_FSYNC_TO_BS=$(ENABLE_FSYNC_TO_BS) -DENABLE_FSYNC_TO_CACHE=$(ENABLE_FSYNC_TO_CACHE) -DENABLE_FALLOC=$(ENABLE_FALLOC) -DUSE_BTREE=$(USE_BTREE) -DUNMAP_ON_CLOSE=$(UNMAP_ON_CLOSE)CFLAGS66,1353
+CXXFLAGS=$(CFLAGS)CXXFLAGS68,1872
+MARKERRORS = sed -e "s/\(ERROR:\)/$$(tput bold;tput setaf 1)\1$$(tput sgr0)/g" | sed -e "s/\(WARNING:\)/$$(tput bold;tput setaf 3)\1$$(tput sgr0)/g"MARKERRORS70,1892
+HIGHLIGHTERRORS = sed -e "s/\(total errors:\)/$$(tput bold;tput setaf 1)\1$$(tput sgr0)/gI" | sed -e "s/\(error:\)/$$(tput bold;tput setaf 1)\1$$(tput sgr0)/gI"HIGHLIGHTERRORS72,2042
+HIGHLIGHTFAILURE = sed -e "s/\(FAILURE\)/$$(tput bold;tput setaf 1)\1$$(tput sgr0)/g" | sed -e "s/\(SUCCESS\)/$$(tput bold;tput setaf 2)\1$$(tput sgr0)/g" | sed -e "s/\(Assertion\)/$$(tput bold;tput setaf 1)FAILURE$$(tput sgr0): \1/g" HIGHLIGHTFAILURE74,2204
+SWAPSUCCESSFAILURE = sed -e "s/\(FAILURE\)/$$(tput bold;tput setaf 1)SECRETTEMPWORD1823$$(tput sgr0)/g" | sed -e "s/\(SUCCESS\)/$$(tput bold;tput setaf 2)FAILURE$$(tput sgr0)/g" | sed -e "s/\(SECRETTEMPWORD1823\)/$$(tput bold;tput setaf 2)SUCCESS$$(tput sgr0)/g" SWAPSUCCESSFAILURE76,2441
+SPECIALCASEFORTESTTESTER = sed -e "s/\(test_tester_fail.testexe: RESULT: FAILURE\)/TEMPORARY/gI" | sed -e "s/\(test_tester_fail.testexe: RESULT: SUCCESS\)/test_tester_fail.testexe: RESULT: FAILURE/gI" | sed -e "s/\(TEMPORARY\)/test_tester_fail.testexe: RESULT: SUCCESS/gI" | sed -e "s/\(test_tester_fail.testexe: RESULT: FAILURE\)/\1 : DON'T TRUST THE REST OF THE TEST CASES!/gI" | sed -e "s/\(test_tester_success.testexe: RESULT: FAILURE\)/\1 : DON'T TRUST THE REST OF THE TEST CASES!/gI" | sed -e "s/\(DON'T TRUST THE REST OF THE TEST CASES!\)/$$(tput bold;tput setaf 1)\1$$(tput sgr0)/g"SPECIALCASEFORTESTTESTER78,2706
+MARKINCOMPLETE = sed -e "s/\(result\)/\1: FAILURE: terminated prematurely/gI"MARKINCOMPLETE80,3298
+MARKNOLOAD = sed -e "s/\(If you're reading this, the library is being loaded!\)/\1: FAILURE: did not load libnvp.so/gI"MARKNOLOAD82,3377
+TESTS = test_tester_fail.result test_tester_success.result helloworld.result nvmfileops_test.result test_open.result test_multiplefiles.result test_simultaneousfd.result test_largefilecopy.result test_resizefiles.result test_zipper.result test_rand_zipper.result test_process_zipper.result test_thread.result test_invalid_seek.result test_rollingfd.result test_holes.result test_holes_trunc.result test_open_simultaneous.result test_open_perms.result test_holes_simultaneous.result nvmfileops_test_links.result test_odirect.result test_read_extended.result test_mkstemp.result test_stdout.result test_01.result test_02.result test_03.result test_04.result test_05.result test_07.result test_08.result test_09.result randomTest.resultTESTS85,3522
+NVP_SOFILES = libnvp.so libfileops_wrap.so libfileops_filter.so libfileops_sem.so libfileops_count.so libfileops_harness.so libfileops_nvp.so libfileops_perfcount.so libfileops_hackmmap.so libfileops_death.so #libfileops_bankshot2.soNVP_SOFILES89,4526
+MONETA_DEV_PATH=/dev/bbd0MONETA_DEV_PATH94,4892
+BDB_EXEC_DIR=$$BEE3HOME/Workloads/BDB/MultiBDB_EXEC_DIR96,4919
+
+/home/rohan/projects/quill-modified/fileops_bankshot2.c,12272
+#define MANUAL_PREFAULT MANUAL_PREFAULT8,209
+#define MMAP_PREFAULT MMAP_PREFAULT9,236
+#define DO_ALIGNMENT_CHECKS DO_ALIGNMENT_CHECKS11,263
+const char *bankshot2_ctrl_dev = "/dev/bankshot2Ctrl0";bankshot2_ctrl_dev17,393
+int bankshot2_ctrl_fd;bankshot2_ctrl_fd18,450
+#define NOSANITYCHECK NOSANITYCHECK20,476
+	#define SANITYCHECK(SANITYCHECK22,520
+	#define SANITYCHECK(SANITYCHECK24,552
+#define COUNT_EXTENDS COUNT_EXTENDS28,660
+	volatile size_t _bankshot2_wr_extended;_bankshot2_wr_extended30,704
+	volatile size_t _bankshot2_wr_total;_bankshot2_wr_total31,746
+#define NVP_DO_LOCKING NVP_DO_LOCKING35,797
+#define NVP_LOCK_FD_RD(NVP_LOCK_FD_RD37,825
+#define NVP_UNLOCK_FD_RD(NVP_UNLOCK_FD_RD38,895
+#define NVP_LOCK_FD_WR(NVP_LOCK_FD_WR39,970
+#define NVP_UNLOCK_FD_WR(NVP_UNLOCK_FD_WR40,1027
+#define NVP_LOCK_NODE_RD(NVP_LOCK_NODE_RD42,1091
+#define NVP_UNLOCK_NODE_RD(NVP_UNLOCK_NODE_RD43,1169
+#define NVP_LOCK_NODE_WR(NVP_LOCK_NODE_WR44,1252
+#define NVP_UNLOCK_NODE_WR(NVP_UNLOCK_NODE_WR45,1317
+void* _bankshot2_zbuf; // holds all zeroes.  used for aligned file extending. TODO: does sharing this hurt performance?_bankshot2_zbuf55,1586
+pthread_spinlock_t node_lookup_lock;node_lookup_lock57,1709
+struct NVFile* _bankshot2_fd_lookup;_bankshot2_fd_lookup59,1749
+struct NVNode* _bankshot2_node_lookup;_bankshot2_node_lookup60,1787
+int _bankshot2_ino_lookup[1024];_bankshot2_ino_lookup61,1827
+#define DO_MSYNC(DO_MSYNC77,2619
+int _bankshot2_lock_return_val;_bankshot2_lock_return_val87,2938
+int _bankshot2_write_pwrite_lock_handoff;_bankshot2_write_pwrite_lock_handoff88,2971
+static sigjmp_buf pread_jumper;pread_jumper90,3016
+static sigjmp_buf pwrite_jumper;pwrite_jumper91,3049
+volatile static int do_pread_memcpy;do_pread_memcpy93,3085
+volatile static int do_pwrite_memcpy;do_pwrite_memcpy94,3123
+int falloc_error;falloc_error96,3164
+#define MAX_FALLOC_ERROR	MAX_FALLOC_ERROR97,3183
+#define NVP_CHECK_NVF_VALID(NVP_CHECK_NVF_VALID103,3372
+#define NVP_CHECK_NVF_VALID_WR(NVP_CHECK_NVF_VALID_WR118,3720
+#define SANITYCHECKNVF(SANITYCHECKNVF133,4064
+#define NVP_WRAP_HAS_FD(NVP_WRAP_HAS_FD147,4548
+#define NVP_WRAP_NO_FD(NVP_WRAP_NO_FD158,5304
+#define NVP_WRAP_HAS_FD_IWRAP(NVP_WRAP_HAS_FD_IWRAP165,5562
+#define NVP_WRAP_NO_FD_IWRAP(NVP_WRAP_NO_FD_IWRAP166,5630
+static inline int copy_from_user_inatomic_nocache(void *dst, const void *src, unsigned size) {copy_from_user_inatomic_nocache175,6032
+static inline void* my_memcpy_nocache(void* dst, const void* src, unsigned size) {my_memcpy_nocache179,6180
+static inline void *intel_memcpy(void * __restrict__ b, const void * __restrict__ a, size_t n){intel_memcpy187,6369
+void *(*import_memcpy)(void * __restrict__ b, const void * __restrict__ a, size_t n);import_memcpy194,6553
+#define MMX2_MEMCPY_MIN_LEN MMX2_MEMCPY_MIN_LEN198,6737
+#define MMX_MMREG_SIZE MMX_MMREG_SIZE199,6771
+static void * mmx2_memcpy(void * __restrict__ to, const void * __restrict__ from, size_t len)mmx2_memcpy202,6876
+static char* memcpy1(char *to, char *from, size_t n)memcpy1274,8950
+#define MEMCPY MEMCPY296,9456
+#define MMAP MMAP298,9510
+#define FSYNC_POLICY_NONE FSYNC_POLICY_NONE301,9554
+#define FSYNC_POLICY_FLUSH_ON_FSYNC FSYNC_POLICY_FLUSH_ON_FSYNC302,9583
+#define FSYNC_POLICY_UNCACHEABLE_MAP FSYNC_POLICY_UNCACHEABLE_MAP303,9622
+#define FSYNC_POLICY_NONTEMPORAL_WRITES FSYNC_POLICY_NONTEMPORAL_WRITES304,9662
+#define FSYNC_POLICY_FLUSH_ON_WRITE FSYNC_POLICY_FLUSH_ON_WRITE305,9705
+#define FSYNC_POLICY FSYNC_POLICY307,9746
+	#define FSYNC_MEMCPY FSYNC_MEMCPY310,9827
+	#define FSYNC_MMAP FSYNC_MMAP311,9857
+	#define FSYNC_FSYNC FSYNC_FSYNC312,9883
+	#define FSYNC_MEMCPY FSYNC_MEMCPY314,9957
+	#define FSYNC_MMAP FSYNC_MMAP315,9987
+	#define FSYNC_FSYNC FSYNC_FSYNC316,10013
+	#define FSYNC_MEMCPY FSYNC_MEMCPY318,10119
+	#define FSYNC_MMAP FSYNC_MMAP319,10149
+	#define FSYNC_FSYNC FSYNC_FSYNC320,10197
+	#define FSYNC_MEMCPY FSYNC_MEMCPY322,10275
+	#define FSYNC_MMAP FSYNC_MMAP323,10330
+	#define FSYNC_FSYNC FSYNC_FSYNC324,10356
+	#define FSYNC_MEMCPY FSYNC_MEMCPY326,10442
+	#define FSYNC_MMAP FSYNC_MMAP327,10493
+	#define FSYNC_FSYNC FSYNC_FSYNC328,10519
+static inline void fsync_flush_on_fsync(struct NVFile* nvf)fsync_flush_on_fsync335,10733
+void *mmap_fsync_uncacheable_map(void *start, size_t length, int prot, int flags, int fd, off_t offset)mmap_fsync_uncacheable_map342,10887
+void *memcpy_fsync_nontemporal_writes(void *dest, const void *src, size_t n)memcpy_fsync_nontemporal_writes352,11153
+void *memcpy_fsync_flush_on_write(void *dest, const void *src, size_t n)memcpy_fsync_flush_on_write363,11414
+#define TIME_READ_MEMCPY TIME_READ_MEMCPY378,11741
+long long unsigned int total_memcpy_cycles = 0;total_memcpy_cycles380,11791
+void report_memcpy_usec(void) { printf("Total memcpy time: %llu cycles: %f seconds\n", total_memcpy_cycles, ((float)(total_memcpy_cycles))/(2.27f*1024*1024*1024) ); }report_memcpy_usec381,11840
+enum timing_category {timing_category386,12070
+	do_pread_t = 0,do_pread_t387,12094
+	do_pwrite_t,do_pwrite_t388,12112
+	memcpyr_t,memcpyr_t389,12127
+	memcpyw_t,memcpyw_t390,12140
+	lookup_t,lookup_t391,12153
+	insert_t,insert_t392,12165
+	kernel_t,kernel_t393,12177
+	get_inode_t,get_inode_t394,12189
+	evict_inode_t,evict_inode_t395,12204
+	read_t,read_t396,12221
+	pread_t,pread_t397,12231
+	write_t,write_t398,12242
+	pwrite_t,pwrite_t399,12253
+	open_t,open_t400,12265
+	close_t,close_t401,12275
+	get_node_t,get_node_t402,12286
+	fsync_t,fsync_t403,12300
+	fdsync_t,fdsync_t404,12311
+	falloc_t,falloc_t405,12323
+	TIMING_NUM,	// Last itemTIMING_NUM406,12335
+unsigned long long Countstats[TIMING_NUM];Countstats409,12368
+unsigned long long Timingstats[TIMING_NUM];Timingstats410,12412
+const char *Timingstring[TIMING_NUM] = Timingstring411,12457
+typedef struct timespec timing_type;timing_type434,12766
+#define BANKSHOT2_START_TIMING(BANKSHOT2_START_TIMING438,12828
+#define BANKSHOT2_END_TIMING(BANKSHOT2_END_TIMING441,12918
+void bankshot2_print_time_stats(void)bankshot2_print_time_stats449,13159
+#define BANKSHOT2_START_TIMING(BANKSHOT2_START_TIMING462,13521
+#define BANKSHOT2_END_TIMING(BANKSHOT2_END_TIMING464,13585
+void bankshot2_print_time_stats(void)bankshot2_print_time_stats467,13656
+unsigned int num_total_open;num_total_open480,13970
+unsigned int num_total_close;num_total_close481,14000
+unsigned int num_total_read;num_total_read482,14031
+unsigned int num_total_write;num_total_write483,14061
+unsigned long long total_read_size;total_read_size484,14092
+unsigned long long total_write_size;total_write_size485,14129
+unsigned int num_total_pread;num_total_pread486,14167
+unsigned int num_total_pwrite;num_total_pwrite487,14198
+unsigned long long total_pread_size;total_pread_size488,14230
+unsigned long long total_pwrite_size;total_pwrite_size489,14268
+unsigned int num_read_recheck;num_read_recheck490,14307
+unsigned int num_write_recheck;num_write_recheck491,14339
+void _bankshot2_SIGUSR1_handler(int sig)_bankshot2_SIGUSR1_handler495,14412
+void bankshot2_setup_signal_handler(void)bankshot2_setup_signal_handler504,14625
+void _bankshot2_init2(void)_bankshot2_init2514,14866
+void _bankshot2_print_extend_stats(void)_bankshot2_print_extend_stats572,16321
+static int _bankshot2_get_cache_inode(const char *path, int oflag, int mode,_bankshot2_get_cache_inode585,16966
+void bankshot2_cleanup_node(struct NVNode *node)bankshot2_cleanup_node656,18776
+void bankshot2_init_node(struct NVNode *node)bankshot2_init_node665,18943
+void bankshot2_clear_mappings(void)bankshot2_clear_mappings676,19136
+void bankshot2_print_io_stats(void)bankshot2_print_io_stats711,19930
+void bankshot2_exit_handler(void)bankshot2_exit_handler774,22469
+struct NVNode * bankshot2_allocate_node(void)bankshot2_allocate_node782,22634
+struct NVNode * bankshot2_get_node(const char *path, struct stat *file_st)bankshot2_get_node817,23439
+RETT_OPEN _bankshot2_OPEN(INTF_OPEN)_bankshot2_OPEN870,24833
+RETT_CLOSE _bankshot2_CLOSE(INTF_CLOSE)_bankshot2_CLOSE1156,32352
+static ssize_t _bankshot2_check_read_size_valid(size_t count)_bankshot2_check_read_size_valid1209,33653
+static ssize_t _bankshot2_check_write_size_valid(size_t count)_bankshot2_check_write_size_valid1226,33961
+int integrity_check(const char *buf, char *buf1, size_t length)integrity_check1245,34330
+void integrity_test_extent(struct NVFile *nvf, uint64_t mmap_offset,integrity_test_extent1271,34773
+void bankshot2_read_check(struct NVFile *nvf, ssize_t result, INTF_READ)bankshot2_read_check1308,35551
+void bankshot2_write_check(INTF_WRITE)bankshot2_write_check1325,36035
+void bankshot2_pread_check(struct NVFile *nvf, ssize_t result, INTF_PREAD)bankshot2_pread_check1330,36124
+void bankshot2_pwrite_check(INTF_PWRITE)bankshot2_pwrite_check1346,36561
+void bankshot2_read_check(struct NVFile *nvf, ssize_t result, INTF_READ) {}bankshot2_read_check1353,36663
+void bankshot2_write_check(INTF_WRITE) {}bankshot2_write_check1354,36740
+void bankshot2_pread_check(struct NVFile *nvf, ssize_t result, INTF_PREAD) {}bankshot2_pread_check1355,36783
+void bankshot2_pwrite_check(INTF_PWRITE) {}bankshot2_pwrite_check1356,36862
+void integrity_test_extent(struct NVFile *nvf, uint64_t mmap_offset,integrity_test_extent1357,36907
+RETT_READ _bankshot2_READ(INTF_READ)_bankshot2_READ1362,37035
+RETT_WRITE _bankshot2_WRITE(INTF_WRITE)_bankshot2_WRITE1420,38635
+RETT_PREAD _bankshot2_PREAD(INTF_PREAD)_bankshot2_PREAD1490,40633
+RETT_PWRITE _bankshot2_PWRITE(INTF_PWRITE)_bankshot2_PWRITE1537,41691
+int copy_to_cache(struct NVFile *nvf, struct bankshot2_cache_data *data)copy_to_cache1597,43078
+void copy_from_cache(struct NVFile *nvf, off_t offset, size_t count,copy_from_cache1622,43829
+inline void cache_write_back_extent(struct NVFile *nvf, off_t offset, size_t count,cache_write_back_extent1650,44608
+void cache_write_back(struct NVFile *nvf)cache_write_back1658,44907
+inline void bankshot2_update_file_length(struct NVFile *nvf, size_t file_length)bankshot2_update_file_length1680,45471
+int bankshot2_get_extent(struct NVFile *nvf,bankshot2_get_extent1690,45806
+RETT_PREAD _bankshot2_do_pread(INTF_PREAD, int cpuid)_bankshot2_do_pread1938,53743
+RETT_PWRITE _bankshot2_do_pwrite(INTF_PWRITE, int wr_lock, int cpuid)_bankshot2_do_pwrite2161,60007
+RETT_SEEK _bankshot2_SEEK(INTF_SEEK)_bankshot2_SEEK2452,68329
+RETT_SEEK64 _bankshot2_SEEK64(INTF_SEEK64)_bankshot2_SEEK642458,68444
+RETT_SEEK64 _bankshot2_do_seek64(INTF_SEEK64)_bankshot2_do_seek642479,68926
+RETT_TRUNC _bankshot2_TRUNC(INTF_TRUNC)_bankshot2_TRUNC2535,70251
+RETT_TRUNC64 _bankshot2_TRUNC64(INTF_TRUNC64)_bankshot2_TRUNC642544,70414
+RETT_READV _bankshot2_READV(INTF_READV)_bankshot2_READV2614,71957
+RETT_WRITEV _bankshot2_WRITEV(INTF_WRITEV)_bankshot2_WRITEV2639,72394
+RETT_DUP _bankshot2_DUP(INTF_DUP)_bankshot2_DUP2664,72837
+RETT_DUP2 _bankshot2_DUP2(INTF_DUP2)_bankshot2_DUP22738,74522
+RETT_IOCTL _bankshot2_IOCTL(INTF_IOCTL)_bankshot2_IOCTL2860,77571
+static int _bankshot2_evict_cache_inode(const char *path)_bankshot2_evict_cache_inode2876,77901
+RETT_UNLINK _bankshot2_UNLINK(INTF_UNLINK)_bankshot2_UNLINK2931,79199
+RETT_UNLINKAT _bankshot2_UNLINKAT(INTF_UNLINKAT)_bankshot2_UNLINKAT2944,79472
+int bankshot2_sync(struct NVFile *nvf, struct bankshot2_cache_data *data)bankshot2_sync2959,79785
+RETT_FSYNC _bankshot2_FSYNC(INTF_FSYNC)_bankshot2_FSYNC2976,80181
+RETT_FDSYNC _bankshot2_FDSYNC(INTF_FDSYNC)_bankshot2_FDSYNC3002,80850
+int bankshot2_sync(struct NVFile *nvf, struct bankshot2_cache_data *data)bankshot2_sync3030,81559
+RETT_FSYNC _bankshot2_FSYNC(INTF_FSYNC)_bankshot2_FSYNC3047,81958
+RETT_FDSYNC _bankshot2_FDSYNC(INTF_FDSYNC)_bankshot2_FDSYNC3069,82527
+RETT_FSYNC _bankshot2_FSYNC(INTF_FSYNC)_bankshot2_FSYNC3093,83114
+RETT_FDSYNC _bankshot2_FDSYNC(INTF_FDSYNC)_bankshot2_FDSYNC3106,83411
+#define TIME_EXTEND TIME_EXTEND3121,83729
+void _bankshot2_SIGBUS_handler(int sig)_bankshot2_SIGBUS_handler3326,90015
+void _bankshot2_SIGINT_handler(int sig)_bankshot2_SIGINT_handler3336,90447
+void _bankshot2_SIGSEGV_handler(int sig)_bankshot2_SIGSEGV_handler3343,90620
+
+/home/rohan/projects/quill-modified/run_nvp,0
+
+/home/rohan/projects/quill-modified/run_quill.sh,93
+usage() { echo "Usage: $0 -p </path/to/quill> -t <tree_name> exe" 1>&2; exit 1; }usage3,13
+
+/home/rohan/projects/quill-modified/ramdiskbreaker.c,291
+#define O_DIRECT O_DIRECT13,236
+#define filename filename16,280
+#define THREAD_COUNT THREAD_COUNT18,332
+void* map_location;map_location20,359
+pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;;rwlock28,691
+void* thread_work(void* ptr)thread_work31,751
+int main()main46,1014
+
+/home/rohan/projects/quill-modified/fileops_wrap.c,457
+#define ENV_WRAP_FOP ENV_WRAP_FOP5,80
+#define WRAP_PRINT_F(WRAP_PRINT_F12,289
+#define ALLOPS_FINITEPARAMS_WPAREN_NOFORK ALLOPS_FINITEPARAMS_WPAREN_NOFORK14,349
+#define WRAP(WRAP21,759
+#define WRAP_IWRAP(WRAP_IWRAP27,1025
+BOOST_PP_SEQ_FOR_EACH(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP, _wrap_, ALLOPS_FINITEPARAMS_WPAREN)BOOST_PP_SEQ_FOR_EACH7,119
+int _wrap_IOCTL(INTF_IOCTL)_wrap_IOCTL53,1705
+RETT_FORK _wrap_FORK ( INTF_FORK ) {_wrap_FORK68,2007
+
+/home/rohan/projects/quill-modified/rbtree.c,1619
+static inline void rb_set_black(struct rb_node *rb)rb_set_black50,1836
+static inline struct rb_node *rb_red_parent(struct rb_node *red)rb_red_parent55,1929
+__rb_rotate_set_parents(struct rb_node *old, struct rb_node *new,__rb_rotate_set_parents66,2220
+__rb_insert(struct rb_node *node, struct rb_root *root,__rb_insert76,2530
+____rb_erase_color(struct rb_node *parent, struct rb_root *root,____rb_erase_color205,5953
+void __rb_erase_color(struct rb_node *parent, struct rb_root *root,__rb_erase_color367,10504
+static inline void dummy_propagate(struct rb_node *node, struct rb_node *stop) {}dummy_propagate380,10901
+static inline void dummy_copy(struct rb_node *old, struct rb_node *new) {}dummy_copy381,10983
+static inline void dummy_rotate(struct rb_node *old, struct rb_node *new) {}dummy_rotate382,11058
+static const struct rb_augment_callbacks dummy_callbacks = {dummy_callbacks384,11136
+void rb_insert_color(struct rb_node *node, struct rb_root *root)rb_insert_color388,11244
+void rb_erase(struct rb_node *node, struct rb_root *root)rb_erase393,11354
+void __rb_insert_augmented(struct rb_node *node, struct rb_root *root,__rb_insert_augmented408,11766
+struct rb_node *rb_first(const struct rb_root *root)rb_first417,12027
+struct rb_node *rb_last(const struct rb_root *root)rb_last429,12199
+struct rb_node *rb_next(const struct rb_node *node)rb_next441,12372
+struct rb_node *rb_prev(const struct rb_node *node)rb_prev472,13152
+void rb_replace_node(struct rb_node *victim, struct rb_node *new,rb_replace_node500,13709
+void rb_init_node(struct rb_node *rb)rb_init_node516,14172
+
+/home/rohan/projects/quill-modified/fileops_hackmmap.c,368
+#define ENV_HACKMMAP_FOP ENV_HACKMMAP_FOP6,86
+#define HACKMMAP_PRINT_F(HACKMMAP_PRINT_F13,315
+#define HACKMMAP(HACKMMAP20,589
+#define HACKMMAP_IHACKMMAP(HACKMMAP_IHACKMMAP26,859
+BOOST_PP_SEQ_FOR_EACH(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP, _hackmmap_, ALLOPS_FINITEPARAMS_WPAREN)BOOST_PP_SEQ_FOR_EACH8,133
+int _hackmmap_IOCTL(INTF_IOCTL)_hackmmap_IOCTL90,2200
+
+/home/rohan/projects/quill-modified/debug.h,779
+#define __DEBUG_INCLUDED__DEBUG_INCLUDED2,26
+	#define SHOW_DEBUG SHOW_DEBUG8,157
+	#define SPIN_ON_ERROR SPIN_ON_ERROR12,213
+#define NVP_PRINT_FD NVP_PRINT_FD23,409
+typedef char* charptr;charptr25,472
+#define _nvp_debug_handoff(_nvp_debug_handoff28,592
+#define ERROR_NAMES_LIST ERROR_NAMES_LIST43,1180
+#define ERROR_IF_PRINT(ERROR_IF_PRINT45,1560
+#define PRINTFUNC PRINTFUNC49,1751
+#define MSG(MSG52,1786
+#define ERROR(ERROR54,2068
+int _nv_error_count;_nv_error_count56,2291
+	#define DEBUG(DEBUG59,2331
+        #define WARNING(WARNING60,2503
+	#define DEBUG_P(DEBUG_P61,2660
+	#define DEBUG(DEBUG63,2794
+	#define WARNING(WARNING64,2836
+	#define DEBUG_P(DEBUG_P65,2880
+#define FAIL FAIL68,2934
+#define PRINT_ERROR_NAME(PRINT_ERROR_NAME89,4538
+
+/home/rohan/projects/quill-modified/bin/nvpMoneta,0
+
+/home/rohan/projects/quill-modified/bin/nvpTrace,0
+
+/home/rohan/projects/quill-modified/bin/nvpOLTPwrap,0
+
+/home/rohan/projects/quill-modified/bin/nvpUnmod,0
+
+/home/rohan/projects/quill-modified/bin/nvpCountOrDeath,0
+
+/home/rohan/projects/quill-modified/bin/nvpPerfcountNVP,0
+
+/home/rohan/projects/quill-modified/bin/test_pgsql_wrap,0
+
+/home/rohan/projects/quill-modified/bin/nvpMonetaCompare,0
+
+/home/rohan/projects/quill-modified/bin/nvpCount,0
+
+/home/rohan/projects/quill-modified/bin/test_pgsql_moneta,0
+
+/home/rohan/projects/quill-modified/bin/nvpWrapPerfcount,0
+
+/home/rohan/projects/quill-modified/bin/nvpOLTPmoneta,0
+
+/home/rohan/projects/quill-modified/bin/nvpPerfcount,0
+
+/home/rohan/projects/quill-modified/bin/nvpNVP,0
+
+/home/rohan/projects/quill-modified/bin/test_pgsql_unmod,0
+
+/home/rohan/projects/quill-modified/fileops_sem.c,967
+#define ENV_SEM_FOP ENV_SEM_FOP7,97
+pthread_rwlock_t *mutex;mutex10,141
+void _sem_init2(void)_sem_init225,430
+RETT_OPEN _sem_OPEN(INTF_OPEN)_sem_OPEN37,623
+#define SEM_OPS_RDLOCK SEM_OPS_RDLOCK72,1489
+#define SEM_OPS_WRLOCK SEM_OPS_WRLOCK73,1536
+#define SEM_OPS_NOLOCK SEM_OPS_NOLOCK74,1645
+#define SEM_LOCK_RD(SEM_LOCK_RD76,1685
+#define SEM_LOCK_WR(SEM_LOCK_WR82,1887
+#define SEM_UNLOCK SEM_UNLOCK88,2090
+#define SEM_FUNCT_RDLOCK(SEM_FUNCT_RDLOCK93,2231
+#define SEM_FUNCT_WRLOCK(SEM_FUNCT_WRLOCK102,2444
+#define SEM_FUNCT_NOLOCK(SEM_FUNCT_NOLOCK110,2655
+#define SEM_FUNCT_RDLOCK_IWRAP(SEM_FUNCT_RDLOCK_IWRAP118,2896
+#define SEM_FUNCT_NOLOCK_IWRAP(SEM_FUNCT_NOLOCK_IWRAP119,2966
+#define SEM_FUNCT_WRLOCK_IWRAP(SEM_FUNCT_WRLOCK_IWRAP120,3036
+BOOST_PP_SEQ_FOR_EACH(SEM_FUNCT_NOLOCK_IWRAP,  z, SEM_OPS_NOLOCK )BOOST_PP_SEQ_FOR_EACH122,3108
+RETT_DUP _sem_DUP(INTF_DUP)_sem_DUP141,3560
+RETT_DUP2 _sem_DUP2(INTF_DUP2)_sem_DUP2158,3779
+
+/home/rohan/projects/quill-modified/red_black_tree.c,1313
+rb_red_blk_tree* RBTreeCreate( int (*CompFunc) (const void*,const void*),RBTreeCreate24,1092
+void LeftRotate(rb_red_blk_tree* tree, rb_red_blk_node* x) {LeftRotate69,2801
+void RightRotate(rb_red_blk_tree* tree, rb_red_blk_node* y) {RightRotate124,4811
+void TreeInsertHelp(rb_red_blk_tree* tree, rb_red_blk_node* z) {TreeInsertHelp175,6732
+rb_red_blk_node * RBTreeInsert(rb_red_blk_tree* tree, void* key, void* info) {RBTreeInsert225,8394
+rb_red_blk_node* TreeSuccessor(rb_red_blk_tree* tree,rb_red_blk_node* x) { TreeSuccessor295,10296
+rb_red_blk_node* TreePredecessor(rb_red_blk_tree* tree, rb_red_blk_node* x) {TreePredecessor330,11408
+void InorderTreePrint(rb_red_blk_tree* tree, rb_red_blk_node* x) {InorderTreePrint366,12506
+void TreeDestHelper(rb_red_blk_tree* tree, rb_red_blk_node* x) {TreeDestHelper390,13290
+void RBTreeDestroy(rb_red_blk_tree* tree) {RBTreeDestroy415,13941
+void RBTreePrint(rb_red_blk_tree* tree) {RBTreePrint437,14549
+rb_red_blk_node* RBExactQuery(rb_red_blk_tree* tree, void* q) {RBExactQuery456,15195
+void RBDeleteFixUp(rb_red_blk_tree* tree, rb_red_blk_node* x) {RBDeleteFixUp491,16270
+void RBDelete(rb_red_blk_tree* tree, rb_red_blk_node* z){RBDelete570,18267
+stk_stack* RBEnumerate(rb_red_blk_tree* tree, void* low, void* high) {RBEnumerate633,20046
+
+/home/rohan/projects/quill-modified/scripts/dirtyTrackingOverhead.sh,39
+run_experiment()run_experiment34,669
+
+/home/rohan/projects/quill-modified/scripts/dirtyTrackingOverheadNoQuill.sh,39
+run_experiment()run_experiment34,694
+
+/home/rohan/projects/quill-modified/scripts/dirtyTrackingOverhead.sh~,39
+run_experiment()run_experiment26,510
+
+/home/rohan/projects/quill-modified/scripts/dirtyTrackingOverheadNoQuill.sh~,39
+run_experiment()run_experiment34,694
+
+/home/rohan/projects/quill-modified/test/test_resizefiles.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval15,223
+
+/home/rohan/projects/quill-modified/test/test_07.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval14,272
+
+/home/rohan/projects/quill-modified/test/Makefile,7333
+TESTTREE0  = "test_fake.tree"TESTTREE07,147
+TESTTREE1  = "test_no_target.tree"TESTTREE18,177
+TESTTREE2  = "test_no_hub.tree"TESTTREE29,212
+TESTTREE3  = "test_badformat1.tree"TESTTREE310,244
+TESTTREE4  = "test_badformat2.tree"TESTTREE411,280
+TESTTREE5  = "test_badhub.tree"TESTTREE512,316
+TESTTREE10 = "nvp_posix.tree"TESTTREE1014,349
+TESTTREE11 = "nvp_count.tree"TESTTREE1115,379
+TESTTREE12 = "nvp_compare_posix_posix.tree"TESTTREE1216,409
+TESTTREE13 = "nvp_compare_posix_count.tree"TESTTREE1317,453
+TESTTREE20 = "nvp_moneta.tree"TESTTREE2020,535
+TESTTREE21 = "nvp_compare_moneta.tree"TESTTREE2121,566
+TESTTREE30 = "nvp_nvp.tree"TESTTREE3023,606
+TESTTREE31 = "nvp_wrap_compare_posix_nvp.tree"TESTTREE3124,634
+PASSTREENUMS = 10 11 12 13 30 31PASSTREENUMS26,682
+FAILTREENUMS = 0 1 2 3 4 5FAILTREENUMS27,715
+PASSMONETATREENUMS = 20 21PASSMONETATREENUMS29,743
+FAILMONETATREENUMS = FAILMONETATREENUMS30,770
+	-export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so $(MONETA_TEST)"; ./$< 2>&1 | (unset LD_PRELOAD; tee $(LOG_OUT_DIR)/$@ | $(MARKERRORS) )D_LIBRARY_PATH93,2635
+	export NVP_TREE_FILE=$(LIBNVP_TREE_DIR)$(TESTTREE$(TESTNUM)); $(MAKE) $(TESTS)NVP_TREE_FILE138,4627
+XDDEXEC  = $(BEE3HOME)/Workloads/xdd/bin/xdd.linuxXDDEXEC181,6115
+XDDFLAGS =     -rwratio 50 -mbytes 54000 -noproclock -nomemlock -runtime 100 -target $(XDD_FILE)XDDFLAGS182,6166
+XDDFLAGS_NVP = -mbytes 54000 -noproclock -nomemlock -runtime 2 -blocksize 4096 -reqsize 1 -dio -target $(XDD_FILE_NVP)XDDFLAGS_NVP184,6365
+XDD_TESTS =     xdd_unmod.result xdd_wrap.result xdd_moneta.resultXDD_TESTS185,6484
+XDD_TESTS_NVP = xdd_unmod-rw1.result xdd_unmod-rw50.result xdd_unmod-rw100.result xdd_nvp-rw1.result xdd_nvp-rw50.result xdd_nvp-rw100.resultXDD_TESTS_NVP187,6639
+XDD_FILE = $(MONETA_MOUNT_DIR)/xddtestfile.txtXDD_FILE188,6781
+XDD_FILE_NVP = $(RAMDISK_TEST_DIR)xddtestfile.txtXDD_FILE_NVP189,6828
+XDD_WRAPPER_DIR = $(BEE3HOME)/test/PosixNVM/binXDD_WRAPPER_DIR191,6879
+XDD_WRAPPER_SCRIPTS = nvpUnmod nvpNVPXDD_WRAPPER_SCRIPTS192,6927
+XDD_RATIOS = 1 50 100XDD_RATIOS193,6965
+XDD_NUM_THREADS = 1 8XDD_NUM_THREADS194,6987
+XDD_LOG_FILENAME = xdd_nvp_$(SCRIPT)-tc$(THREADS)-rw$(RATIO).resultXDD_LOG_FILENAME195,7009
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_posix.tree"; $(XDDEXEC) $(XDDFLAGS) -target $(MONETA_MOUNT_DIR)/xddtestfile.txt 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_wrap.result )D_LIBRARY_PATH217,8686
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so libmoneta.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_moneta.tree"; $(XDDEXEC) $(XDDFLAGS) -target $(MONETA_MOUNT_DIR)/xddtestfile.txt 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_moneta.result )D_LIBRARY_PATH218,8950
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree"; $(XDDEXEC) $(XDDFLAGS_NVP) -rwratio 1 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_nvp-rw1.result )D_LIBRARY_PATH230,10236
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree"; $(XDDEXEC) $(XDDFLAGS_NVP) -rwratio 50 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_nvp-rw50.result )D_LIBRARY_PATH231,10472
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree"; $(XDDEXEC) $(XDDFLAGS_NVP) -rwratio 100 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_nvp-rw100.result )D_LIBRARY_PATH232,10710
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree"; $(XDDEXEC) $(XDDFLAGS_NVP) 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/xdd_nvp.result )D_LIBRARY_PATH233,10950
+BDB_TESTS = BDB_tree_unmod.result BDB_tree_wrap.result BDB_tree_moneta.result BDB_hash_unmod.result BDB_hash_wrap.result BDB_hash_moneta.resultBDB_TESTS249,12160
+BDB_TESTS_NVP = BDB_tree_unmod.result BDB_tree_wrap.result BDB_tree_nvp.result BDB_tree_compare_nvp.resultBDB_TESTS_NVP250,12304
+BDB_FLAGS_CREATE = -rt 600 -tc 1 -foot 50000 -file $(BDB_FILE_NVP) -createBDB_FLAGS_CREATE251,12411
+BDB_FLAGS_RUN    = -rt 600 -tc 1 -foot 50000 -file $(BDB_FILE_NVP) -reloadBDB_FLAGS_RUN252,12486
+BDB_FILE = $(MONETA_MOUNT_DIR)/test/BDB_FILE253,12561
+BDB_FILE_NVP = $(RAMDISK_TEST_DIR)bdbtestBDB_FILE_NVP254,12598
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so libmoneta.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_moneta.tree"; $(BDB_EXEC_DIR)/BTree.exe BDBtest_tree_moneta $(BDB_FLAGS_RUN) 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/BDB_tree_moneta.result )D_LIBRARY_PATH269,13659
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_posix.tree"; $(BDB_EXEC_DIR)/BTree.exe BDBtest_tree_wrap $(BDB_FLAGS_RUN) 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/BDB_tree_wrap.result )D_LIBRARY_PATH281,14547
+	- export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree"; $(BDB_EXEC_DIR)/BTree.exe BDBtest_tree_nvp $(BDB_FLAGS_RUN) 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/BDB_tree_nvp.result )D_LIBRARY_PATH282,14810
+OLTP_TESTS = oltp_unmod.result oltp_wrap.result oltp_moneta.result oltp_nvp.result oltp_compare_nvp.resultOLTP_TESTS296,16097
+EXPORT_UNMOD = EXPORT_UNMOD298,16205
+EXPORT_WRAP = export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_posix.tree";EXPORT_WRAP301,16279
+EXPORT_MONETA = export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so libmoneta.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_moneta.tree";EXPORT_MONETA302,16423
+EXPORT_NVP = export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_nvp.tree";EXPORT_NVP303,16583
+EXPORT_COMPARE_NVP = export LD_LIBRARY_PATH=$(MY_LD_LIB_PATH); export LD_PRELOAD="libnvp.so"; export NVP_TREE_FILE="$(LIBNVP_TREE_DIR)nvp_wrap_compare_posix_nvp.tree";EXPORT_COMPARE_NVP304,16724
+	-$(MAKE) setup_oltp run_oltp close_oltp OLTPEXPORT=EXPORT_WRAP   2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/oltp_wrap.result )LTPEXPORT313,17258
+	-$(MAKE) setup_oltp run_oltp close_oltp OLTPEXPORT=EXPORT_MONETA 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/oltp_moneta.result )LTPEXPORT315,17399
+	-$(MAKE) setup_oltp run_oltp close_oltp OLTPEXPORT=EXPORT_WRAP   2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/oltp_wrap.result )LTPEXPORT326,18216
+	-$(MAKE) setup_oltp run_oltp close_oltp OLTPEXPORT=EXPORT_NVP 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/oltp_nvp.result )LTPEXPORT328,18357
+	-$(MAKE) setup_oltp run_oltp close_oltp OLTPEXPORT=EXPORT_COMPARE_NVP 2>&1 | ( unset LD_PRELOAD; tee $(LOG_OUT_DIR)/oltp_compare_nvp.result )LTPEXPORT330,18494
+	mysql_install_db --basedir=${BEE3HOME}/ext/mysql-5.1.46/install --datadir=/mnt/beecube/mysql --defaults-file=/tmp/my.cnf-basedir343,19400
+	mysqladmin --defaults-file=/tmp/my.cnf -u root shutdown-defaults-file359,20889
+PG_TESTS = pgsql_unmod.result pgsql_wrap.result pgsql_moneta.resultPG_TESTS372,21198
+
+/home/rohan/projects/quill-modified/test/test_invalid_seek.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval9,96
+
+/home/rohan/projects/quill-modified/test/test_mkstemp.c,105
+#define _XOPEN_SOURCE _XOPEN_SOURCE12,200
+int do_test_eval(int argc, char* argv[])do_test_eval18,366
+
+/home/rohan/projects/quill-modified/test/test_open_many.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval9,96
+
+/home/rohan/projects/quill-modified/test/helloworld.c,22
+int main()main7,105
+
+/home/rohan/projects/quill-modified/test/test_08.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval14,272
+
+/home/rohan/projects/quill-modified/test/test_holes_simultaneous.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval6,71
+
+/home/rohan/projects/quill-modified/test/test_common.h,1125
+#define __TEST_COMMON_H___TEST_COMMON_H_2,26
+#define _GNU_SOURCE_GNU_SOURCE5,75
+#define ERROR ERROR35,580
+#define DEBUG DEBUG36,602
+#define MSG MSG37,624
+#define DEFAULT_FILENAME1 DEFAULT_FILENAME139,646
+#define DEFAULT_FILENAME2 DEFAULT_FILENAME240,696
+#define DEFAULT_FILENAME3 DEFAULT_FILENAME341,746
+#define DEFAULT_FILENAME4 DEFAULT_FILENAME442,796
+#define DEFAULT_FILENAME5 DEFAULT_FILENAME543,846
+#define DEFAULT_FILENAME6 DEFAULT_FILENAME644,896
+#define DEFAULT_FILENAME7 DEFAULT_FILENAME745,946
+#define DEFAULT_FILENAME8 DEFAULT_FILENAME846,996
+#define CHECK_LEN_INT(CHECK_LEN_INT48,1048
+#define CHECK_LEN(CHECK_LEN49,1364
+#define CHECK_WRITE(CHECK_WRITE50,1467
+#define CHECK_BIN_RRESULT(CHECK_BIN_RRESULT51,1652
+#define CHECK_BIN_READ(CHECK_BIN_READ52,1845
+#define CHECK_RRESULT(CHECK_RRESULT53,2049
+#define CHECK_READ(CHECK_READ54,2230
+#define CHECK_SEEK(CHECK_SEEK55,2442
+#define SET_BUFFER(SET_BUFFER56,2622
+#define CLEAR_BUFFER CLEAR_BUFFER57,2761
+#define CHECK_CLOSE(CHECK_CLOSE58,2815
+#define CHECK_TRUNC(CHECK_TRUNC59,2959
+#define CHECK_FD(CHECK_FD60,3105
+
+/home/rohan/projects/quill-modified/test/test_rollingfd.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval6,71
+
+/home/rohan/projects/quill-modified/test/test_process_zipper.c,285
+     int fd;fd18,307
+     char id;id19,321
+     int thread_count;thread_count20,336
+     pid_t pid;pid21,360
+} ThreadState;ThreadState22,377
+void * Go(void *arg) {Go24,395
+#define ITERATIONS ITERATIONS29,498
+int do_test_eval(int argc, char* argv[]) {do_test_eval43,876
+
+/home/rohan/projects/quill-modified/test/test_tester_success.c,60
+int do_test_eval(int argc, char* argv[])do_test_eval6,122
+
+/home/rohan/projects/quill-modified/test/nvmfileops_test.c,45
+int main(int argc, char* argv[])main16,258
+
+/home/rohan/projects/quill-modified/test/test_stdout.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval12,200
+
+/home/rohan/projects/quill-modified/test/test_rand_zipper.c,383
+pthread_barrier_t start_barrier;start_barrier18,269
+pthread_barrier_t barrier1;barrier119,303
+pthread_barrier_t barrier2;barrier220,332
+     int fd;fd23,381
+     char id;id24,395
+     int thread_count;thread_count25,410
+     pthread_t thread;thread26,434
+} ThreadState;ThreadState27,458
+void * Go(void *arg) {Go29,476
+int main(int argc, char* argv[]) {main47,929
+
+/home/rohan/projects/quill-modified/test/test_02.c,105
+#define _XOPEN_SOURCE _XOPEN_SOURCE12,200
+int do_test_eval(int argc, char* argv[])do_test_eval18,366
+
+/home/rohan/projects/quill-modified/test/test_06.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval12,200
+
+/home/rohan/projects/quill-modified/test/test_thread.c,399
+pthread_barrier_t start_barrier;start_barrier16,223
+pthread_barrier_t barrier1;barrier117,257
+pthread_barrier_t barrier2;barrier218,286
+     int fd;fd21,335
+     char id;id22,349
+     int thread_count;thread_count23,364
+     pthread_t thread;thread24,388
+} ThreadState;ThreadState25,412
+void * Go(void *arg) {Go27,430
+int do_test_eval(int argc, char* argv[]) {do_test_eval32,480
+
+/home/rohan/projects/quill-modified/test/static_copy.c,79
+#define PACKAGE PACKAGE12,213
+int main(int argc, char *argv[]) {main14,239
+
+/home/rohan/projects/quill-modified/test/test_ioctl.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval16,254
+
+/home/rohan/projects/quill-modified/test/test_fread.c,60
+int do_test_eval(int argc, char* argv[])do_test_eval7,114
+
+/home/rohan/projects/quill-modified/test/test_03.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval12,200
+
+/home/rohan/projects/quill-modified/test/harness.c,455
+char *_harness_name;_harness_name9,153
+int _harness_status = 0;_harness_status10,175
+char **theEnvp = NULL;theEnvp18,342
+char **theArgv = NULL;theArgv19,366
+int theArgc = 0;theArgc20,390
+void nv_test_exit(int status)nv_test_exit25,533
+int main(int argc, char* argv[], char *envp[])main37,880
+void PrintHarnessStatus(void)PrintHarnessStatus78,2036
+void HarnessSuccess(void)HarnessSuccess88,2253
+void HarnessFail(void)HarnessFail93,2311
+
+/home/rohan/projects/quill-modified/test/randomOps.hpp,0
+
+/home/rohan/projects/quill-modified/test/test_open_perms.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval9,96
+
+/home/rohan/projects/quill-modified/test/test_simultaneousfd.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval15,223
+
+/home/rohan/projects/quill-modified/test/test_read_extended.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval11,179
+
+/home/rohan/projects/quill-modified/test/test_09.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval12,200
+
+/home/rohan/projects/quill-modified/test/test_hub_pointers.c,184
+#define ENV_HUB_FOP ENV_HUB_FOP21,373
+int do_test_eval(int argc, char* argv[])do_test_eval23,410
+	#define TEST_FOP(TEST_FOP37,909
+	#define TEST_FOP_IWRAP(TEST_FOP_IWRAP45,1156
+
+/home/rohan/projects/quill-modified/test/nvmfileops_test_links.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval16,258
+
+/home/rohan/projects/quill-modified/test/test_tester_fail.c,60
+int do_test_eval(int argc, char* argv[])do_test_eval6,122
+
+/home/rohan/projects/quill-modified/test/test_holes.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval6,71
+
+/home/rohan/projects/quill-modified/test/test_04.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval12,200
+
+/home/rohan/projects/quill-modified/test/test_multiplefiles.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval15,223
+
+/home/rohan/projects/quill-modified/test/test_01.c,105
+#define _XOPEN_SOURCE _XOPEN_SOURCE12,200
+int do_test_eval(int argc, char* argv[])do_test_eval18,366
+
+/home/rohan/projects/quill-modified/test/randomTest.cpp,2123
+#define FD_COUNT FD_COUNT19,343
+#define FILE_NAME_COUNT FILE_NAME_COUNT20,364
+#define BUF_SIZE BUF_SIZE21,392
+#define FLAGS_RANGE FLAGS_RANGE22,422
+#define PERMS_RANGE PERMS_RANGE24,729
+#define MAX_OFFSET MAX_OFFSET25,766
+#define SEEK_WHENCE SEEK_WHENCE26,802
+int thread_count;thread_count30,856
+#define MAX_THREAD_COUNT MAX_THREAD_COUNT31,875
+int fds[FD_COUNT];fds33,905
+char *fileNames[FILE_NAME_COUNT];fileNames34,925
+typedef void (OpFunc)(void);OpFunc36,962
+class RandFunc {RandFunc39,1043
+     static uint64_t seed;seed40,1061
+     RandFunc(){}RandFunc42,1098
+     int operator() () {operator ()43,1117
+uint64_t RandFunc<MIN, MAX>::seed = rand();seed49,1256
+RandFunc<0, FD_COUNT> RandFDIndex;RandFDIndex51,1303
+RandFunc<0,FILE_NAME_COUNT> RandFileNameIndex;RandFileNameIndex52,1339
+RandFunc<0, BUF_SIZE> RandBufSize;RandBufSize53,1387
+RandFunc<0, FLAGS_RANGE> RandFlags;RandFlags54,1423
+RandFunc<0, PERMS_RANGE> RandPerms;RandPerms55,1460
+RandFunc<0, -1> RandLongInt;RandLongInt56,1497
+RandFunc<0, MAX_OFFSET> RandOffset;RandOffset57,1527
+RandFunc<-2, 2> RandWhence;RandWhence58,1564
+int & RandFD() {return fds[RandFDIndex()];}RandFD60,1595
+char * RandFileName() {return fileNames[RandFileNameIndex()];}RandFileName61,1640
+int errorCount = 0;errorCount63,1706
+#define OP(OP69,1796
+const int OpCount = 0 OpCount70,1830
+#undef OPOP73,1887
+#define OP(OP76,1924
+#undef OPOP78,1985
+int distribution[] = {distribution75,1900
+#define OP(OP81,2002
+const int DistributionMax = 0 DistributionMax82,2040
+#undef OPOP85,2105
+typedef std::map<std::string, int> OpCountMapType;OpCountMapType87,2118
+OpCountMapType opCountMap;opCountMap88,2170
+OpCountMapType opErrorMap;opErrorMap89,2198
+typedef std::vector<int> FDListType;FDListType91,2228
+FDListType fdList;fdList92,2266
+int iterationCounter = 0;iterationCounter94,2288
+int repCount = 10000;repCount95,2315
+#define OP(OP97,2340
+#undef OPOP99,2547
+#define OP(OP102,2579
+#undef OPOP104,2647
+OpFunc *Ops[] = {Ops101,2560
+int do_test_eval(int argc, char* argv[]) {do_test_eval108,2680
+
+/home/rohan/projects/quill-modified/test/test_odirect.c,105
+#define _XOPEN_SOURCE _XOPEN_SOURCE11,179
+int do_test_eval(int argc, char* argv[])do_test_eval13,208
+
+/home/rohan/projects/quill-modified/test/test_open.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval15,223
+
+/home/rohan/projects/quill-modified/test/test_holes_trunc.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval9,96
+
+/home/rohan/projects/quill-modified/test/test_clone.c,116
+int DoSomething(void*t) {return 0;}DoSomething10,140
+int do_test_eval(int argc, char* argv[])do_test_eval12,179
+
+/home/rohan/projects/quill-modified/test/test_open_simultaneous.c,59
+int do_test_eval(int argc, char* argv[])do_test_eval9,96
+
+/home/rohan/projects/quill-modified/test/test_zipper.c,399
+pthread_barrier_t start_barrier;start_barrier16,223
+pthread_barrier_t barrier1;barrier117,257
+pthread_barrier_t barrier2;barrier218,286
+     int fd;fd21,335
+     char id;id22,349
+     int thread_count;thread_count23,364
+     pthread_t thread;thread24,388
+} ThreadState;ThreadState25,412
+void * Go(void *arg) {Go27,430
+int do_test_eval(int argc, char* argv[]) {do_test_eval42,812
+
+/home/rohan/projects/quill-modified/test/test_largefilecopy.c,61
+int do_test_eval(int argc, char* argv[])do_test_eval15,223
+
+/home/rohan/projects/quill-modified/nvp_printf.c,1358
+#define __NVP_XIL_PRINTF_C___NVP_XIL_PRINTF_C_10,430
+FILE * _xil_printf_file;_xil_printf_file26,736
+FILE* _nvp_print_fd;_nvp_print_fd28,764
+static pthread_mutex_t __debug_mutex = PTHREAD_MUTEX_INITIALIZER;__debug_mutex34,822
+int max_len = 0;max_len36,891
+int pos = 0;pos37,909
+char * outbuf = NULL;outbuf38,923
+void crush_outbuf(void)crush_outbuf40,948
+void flush_outbuf(void)flush_outbuf46,1023
+void outbyte (char c)outbyte77,2052
+void printString(char *s){printString89,2247
+typedef struct params_s {params_s100,2583
+    int len;len101,2610
+    int num1;num1102,2624
+    int num2;num2103,2639
+    char pad_character;pad_character104,2654
+    int do_padding;do_padding105,2679
+    int left_flag;left_flag106,2700
+} params_t;params_t107,2720
+typedef int (*func_ptr)(int c);func_ptr117,3136
+static void padding( const int l_flag, params_t *par)padding124,3456
+static void outs(charptr lp, params_t *par)outs138,3967
+static void outnum( const long long n, const long long base, params_t *par)outnum161,4799
+static int getnum( charptr* linep)getnum202,6007
+void xil_printf( FILE * file, const charptr ctrl1, ...)xil_printf230,6971
+#define MK_STR(MK_STR381,10443
+#define _NVP_PRINT_ERROR_NAME_FDEF__NVP_PRINT_ERROR_NAME_FDEF_384,10504
+void _nvp_print_error_name(int errnoin) _nvp_print_error_name385,10541
+
+/home/rohan/projects/quill-modified/nv_common.h,9840
+#define __NV_COMMON_H___NV_COMMON_H_4,91
+#define _GNU_SOURCE_GNU_SOURCE10,178
+#define MIN(MIN37,739
+#define MAX(MAX38,777
+#define LIKELY(LIKELY41,880
+#define UNLIKELY(UNLIKELY42,929
+#define assert(assert44,980
+#define MK_STR(MK_STR47,1146
+#define MK_STR2(MK_STR248,1172
+#define MK_STR3(MK_STR349,1202
+#define MACRO_WRAP(MACRO_WRAP51,1235
+#define MACRO_CAT(MACRO_CAT52,1260
+#define MONETA_CHAR_DEVICE_PATH MONETA_CHAR_DEVICE_PATH56,1349
+#define SDSSD_CHAR_DEVICE_PATH SDSSD_CHAR_DEVICE_PATH57,1401
+#define MONETA_BLOCK_DEVICE_PATH MONETA_BLOCK_DEVICE_PATH58,1452
+#define SDSSD_BLOCK_DEVICE_PATH SDSSD_BLOCK_DEVICE_PATH59,1501
+#define ST_MONETA_DEVICE_ID ST_MONETA_DEVICE_ID61,1551
+#define ST_SDSSD_DEVICE_ID ST_SDSSD_DEVICE_ID62,1584
+#define ST_SDSSD_BANKSHOT_DEVICE_ID ST_SDSSD_BANKSHOT_DEVICE_ID63,1616
+typedef int bool;bool66,1680
+#define false false67,1699
+#define true true68,1716
+#define MAX_FILEOPS MAX_FILEOPS74,1837
+#define OPS_FINITEPARAMS_64 OPS_FINITEPARAMS_6483,2242
+#define OPS_64 OPS_6484,2290
+#define ALLOPS_FINITEPARAMS_WPAREN ALLOPS_FINITEPARAMS_WPAREN85,2332
+#define ALLOPS_WPAREN ALLOPS_WPAREN86,2542
+#define FILEOPS_WITH_FD FILEOPS_WITH_FD89,2688
+#define FILEOPS_WITHOUT_FD FILEOPS_WITHOUT_FD91,2825
+#define CHECK_RESOLVE_FILEOPS_OLDVERSION(CHECK_RESOLVE_FILEOPS_OLDVERSION103,3221
+#define CHECK_RESOLVE_FILEOPS(CHECK_RESOLVE_FILEOPS110,3421
+#define ADD_FUNCTP(ADD_FUNCTP137,4404
+#define ADD_FUNCTP_IWRAP(ADD_FUNCTP_IWRAP138,4467
+#define INIT_FILEOPS_P(INIT_FILEOPS_P140,4534
+#define MODULE_REGISTRATION_F(MODULE_REGISTRATION_F148,4866
+#define FLAGS_INCLUDE(FLAGS_INCLUDE179,5760
+#define DUMP_FLAGS(DUMP_FLAGS180,5813
+#define WEAK_ALIAS(WEAK_ALIAS182,5918
+#define ALIAS_OPEN ALIAS_OPEN187,6108
+#define ALIAS_READ ALIAS_READ188,6135
+#define ALIAS_WRITE ALIAS_WRITE189,6162
+#define ALIAS_SEEK ALIAS_SEEK190,6190
+#define ALIAS_CLOSE ALIAS_CLOSE191,6218
+#define ALIAS_TRUNC ALIAS_TRUNC192,6246
+#define ALIAS_DUP ALIAS_DUP193,6278
+#define ALIAS_DUP2 ALIAS_DUP2194,6304
+#define ALIAS_FORK ALIAS_FORK195,6331
+#define ALIAS_MMAP ALIAS_MMAP196,6358
+#define ALIAS_READV ALIAS_READV197,6385
+#define ALIAS_WRITEV ALIAS_WRITEV198,6413
+#define ALIAS_PIPE ALIAS_PIPE199,6442
+#define ALIAS_IOCTL ALIAS_IOCTL200,6469
+#define ALIAS_MUNMAP ALIAS_MUNMAP201,6497
+#define ALIAS_MSYNC ALIAS_MSYNC202,6526
+#define ALIAS_CLONE ALIAS_CLONE203,6554
+#define ALIAS_PREAD ALIAS_PREAD204,6584
+#define ALIAS_PWRITE ALIAS_PWRITE205,6612
+#define ALIAS_FSYNC ALIAS_FSYNC206,6641
+#define ALIAS_FDSYNC ALIAS_FDSYNC207,6669
+#define ALIAS_TRUNC64 ALIAS_TRUNC64208,6701
+#define ALIAS_OPEN64 ALIAS_OPEN64209,6736
+#define ALIAS_SEEK64 ALIAS_SEEK64210,6766
+#define ALIAS_MMAP64 ALIAS_MMAP64211,6797
+#define ALIAS_MKSTEMP ALIAS_MKSTEMP212,6827
+#define ALIAS_ACCEPT ALIAS_ACCEPT213,6858
+#define ALIAS_SOCKET ALIAS_SOCKET214,6888
+#define ALIAS_UNLINK ALIAS_UNLINK215,6918
+#define ALIAS_UNLINKAT ALIAS_UNLINKAT216,6948
+#define RETT_OPEN RETT_OPEN219,7013
+#define RETT_READ RETT_READ220,7038
+#define RETT_WRITE RETT_WRITE221,7067
+#define RETT_SEEK RETT_SEEK222,7096
+#define RETT_CLOSE RETT_CLOSE223,7123
+#define RETT_TRUNC RETT_TRUNC224,7148
+#define RETT_DUP RETT_DUP225,7173
+#define RETT_DUP2 RETT_DUP2226,7198
+#define RETT_FORK RETT_FORK227,7223
+#define RETT_MMAP RETT_MMAP228,7250
+#define RETT_READV RETT_READV229,7277
+#define RETT_WRITEV RETT_WRITEV230,7306
+#define RETT_PIPE RETT_PIPE231,7335
+#define RETT_IOCTL RETT_IOCTL232,7360
+#define RETT_MUNMAP RETT_MUNMAP233,7385
+#define RETT_MSYNC RETT_MSYNC234,7410
+#define RETT_CLONE RETT_CLONE235,7435
+#define RETT_PREAD RETT_PREAD236,7460
+#define RETT_PWRITE RETT_PWRITE237,7489
+#define RETT_FSYNC RETT_FSYNC238,7518
+#define RETT_FDSYNC RETT_FDSYNC239,7543
+#define RETT_TRUNC64 RETT_TRUNC64240,7568
+#define RETT_OPEN64 RETT_OPEN64241,7594
+#define RETT_SEEK64 RETT_SEEK64242,7620
+#define RETT_MMAP64 RETT_MMAP64243,7650
+#define RETT_MKSTEMP RETT_MKSTEMP244,7678
+#define RETT_ACCEPT RETT_ACCEPT245,7704
+#define RETT_SOCKET RETT_SOCKET246,7730
+#define RETT_UNLINK RETT_UNLINK247,7756
+#define RETT_UNLINKAT RETT_UNLINKAT248,7782
+#define INTF_OPEN INTF_OPEN252,7841
+#define INTF_READ INTF_READ253,7895
+#define INTF_WRITE INTF_WRITE254,7957
+#define INTF_SEEK INTF_SEEK255,8019
+#define INTF_CLOSE INTF_CLOSE256,8075
+#define INTF_TRUNC INTF_TRUNC257,8105
+#define INTF_DUP INTF_DUP258,8149
+#define INTF_DUP2 INTF_DUP2259,8179
+#define INTF_FORK INTF_FORK260,8218
+#define INTF_MMAP INTF_MMAP261,8244
+#define INTF_READV INTF_READV262,8330
+#define INTF_WRITEV INTF_WRITEV263,8397
+#define INTF_PIPE INTF_PIPE264,8464
+#define INTF_IOCTL INTF_IOCTL265,8497
+#define INTF_MUNMAP INTF_MUNMAP266,8545
+#define INTF_MSYNC INTF_MSYNC267,8589
+#define INTF_CLONE INTF_CLONE268,8644
+#define INTF_PREAD INTF_PREAD269,8725
+#define INTF_PWRITE INTF_PWRITE270,8800
+#define INTF_FSYNC INTF_FSYNC271,8875
+#define INTF_FDSYNC INTF_FDSYNC272,8905
+#define INTF_TRUNC64 INTF_TRUNC64273,8935
+#define INTF_OPEN64 INTF_OPEN64274,8982
+#define INTF_SEEK64 INTF_SEEK64275,9037
+#define INTF_MMAP64 INTF_MMAP64276,9096
+#define INTF_MKSTEMP INTF_MKSTEMP277,9185
+#define INTF_ACCEPT INTF_ACCEPT278,9218
+#define INTF_SOCKET INTF_SOCKET279,9292
+#define INTF_UNLINK INTF_UNLINK280,9349
+#define INTF_UNLINKAT INTF_UNLINKAT281,9388
+#define CALL_OPEN CALL_OPEN285,9566
+#define CALL_IOCTL CALL_IOCTL286,9599
+#define CALL_READ CALL_READ287,9634
+#define CALL_WRITE CALL_WRITE288,9673
+#define CALL_SEEK CALL_SEEK289,9712
+#define CALL_CLOSE CALL_CLOSE290,9754
+#define CALL_TRUNC CALL_TRUNC291,9780
+#define CALL_DUP CALL_DUP292,9814
+#define CALL_DUP2 CALL_DUP2293,9840
+#define CALL_FORK CALL_FORK294,9871
+#define CALL_MMAP CALL_MMAP295,9893
+#define CALL_READV CALL_READV296,9948
+#define CALL_WRITEV CALL_WRITEV297,9987
+#define CALL_PIPE CALL_PIPE298,10026
+#define CALL_MUNMAP CALL_MUNMAP299,10052
+#define CALL_MSYNC CALL_MSYNC300,10083
+#define CALL_CLONE CALL_CLONE301,10121
+#define CALL_PREAD CALL_PREAD302,10170
+#define CALL_PWRITE CALL_PWRITE303,10216
+#define CALL_FSYNC CALL_FSYNC304,10262
+#define CALL_FDSYNC CALL_FDSYNC305,10288
+#define CALL_TRUNC64 CALL_TRUNC64306,10314
+#define CALL_OPEN64 CALL_OPEN64307,10347
+#define CALL_SEEK64 CALL_SEEK64308,10379
+#define CALL_MMAP64 CALL_MMAP64309,10411
+#define CALL_MKSTEMP CALL_MKSTEMP310,10443
+#define CALL_ACCEPT CALL_ACCEPT311,10470
+#define CALL_SOCKET CALL_SOCKET312,10512
+#define CALL_UNLINK CALL_UNLINK313,10557
+#define CALL_UNLINKAT CALL_UNLINKAT314,10584
+#define PFFS_OPEN PFFS_OPEN317,10678
+#define PFFS_READ PFFS_READ318,10708
+#define PFFS_WRITE PFFS_WRITE319,10742
+#define PFFS_SEEK PFFS_SEEK320,10776
+#define PFFS_CLOSE PFFS_CLOSE321,10810
+#define PFFS_TRUNC PFFS_TRUNC322,10836
+#define PFFS_DUP PFFS_DUP323,10866
+#define PFFS_DUP2 PFFS_DUP2324,10892
+#define PFFS_FORK PFFS_FORK325,10922
+#define PFFS_MMAP PFFS_MMAP326,10946
+#define PFFS_READV PFFS_READV327,10988
+#define PFFS_WRITEV PFFS_WRITEV328,11022
+#define PFFS_PIPE PFFS_PIPE329,11056
+#define PFFS_IOCTL PFFS_IOCTL330,11082
+#define PFFS_MUNMAP PFFS_MUNMAP331,11112
+#define PFFS_MSYNC PFFS_MSYNC332,11142
+#define PFFS_CLONE PFFS_CLONE333,11176
+#define PFFS_PREAD PFFS_PREAD334,11214
+#define PFFS_PWRITE PFFS_PWRITE335,11252
+#define PFFS_FSYNC PFFS_FSYNC336,11290
+#define PFFS_FDSYNC PFFS_FDSYNC337,11316
+#define PFFS_TRUNC64 PFFS_TRUNC64338,11342
+#define PFFS_OPEN64 PFFS_OPEN64339,11373
+#define PFFS_SEEK64 PFFS_SEEK64340,11404
+#define PFFS_MMAP64 PFFS_MMAP64341,11439
+#define PFFS_MKSTEMP PFFS_MKSTEMP342,11482
+#define PFFS_ACCEPT PFFS_ACCEPT343,11509
+#define PFFS_SOCKET PFFS_SOCKET344,11544
+#define PFFS_UNLINK PFFS_UNLINK345,11579
+#define PFFS_UNLINKAT PFFS_UNLINKAT346,11606
+#define STD_OPEN STD_OPEN350,11704
+#define STD_OPEN64 STD_OPEN64351,11731
+#define STD_READ STD_READ352,11760
+#define STD_WRITE STD_WRITE353,11787
+#define STD_SEEK STD_SEEK354,11815
+#define STD_SEEK64 STD_SEEK64355,11843
+#define STD_CLOSE STD_CLOSE356,11873
+#define STD_TRUNC STD_TRUNC357,11901
+#define STD_TRUNC64 STD_TRUNC64358,11933
+#define STD_DUP STD_DUP359,11968
+#define STD_DUP2 STD_DUP2360,11994
+#define STD_FORK STD_FORK361,12021
+#define STD_MMAP STD_MMAP362,12048
+#define STD_MMAP64 STD_MMAP64363,12075
+#define STD_READV STD_READV364,12104
+#define STD_WRITEV STD_WRITEV365,12132
+#define STD_PIPE STD_PIPE366,12161
+#define STD_IOCTL STD_IOCTL367,12188
+#define STD_MUNMAP STD_MUNMAP368,12216
+#define STD_MSYNC STD_MSYNC369,12245
+#define STD_CLONE STD_CLONE370,12278
+#define STD_PREAD STD_PREAD371,12306
+#define STD_PWRITE STD_PWRITE372,12334
+#define STD_FSYNC STD_FSYNC373,12363
+#define STD_FDSYNC STD_FDSYNC374,12391
+#define STD_MKSTEMP STD_MKSTEMP375,12420
+#define STD_UNLINK STD_UNLINK376,12449
+#define STD_UNLINKAT STD_UNLINKAT377,12478
+#define STD_DECL(STD_DECL383,12585
+#define STD_DECL_IWRAP(STD_DECL_IWRAP384,12661
+struct Fileops_p {Fileops_p388,12789
+	char* name;name389,12809
+	int (*resolve) (char*);resolve390,12823
+	#define ADD_FILEOP(ADD_FILEOP392,12902
+	#define ADD_FILEOP_IWRAP(ADD_FILEOP_IWRAP393,12961
+#define DECLARE_AND_ALIAS_FUNCS(DECLARE_AND_ALIAS_FUNCS413,13702
+#define DECLARE_AND_ALIAS_FUNCTS_IWRAP(DECLARE_AND_ALIAS_FUNCTS_IWRAP416,13876
+#define DECLARE_WITHOUT_ALIAS_FUNCS(DECLARE_WITHOUT_ALIAS_FUNCS421,14130
+#define DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP423,14228
+#define WRAP_NOT_IMPLEMENTED(WRAP_NOT_IMPLEMENTED429,14522
+#define WRAP_NOT_IMPLEMENTED_IWRAP(WRAP_NOT_IMPLEMENTED_IWRAP434,14690
+#define RESOLVE_TWO_FILEOPS(RESOLVE_TWO_FILEOPS436,14777
+
+/home/rohan/projects/quill-modified/nvp_io_generator.c,45
+int main(int argc, char* argv[])main17,382
+
+/home/rohan/projects/quill-modified/fileops_bankshot2_extent.c,1596
+int extent_rbtree_compare(struct extent_cache_entry *curr,extent_rbtree_compare3,32
+int extent_rbtree_compare_find(struct extent_cache_entry *curr,extent_rbtree_compare_find12,229
+int mmap_rbtree_compare_find(struct extent_cache_entry *curr,mmap_rbtree_compare_find25,491
+void extent_rbtree_printkey(struct extent_cache_entry *current)extent_rbtree_printkey38,786
+void bankshot2_print_extent_tree(struct NVNode *node)bankshot2_print_extent_tree45,1027
+void bankshot2_cleanup_extent_tree(struct NVNode *node)bankshot2_cleanup_extent_tree69,1616
+static void bankshot2_free_btree(unsigned long *root, unsigned int height)bankshot2_free_btree87,2026
+void bankshot2_cleanup_extent_btree(struct NVNode *node)bankshot2_cleanup_extent_btree108,2406
+int find_extent(struct NVFile *nvf, off_t *offset, size_t *count,find_extent143,3299
+static unsigned long calculate_capacity(unsigned int height)calculate_capacity174,3908
+int find_extent_btree(struct NVFile *nvf, off_t *offset, size_t *count,find_extent_btree186,4087
+void add_extent(struct NVFile *nvf, off_t offset, size_t length, int write,add_extent219,4935
+static unsigned int calculate_new_height(off_t offset)calculate_new_height419,10537
+void add_extent_btree(struct NVFile *nvf, off_t offset, size_t length,add_extent_btree432,10771
+void remove_extent(struct NVFile *nvf, off_t offset)remove_extent604,15423
+void remove_extent_btree(struct NVFile *nvf, off_t offset, int btree_only)remove_extent_btree642,16354
+int first_extent(struct NVFile *nvf, off_t *offset, size_t *count, int *dirty,first_extent702,17877
+
+/home/rohan/projects/quill-modified/fileops_perfcount.c,697
+#define ENV_COUNT_FOP ENV_COUNT_FOP6,101
+#define COUNTVAR(COUNTVAR16,380
+#define COUNTVAR_IWRAP(COUNTVAR_IWRAP17,443
+#define COUNT_WRAP(COUNT_WRAP22,560
+#define COUNT_WRAP_IWRAP(COUNT_WRAP_IWRAP31,874
+BOOST_PP_SEQ_FOR_EACH(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP, _perfcount_, ALLOPS_FINITEPARAMS_WPAREN)BOOST_PP_SEQ_FOR_EACH8,142
+RETT_IOCTL _perfcount_IOCTL(INTF_IOCTL)_perfcount_IOCTL59,1468
+void _perfcount_init2(void)_perfcount_init277,1878
+	#define COUNT_INIT(COUNT_INIT79,1910
+	#define COUNT_INIT_IWRAP(COUNT_INIT_IWRAP80,1969
+void _perfcount_print(void)_perfcount_print85,2151
+	#define COUNT_PRINT(COUNT_PRINT88,2238
+	#define COUNT_PRINT_IWRAP(COUNT_PRINT_IWRAP89,2320
+
+/home/rohan/projects/quill-modified/simplecat.c,45
+int main(int argc, char* argv[])main12,229
+
+/home/rohan/projects/quill-modified/fileops_harness.c,1525
+int*   _harness_fd_lookup; // maps std->fd to uut->fd_harness_fd_lookup5,143
+char** _fd_path_lookup; // maps fd to its original path_fd_path_lookup6,198
+int* _harness_fd_valid; // set when returned from open or dup or dup2, cleared when passed to close or fd2 of dup2_harness_fd_valid8,257
+struct Fileops_p *fileops_ref;fileops_ref13,497
+struct Fileops_p *fileops_test;fileops_test14,529
+int once = 1;once20,634
+int _print_file_stats(int fd)_print_file_stats23,653
+struct stat g_stat;g_stat47,1171
+#define TEST_WRAP(TEST_WRAP49,1194
+#define TEST_WRAP_IWRAP(TEST_WRAP_IWRAP118,4720
+#define TEST_SIMPLEWRAP(TEST_SIMPLEWRAP120,4778
+#define TEST_SIMPLEWRAP_IWRAP(TEST_SIMPLEWRAP_IWRAP126,5055
+void _harness_init2(void)_harness_init2137,5511
+int _harness_specific_resolver_wrap(char* tree)_harness_specific_resolver_wrap161,6068
+int _testspecific_resolve_fileops(char* fileops_ref_name, char* fileops_harness_name) _testspecific_resolve_fileops172,6266
+	#define STD_FOP STD_FOP200,7199
+int _harness_OPEN(const char* path, int oflag, ...)_harness_OPEN216,7643
+int _harness_IOCTL(INTF_IOCTL)_harness_IOCTL392,12152
+RETT_CLOSE _harness_CLOSE(INTF_CLOSE)_harness_CLOSE407,12493
+int _harness_DUP(int filedes)_harness_DUP506,15312
+int _harness_DUP2(int filedes, int fd2)_harness_DUP2599,18172
+int _harness_compare_files(int f1, int f2, const char* name)_harness_compare_files745,23121
+#define DUMP_STAT(DUMP_STAT781,24100
+int my_copy(const char* file1, const char* file2)my_copy825,25248
+
+/home/rohan/projects/quill-modified/fileops_death.c,258
+BOOST_PP_SEQ_FOR_EACH(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP, _death_, ALLOPS_FINITEPARAMS_WPAREN)BOOST_PP_SEQ_FOR_EACH5,92
+void _death_init2(void)_death_init212,314
+#define DEATH_FUNCT(DEATH_FUNCT19,465
+#define DEATH_FUNCT_IWRAP(DEATH_FUNCT_IWRAP26,660
+
+/home/rohan/projects/quill-modified/fileops_sdssd.c,2593
+typedef size_t offset_t;offset_t5,116
+pid_t gettid( void )gettid12,246
+#define CHECK_ALIGNMENT CHECK_ALIGNMENT18,318
+#define LOG_WORD_SIZE LOG_WORD_SIZE31,1163
+#define mix(mix34,1254
+#define WORD_AT(WORD_AT47,1679
+#define WORD_AT(WORD_AT49,1739
+#define mix(mix55,1944
+#define WORD_AT(WORD_AT71,2459
+#define WORD_AT(WORD_AT73,2519
+static unsigned long Hash(char *key, unsigned long cBuckets)Hash83,2960
+#define MAX_THREADS MAX_THREADS148,5531
+void _sdssd_exit_cleanup(void);_sdssd_exit_cleanup156,5758
+struct SDSSD_FD {SDSSD_FD158,5793
+	volatile off64_t *offset; // TODO: this needs a lockoffset159,5812
+	int flags;flags161,5894
+	char* path;path163,5985
+	ino_t serialno;serialno164,5999
+	int managed;managed165,6017
+struct SDSSD_Channel{SDSSD_Channel168,6038
+	void *channel;channel169,6061
+	pid_t tid;tid170,6078
+struct SDSSD_FD **_sdssd_fd_lookup;_sdssd_fd_lookup175,6258
+struct SDSSD_Channel *_sdssd_channel;_sdssd_channel177,6297
+void *_control_channel; //created at process initalization to send FileOpened and FileClosed calls_control_channel179,6338
+#define SDSSD_OPS_SIMPLEWRAP SDSSD_OPS_SIMPLEWRAP185,6574
+#define SDSSD_WRAP(SDSSD_WRAP188,6716
+#define SDSSD_WRAP_IWRAP(SDSSD_WRAP_IWRAP195,6966
+BOOST_PP_SEQ_FOR_EACH(SDSSD_WRAP_IWRAP, z, SDSSD_OPS_SIMPLEWRAP)BOOST_PP_SEQ_FOR_EACH196,7024
+void _sdssd_exit_cleanup(void)_sdssd_exit_cleanup219,7571
+void *_sdssd_getchannel()_sdssd_getchannel235,7987
+RETT_OPEN _sdssd_OPEN(INTF_OPEN)_sdssd_OPEN278,8962
+RETT_CLOSE _sdssd_CLOSE(INTF_CLOSE)_sdssd_CLOSE446,14550
+RETT_READ _sdssd_READ(INTF_READ)_sdssd_READ466,14964
+RETT_WRITE _sdssd_WRITE(INTF_WRITE)_sdssd_WRITE513,16005
+RETT_SEEK _sdssd_SEEK(INTF_SEEK)_sdssd_SEEK560,16966
+RETT_SEEK64 _sdssd_SEEK64(INTF_SEEK64)_sdssd_SEEK64576,17238
+RETT_TRUNC _sdssd_TRUNC(INTF_TRUNC)_sdssd_TRUNC636,18484
+RETT_TRUNC64 _sdssd_TRUNC64(INTF_TRUNC64)_sdssd_TRUNC64703,21476
+RETT_IOCTL _sdssd_IOCTL(INTF_IOCTL)_sdssd_IOCTL767,24479
+RETT_DUP _sdssd_DUP(INTF_DUP)_sdssd_DUP783,24762
+RETT_DUP2 _sdssd_DUP2(INTF_DUP2)_sdssd_DUP2829,26474
+RETT_READV _sdssd_READV(INTF_READV)_sdssd_READV868,27437
+RETT_WRITEV _sdssd_WRITEV(INTF_WRITEV)_sdssd_WRITEV898,27936
+RETT_FORK _sdssd_FORK(INTF_FORK)_sdssd_FORK927,28440
+RETT_PREAD _sdssd_PREAD(INTF_PREAD)_sdssd_PREAD952,28873
+RETT_PWRITE _sdssd_PWRITE(INTF_PWRITE)_sdssd_PWRITE991,29734
+RETT_FSYNC _sdssd_FSYNC(INTF_FSYNC)_sdssd_FSYNC1029,30679
+RETT_FDSYNC _sdssd_FDSYNC(INTF_FDSYNC)_sdssd_FDSYNC1042,30908
+RETT_MKSTEMP _sdssd_MKSTEMP(INTF_MKSTEMP)_sdssd_MKSTEMP1055,31143
+
+/home/rohan/projects/quill-modified/fileops_bankshot2.h,3623
+#define __NV_FILEOPS_H___NV_FILEOPS_H_4,60
+#define ENV_NV_FOP ENV_NV_FOP27,498
+	#define SYNC_ON_WRITE SYNC_ON_WRITE34,797
+#define _NVP_USE_DEFAULT_FILEOPS _NVP_USE_DEFAULT_FILEOPS37,834
+#define _NVP_CHECK_USE_DEFAULT_FILEOPS(_NVP_CHECK_USE_DEFAULT_FILEOPS39,875
+#define CHECK_VALID_FD(CHECK_VALID_FD45,1088
+#define CHECK_VALID_FD2(CHECK_VALID_FD252,1338
+#define PAGE_SIZE	PAGE_SIZE60,1552
+struct NVFileNVFile62,1578
+	struct NVNode* node;node64,1596
+	NVP_LOCK_DECL;NVP_LOCK_DECL65,1619
+	volatile bool valid;valid66,1636
+	int fd;fd67,1659
+	volatile size_t* offset;offset68,1669
+	bool canRead;canRead69,1696
+	bool canWrite;canWrite70,1712
+	bool append;append71,1729
+	bool aligned;aligned72,1744
+	ino_t serialno; // duplicated so that iterating doesn't require following every node*serialno73,1760
+	bool posix;	// Use Posix operationsposix74,1848
+	ino_t cache_serialno; // duplicated so that iterating doesn't require following every node*cache_serialno75,1886
+struct NVNodeNVNode78,1986
+	struct rb_root extent_tree;extent_tree80,2004
+	struct rb_root mmap_extent_tree;mmap_extent_tree81,2034
+	unsigned long *root;root82,2069
+	unsigned int height;height83,2092
+	int reference;	// How many fds refered this nodereference84,2115
+	int num_extents;num_extents85,2166
+	ino_t serialno;serialno86,2185
+	NVP_LOCK_DECL;NVP_LOCK_DECL87,2203
+	pthread_mutex_t mutex;mutex88,2220
+	char* volatile data; // the pointer itself is volatiledata89,2245
+	volatile size_t length;length90,2302
+	volatile size_t maplength;maplength91,2328
+	volatile size_t cache_length;cache_length94,2434
+	ino_t cache_serialno; // duplicated so that iterating doesn't require following every node*cache_serialno95,2466
+	unsigned long num_reads;num_reads96,2560
+	unsigned long num_writes;num_writes97,2587
+	unsigned long num_posix_writes;num_posix_writes98,2615
+	unsigned long num_read_kernels;num_read_kernels99,2649
+	unsigned long num_write_kernels;num_write_kernels100,2683
+	unsigned long num_read_mmaps;num_read_mmaps101,2718
+	unsigned long num_write_mmaps;num_write_mmaps102,2750
+	unsigned long num_read_segfaults;num_read_segfaults103,2783
+	unsigned long num_write_segfaults;num_write_segfaults104,2819
+	unsigned long long memcpy_read;memcpy_read105,2856
+	unsigned long long memcpy_write;memcpy_write106,2890
+	unsigned long long total_read;total_read107,2925
+	unsigned long long total_write;total_write108,2958
+	unsigned long long total_read_mmap;total_read_mmap109,2992
+	unsigned long long total_write_mmap;total_write_mmap110,3030
+	unsigned long long total_read_actual;total_read_actual111,3069
+	unsigned long long total_write_actual;total_write_actual112,3109
+	unsigned long long total_read_required;total_read_required113,3150
+	unsigned long long total_write_required;total_write_required114,3192
+struct extent_cache_entryextent_cache_entry117,3241
+	struct rb_node node;node119,3271
+	struct rb_node mmap_node;mmap_node120,3294
+	off_t offset;offset121,3322
+	size_t count;count122,3338
+	int dirty;dirty123,3354
+	unsigned long mmap_addr;mmap_addr124,3367
+struct bankshot2_extent_infobankshot2_extent_info128,3437
+	uint64_t offset; //file offset in bytesoffset131,3487
+	size_t request_len;request_len132,3529
+	uint64_t mmap_offset; //Mmap offset, align to MMAP_SIZEmmap_offset134,3569
+	size_t mmap_length; //mmap lengthmmap_length135,3627
+	size_t extent_length;extent_length136,3663
+	uint64_t file_length; //total file length in bytesfile_length137,3687
+	unsigned long mmap_addr; // returned mmap addressmmap_addr138,3740
+
+/home/rohan/projects/quill-modified/rbtree_augmented.h,1303
+#define _LINUX_RBTREE_AUGMENTED_H_LINUX_RBTREE_AUGMENTED_H25,946
+struct rb_augment_callbacks {rb_augment_callbacks37,1300
+	void (*propagate)(struct rb_node *node, struct rb_node *stop);propagate38,1330
+	void (*copy)(struct rb_node *old, struct rb_node *new);copy39,1394
+	void (*rotate)(struct rb_node *old, struct rb_node *new);rotate40,1451
+rb_insert_augmented(struct rb_node *node, struct rb_root *root,rb_insert_augmented46,1679
+#define RB_DECLARE_CALLBACKS(RB_DECLARE_CALLBACKS52,1851
+#define	RB_RED	RB_RED86,3061
+#define	RB_BLACK	RB_BLACK87,3079
+#define __rb_parent(__rb_parent89,3099
+#define __rb_color(__rb_color91,3157
+#define __rb_is_black(__rb_is_black92,3195
+#define __rb_is_red(__rb_is_red93,3237
+#define rb_color(rb_color94,3282
+#define rb_is_red(rb_is_red95,3345
+#define rb_is_black(rb_is_black96,3409
+static inline void rb_set_parent(struct rb_node *rb, struct rb_node *p)rb_set_parent98,3476
+static inline void rb_set_parent_color(struct rb_node *rb,rb_set_parent_color103,3611
+__rb_change_child(struct rb_node *old, struct rb_node *new,__rb_change_child110,3786
+__rb_erase_augmented(struct rb_node *node, struct rb_root *root,__rb_erase_augmented126,4221
+rb_erase_augmented(struct rb_node *node, struct rb_root *root,rb_erase_augmented223,6778
+
+/home/rohan/projects/quill-modified/rbtree.h,724
+#define	_LINUX_RBTREE_H_LINUX_RBTREE_H30,1144
+#define offsetof1(offsetof132,1169
+#define container_of(container_of34,1234
+struct rb_node {rb_node38,1430
+	unsigned long  __rb_parent_color;__rb_parent_color39,1447
+	struct rb_node *rb_right;rb_right40,1482
+	struct rb_node *rb_left;rb_left41,1509
+struct rb_root {rb_root45,1652
+	struct rb_node *rb_node;rb_node46,1669
+#define rb_parent(rb_parent50,1700
+#define RB_ROOT	RB_ROOT52,1774
+#define	rb_entry(rb_entry53,1817
+#define RB_EMPTY_ROOT(RB_EMPTY_ROOT55,1886
+#define RB_EMPTY_NODE(RB_EMPTY_NODE58,2018
+#define RB_CLEAR_NODE(RB_CLEAR_NODE60,2103
+static inline void rb_link_node(struct rb_node * node, struct rb_node * parent,rb_link_node78,2815
+
+/home/rohan/projects/quill-modified/red_black_tree.h,822
+typedef struct rb_red_blk_node {rb_red_blk_node26,1230
+  void* key;key27,1264
+  void* info;info28,1278
+  int red; /* if red=0 then the node is black */red29,1293
+  struct rb_red_blk_node* left;left30,1343
+  struct rb_red_blk_node* right;right31,1376
+  struct rb_red_blk_node* parent;parent32,1410
+} rb_red_blk_node;rb_red_blk_node33,1445
+typedef struct rb_red_blk_tree {rb_red_blk_tree38,1632
+  int (*Compare)(const void* a, const void* b); Compare39,1666
+  void (*DestroyKey)(void* a);DestroyKey40,1716
+  void (*DestroyInfo)(void* a);DestroyInfo41,1748
+  void (*PrintKey)(const void* a);PrintKey42,1781
+  void (*PrintInfo)(void* a);PrintInfo43,1817
+  rb_red_blk_node* root;             root50,2301
+  rb_red_blk_node* nil;              nil51,2340
+} rb_red_blk_tree;rb_red_blk_tree52,2379
+
+/home/rohan/projects/quill-modified/appender.c,173
+#define _XOPEN_SOURCE _XOPEN_SOURCE10,176
+#define TIME TIME16,360
+#define BLOCKSIZE BLOCKSIZE17,377
+#define MAX_FILE_SIZE MAX_FILE_SIZE19,402
+int main()main21,464
+
+/home/rohan/projects/quill-modified/fileops_nvp.h,1831
+#define ENV_NV_FOP ENV_NV_FOP5,61
+#define _NVP_USE_DEFAULT_FILEOPS _NVP_USE_DEFAULT_FILEOPS7,96
+struct NVFileNVFile11,199
+	NVP_LOCK_DECL;NVP_LOCK_DECL13,217
+	volatile bool valid;valid14,234
+	int fd;fd15,257
+	volatile size_t* offset;offset16,267
+	bool canRead;canRead17,294
+	bool canWrite;canWrite18,310
+	bool append;append19,327
+	bool aligned;aligned20,342
+	ino_t serialno; // duplicated so that iterating doesn't require following every node*serialno21,358
+	struct NVNode* node;node22,446
+	bool posix;posix23,469
+	bool debug;debug24,483
+struct NVNodeNVNode27,503
+	ino_t serialno;serialno29,521
+	NVP_LOCK_DECL;NVP_LOCK_DECL30,539
+	volatile size_t length;length32,615
+	volatile size_t maplength;maplength33,641
+	unsigned long *root;root34,670
+	struct merkleBtreeNode **merkle_root;merkle_root35,693
+	unsigned int height;height36,733
+	int reference;reference37,756
+#define NVP_LOCK_FD_RD(NVP_LOCK_FD_RD44,910
+#define NVP_UNLOCK_FD_RD(NVP_UNLOCK_FD_RD45,980
+#define NVP_LOCK_FD_WR(NVP_LOCK_FD_WR46,1055
+#define NVP_UNLOCK_FD_WR(NVP_UNLOCK_FD_WR47,1112
+#define NVP_LOCK_NODE_RD(NVP_LOCK_NODE_RD49,1176
+#define NVP_UNLOCK_NODE_RD(NVP_UNLOCK_NODE_RD50,1254
+#define NVP_LOCK_NODE_WR(NVP_LOCK_NODE_WR51,1337
+#define NVP_UNLOCK_NODE_WR(NVP_UNLOCK_NODE_WR52,1402
+#define IS_ERR(IS_ERR56,1525
+#define MAX_MMAP_SIZE	MAX_MMAP_SIZE58,1591
+#define	ALIGN_MMAP_DOWN(ALIGN_MMAP_DOWN59,1628
+#define DO_ALIGNMENT_CHECKS DO_ALIGNMENT_CHECKS61,1693
+#define DO_MSYNC(DO_MSYNC63,1726
+#define NOSANITYCHECK NOSANITYCHECK75,2091
+	#define SANITYCHECK(SANITYCHECK77,2135
+	#define SANITYCHECK(SANITYCHECK79,2167
+#define NVP_CHECK_NVF_VALID(NVP_CHECK_NVF_VALID82,2273
+#define NVP_CHECK_NVF_VALID_WR(NVP_CHECK_NVF_VALID_WR97,2621
+#define SANITYCHECKNVF(SANITYCHECKNVF112,2965
+
+/home/rohan/projects/quill-modified/fileops_hub.c,2631
+#define ENV_HUB_FOP ENV_HUB_FOP7,233
+#define ENV_TREE_FILE ENV_TREE_FILE9,270
+#define LIBC_SO_LOC LIBC_SO_LOC12,355
+struct Fileops_p** _hub_fd_lookup;_hub_fd_lookup16,534
+struct Fileops_p*  _hub_managed_fileops;_hub_managed_fileops17,570
+void* _libc_so_p;_libc_so_p19,614
+int OPEN_MAX; // maximum number of simultaneous open filesOPEN_MAX21,635
+int _hub_fileops_count = 0;_hub_fileops_count23,697
+struct Fileops_p* _hub_fileops_lookup[MAX_FILEOPS];_hub_fileops_lookup24,726
+#define HUB_CHECK_RESOLVE_FILEOPS(HUB_CHECK_RESOLVE_FILEOPS31,919
+#define HUB_ADD_FUNCTP(HUB_ADD_FUNCTP35,1058
+#define HUB_ADD_FUNCTP_IWRAP(HUB_ADD_FUNCTP_IWRAP44,1405
+#define HUB_INIT_FILEOPS_P(HUB_INIT_FILEOPS_P46,1480
+#define HUB_ADD_POSIX_FUNCTP(HUB_ADD_POSIX_FUNCTP61,2074
+#define HUB_ADD_POSIX_FUNCTP_IWRAP(HUB_ADD_POSIX_FUNCTP_IWRAP70,2427
+#define HUB_INIT_POSIX_FILEOPS_P(HUB_INIT_POSIX_FILEOPS_P72,2508
+int _hub_add_and_resolve_fileops_tree_from_file(char* filename)_hub_add_and_resolve_fileops_tree_from_file82,2937
+RETT_IOCTL  _hub_IOCTL(INTF_IOCTL);_hub_IOCTL222,6553
+RETT_OPEN64  _hub_OPEN64(INTF_OPEN64);_hub_OPEN64225,6658
+RETT_MKSTEMP  _hub_MKSTEMP(INTF_MKSTEMP);_hub_MKSTEMP227,6768
+void _hub_init2(void)_hub_init2233,6931
+int hub_check_resolve_fileops(char* tree)hub_check_resolve_fileops270,8010
+#define HUB_WRAP_HAS_FD(HUB_WRAP_HAS_FD293,8546
+#define HUB_WRAP_NO_FD(HUB_WRAP_NO_FD304,9258
+#define HUB_WRAP_HAS_FD_IWRAP(HUB_WRAP_HAS_FD_IWRAP312,9538
+#define HUB_WRAP_NO_FD_IWRAP(HUB_WRAP_NO_FD_IWRAP313,9606
+BOOST_PP_SEQ_FOR_EACH(HUB_WRAP_HAS_FD_IWRAP, placeholder, FILEOPS_WITH_FD)BOOST_PP_SEQ_FOR_EACH315,9674
+struct Fileops_p* default_resolve_fileops(char* tree, char* name)default_resolve_fileops340,10391
+struct Fileops_p** resolve_n_fileops(char* tree, char* name, int count)resolve_n_fileops354,10776
+void _hub_add_fileop(struct Fileops_p* fo)_hub_add_fileop434,12915
+struct Fileops_p* _hub_find_fileop(const char* name)_hub_find_fileop465,13788
+RETT_OPEN _hub_OPEN(INTF_OPEN)_hub_OPEN501,14498
+RETT_MKSTEMP _hub_MKSTEMP(INTF_MKSTEMP)_hub_MKSTEMP581,16455
+RETT_CLOSE _hub_CLOSE(INTF_CLOSE)_hub_CLOSE634,17932
+RETT_DUP _hub_DUP(INTF_DUP)_hub_DUP669,18780
+RETT_DUP2 _hub_DUP2(INTF_DUP2)_hub_DUP2704,19680
+RETT_IOCTL _hub_IOCTL(INTF_IOCTL)_hub_IOCTL783,21876
+RETT_OPEN64 _hub_OPEN64(INTF_OPEN)_hub_OPEN64798,22148
+RETT_SOCKET _hub_SOCKET(INTF_SOCKET)_hub_SOCKET817,22579
+RETT_ACCEPT _hub_ACCEPT(INTF_ACCEPT)_hub_ACCEPT833,22878
+RETT_UNLINK _hub_UNLINK(INTF_UNLINK)_hub_UNLINK849,23177
+RETT_UNLINKAT _hub_UNLINKAT(INTF_UNLINKAT)_hub_UNLINKAT860,23376
+
+/home/rohan/projects/quill-modified/fileops_filter.c,1025
+#define MAX_NV_FILEOPS MAX_NV_FILEOPS6,216
+#define ENV_FILTER_OVERRIDE ENV_FILTER_OVERRIDE9,290
+struct Fileops_p** _filter_fd_lookup;_filter_fd_lookup20,674
+struct Fileops_p* _filter_managed_fileops;_filter_managed_fileops22,715
+int filter_check_resolve_fileops(char* tree)filter_check_resolve_fileops29,932
+#define FILTER_CHECK_RESOLVE_FILEOPS(FILTER_CHECK_RESOLVE_FILEOPS38,1196
+#define FILTER_WRAP_HAS_FD(FILTER_WRAP_HAS_FD50,1542
+#define FILTER_WRAP_HAS_FD_IWRAP(FILTER_WRAP_HAS_FD_IWRAP68,2575
+#define FILTER_WRAP_NO_FD(FILTER_WRAP_NO_FD75,2919
+#define FILTER_WRAP_NO_FD_IWRAP(FILTER_WRAP_NO_FD_IWRAP82,3221
+BOOST_PP_SEQ_FOR_EACH(FILTER_WRAP_HAS_FD_IWRAP, placeholder, FILEOPS_WITH_FD)BOOST_PP_SEQ_FOR_EACH69,2649
+RETT_OPEN _filter_OPEN(INTF_OPEN)_filter_OPEN113,4431
+RETT_IOCTL _filter_IOCTL(INTF_IOCTL)_filter_IOCTL219,8106
+RETT_CLOSE _filter_CLOSE(INTF_CLOSE)_filter_CLOSE236,8479
+RETT_DUP _filter_DUP(INTF_DUP)_filter_DUP256,8946
+RETT_DUP2 _filter_DUP2(INTF_DUP2)_filter_DUP2276,9440
+
+/home/rohan/projects/quill-modified/nvp_lock.h,1827
+#define cpuid(cpuid8,324
+static inline int _nvp_get_cpuid(void)_nvp_get_cpuid12,454
+static inline int return_zero(void)return_zero26,739
+	#define	USE_PTHREAD_LOCK USE_PTHREAD_LOCK32,822
+	#define	USE_SCHED_GETCPU USE_SCHED_GETCPU36,887
+	#define	GET_CPUID	GET_CPUID40,947
+	#define	GET_CPUID	GET_CPUID42,1003
+	#define	GET_CPUID	GET_CPUID44,1043
+	#define NVP_NUM_LOCKS	NVP_NUM_LOCKS48,1109
+	#define NVP_NUM_LOCKS	NVP_NUM_LOCKS50,1142
+#define NVP_LOCK_DECL NVP_LOCK_DECL57,1347
+#define NVP_LOCK_INIT(NVP_LOCK_INIT59,1409
+#define NVP_EXTENT_LOCK_DECL NVP_EXTENT_LOCK_DECL61,1538
+#define NVP_LOCK_INIT_EXTENT_LOCK(NVP_LOCK_INIT_EXTENT_LOCK63,1599
+#define NVP_LOCK_DO_CHECKING NVP_LOCK_DO_CHECKING65,1680
+	#define NVP_LOCK_CHECK(NVP_LOCK_CHECK67,1738
+	#define NVP_LOCK_CHECK(NVP_LOCK_CHECK76,1974
+#define SANITY SANITY79,2030
+#define NVP_LOCK_RD(NVP_LOCK_RD82,2057
+#define NVP_LOCK_UNLOCK_RD(NVP_LOCK_UNLOCK_RD88,2327
+#define NVP_LOCK_WR(NVP_LOCK_WR95,2606
+#define NVP_LOCK_UNLOCK_WR(NVP_LOCK_UNLOCK_WR103,2914
+#define NVP_LOCK_EXTENT_TREE(NVP_LOCK_EXTENT_TREE111,3229
+#define NVP_UNLOCK_EXTENT_TREE(NVP_UNLOCK_EXTENT_TREE114,3317
+#define WR_HELD	WR_HELD123,3504
+#define NVP_LOCK_DECL NVP_LOCK_DECL125,3533
+#define NVP_LOCK_INIT(NVP_LOCK_INIT127,3592
+#define NVP_EXTENT_LOCK_DECL NVP_EXTENT_LOCK_DECL129,3702
+#define NVP_LOCK_INIT_EXTENT_LOCK(NVP_LOCK_INIT_EXTENT_LOCK131,3755
+#define NVP_LOCK_CHECK(NVP_LOCK_CHECK133,3812
+#define SANITY SANITY135,3859
+#define NVP_LOCK_RD(NVP_LOCK_RD137,3884
+#define NVP_LOCK_UNLOCK_RD(NVP_LOCK_UNLOCK_RD144,4217
+#define NVP_LOCK_WR(NVP_LOCK_WR151,4489
+#define NVP_LOCK_UNLOCK_WR(NVP_LOCK_UNLOCK_WR160,4820
+#define NVP_LOCK_EXTENT_TREE(NVP_LOCK_EXTENT_TREE168,5132
+#define NVP_UNLOCK_EXTENT_TREE(NVP_UNLOCK_EXTENT_TREE172,5239
+
+/home/rohan/projects/quill-modified/fileops_count.c,531
+#define ENV_COUNT_FOP ENV_COUNT_FOP5,77
+#define COUNTVAR(COUNTVAR15,336
+#define COUNTVAR_IWRAP(COUNTVAR_IWRAP16,380
+#define COUNT_WRAP(COUNT_WRAP21,497
+#define COUNT_WRAP_IWRAP(COUNT_WRAP_IWRAP27,686
+BOOST_PP_SEQ_FOR_EACH(DECLARE_WITHOUT_ALIAS_FUNCTS_IWRAP, _count_, ALLOPS_FINITEPARAMS_WPAREN)BOOST_PP_SEQ_FOR_EACH7,118
+RETT_IOCTL _count_IOCTL(INTF_IOCTL)_count_IOCTL48,1156
+void _count_print(void)_count_print63,1472
+	#define COUNT_PRINT(COUNT_PRINT66,1551
+	#define COUNT_PRINT_IWRAP(COUNT_PRINT_IWRAP68,1690
+
+/home/rohan/projects/quill-modified/add_license.py,75
+def add_license(filename, lines):add_license7,51
+def main():main20,297
+
+/home/rohan/projects/quill-modified/fileops_harness.h,448
+#define __NV_COMPAREHARNESS_H___NV_COMPAREHARNESS_H_5,104
+#define ENV_REF_IMPL ENV_REF_IMPL9,164
+#define ENV_TEST_IMPL ENV_TEST_IMPL10,208
+#define DO_PARANOID_FILE_CHECK DO_PARANOID_FILE_CHECK12,256
+#define TEST_CHECK_RESOLVE_FILEOPS_OLD TEST_CHECK_RESOLVE_FILEOPS_OLD27,788
+#define TEST_CHECK_RESOLVE_FILEOPS TEST_CHECK_RESOLVE_FILEOPS37,1031
+#define TEST_COMPARE(TEST_COMPARE43,1284
+#define TEST_COMPARE_EQ(TEST_COMPARE_EQ56,1792
+
+/home/rohan/projects/quill-modified/fileops_sdssdbs.c,2707
+typedef size_t offset_t;offset_t5,116
+pid_t gettid( void )gettid12,246
+#define CHECK_ALIGNMENT CHECK_ALIGNMENT18,318
+#define LOG_WORD_SIZE LOG_WORD_SIZE31,1163
+#define mix(mix34,1254
+#define WORD_AT(WORD_AT47,1679
+#define WORD_AT(WORD_AT49,1739
+#define mix(mix55,1944
+#define WORD_AT(WORD_AT71,2459
+#define WORD_AT(WORD_AT73,2519
+static unsigned long Hash(char *key, unsigned long cBuckets)Hash83,2960
+#define MAX_THREADS MAX_THREADS148,5531
+void _sdssdbs_exit_cleanup(void);_sdssdbs_exit_cleanup156,5766
+struct Bankshot_FD {Bankshot_FD158,5803
+	volatile off64_t *offset; // TODO: this needs a lockoffset159,5825
+	int flags;flags161,5907
+	char* path;path163,6000
+	ino_t serialno;serialno164,6014
+	int managed;managed165,6032
+struct Bankshot_Channel{Bankshot_Channel168,6053
+	void *channel;channel169,6079
+	pid_t tid;tid170,6096
+struct Bankshot_FD **_sdssdbs_fd_lookup;_sdssdbs_fd_lookup175,6276
+struct Bankshot_Channel *_sdssdbs_channel;_sdssdbs_channel177,6320
+void *_control_channel; //created at process initalization to send FileOpened and FileClosed calls_control_channel179,6366
+#define SDSSD_OPS_SIMPLEWRAP SDSSD_OPS_SIMPLEWRAP185,6608
+#define SDSSD_WRAP(SDSSD_WRAP188,6752
+#define SDSSD_WRAP_IWRAP(SDSSD_WRAP_IWRAP195,7012
+BOOST_PP_SEQ_FOR_EACH(SDSSD_WRAP_IWRAP, z, SDSSD_OPS_SIMPLEWRAP)BOOST_PP_SEQ_FOR_EACH196,7070
+void _sdssdbs_exit_cleanup(void)_sdssdbs_exit_cleanup219,7645
+void *_sdssdbs_getchannel()_sdssdbs_getchannel235,8083
+RETT_OPEN _sdssdbs_OPEN(INTF_OPEN)_sdssdbs_OPEN278,9080
+RETT_CLOSE _sdssdbs_CLOSE(INTF_CLOSE)_sdssdbs_CLOSE446,14838
+RETT_READ _sdssdbs_READ(INTF_READ)_sdssdbs_READ467,15340
+RETT_WRITE _sdssdbs_WRITE(INTF_WRITE)_sdssdbs_WRITE514,16417
+RETT_SEEK _sdssdbs_SEEK(INTF_SEEK)_sdssdbs_SEEK561,17415
+RETT_SEEK64 _sdssdbs_SEEK64(INTF_SEEK64)_sdssdbs_SEEK64577,17702
+RETT_TRUNC _sdssdbs_TRUNC(INTF_TRUNC)_sdssdbs_TRUNC637,18961
+RETT_TRUNC64 _sdssdbs_TRUNC64(INTF_TRUNC64)_sdssdbs_TRUNC64704,21972
+RETT_IOCTL _sdssdbs_IOCTL(INTF_IOCTL)_sdssdbs_IOCTL768,25008
+RETT_DUP _sdssdbs_DUP(INTF_DUP)_sdssdbs_DUP784,25299
+RETT_DUP2 _sdssdbs_DUP2(INTF_DUP2)_sdssdbs_DUP2830,27088
+RETT_READV _sdssdbs_READV(INTF_READV)_sdssdbs_READV869,28085
+RETT_WRITEV _sdssdbs_WRITEV(INTF_WRITEV)_sdssdbs_WRITEV899,28598
+RETT_FORK _sdssdbs_FORK(INTF_FORK)_sdssdbs_FORK928,29116
+RETT_PREAD _sdssdbs_PREAD(INTF_PREAD)_sdssdbs_PREAD953,29563
+RETT_PWRITE _sdssdbs_PWRITE(INTF_PWRITE)_sdssdbs_PWRITE992,30456
+RETT_FSYNC _sdssdbs_FSYNC(INTF_FSYNC)_sdssdbs_FSYNC1030,31435
+RETT_FDSYNC _sdssdbs_FDSYNC(INTF_FDSYNC)_sdssdbs_FDSYNC1043,31674
+RETT_MKSTEMP _sdssdbs_MKSTEMP(INTF_MKSTEMP)_sdssdbs_MKSTEMP1056,31919
+
+/home/rohan/projects/quill-modified/make-hs.mk,6519
+define \nn3,2
+NDD_RUNTIME = 80NDD_RUNTIME12,41
+NDD_TARGET_DIR  = /tmp/memuram0NDD_TARGET_DIR14,59
+NDD_TARGET_FILE = xddtestfile.txtNDD_TARGET_FILE15,91
+NDD_OUT_DIR = ~/resultsNDD_OUT_DIR16,125
+NDDEXEC  = $(BEE3HOME)/Workloads/xdd/bin/xdd.linuxNDDEXEC18,150
+NDDFLAGS = -noproclock -nomemlock -reqsize 1 -dio -seek random -id $(NDD_LOG_FILENAME) -runtime $(NDD_RUNTIME)NDDFLAGS19,201
+NDD_WRAPPER_DIR = $(BEE3HOME)/Tools/PosixNVM/binNDD_WRAPPER_DIR21,313
+NDD_WRAPPER_SCRIPTS = nvpUnmod nvpNVPNDD_WRAPPER_SCRIPTS22,362
+NDD_RATIOS = 0 25 50 75 100NDD_RATIOS23,400
+NDD_NUM_THREADS = 1 4 16 64NDD_NUM_THREADS24,428
+NDD_FILE_LENS_KB = 57671680NDD_FILE_LENS_KB25,456
+NDD_REQ_SIZE = 512 4096 131072NDD_REQ_SIZE26,484
+NDD_LOG_FILENAME = $(SCRIPT)-tc$(THREADS)-rw$(RATIO)-filelen$(FILELEN)k-reqsize$(REQSIZE).resultNDD_LOG_FILENAME27,515
+NDD_AFFINITY_1 = taskset -c 0,2,4,6NDD_AFFINITY_129,613
+NDD_AFFINITY_2 = taskset -c 0,2,4,6NDD_AFFINITY_230,649
+NDD_AFFINITY_4 = taskset -c 0,2,4,6NDD_AFFINITY_431,685
+NDD_AFFINITY_8 = taskset -c 0,2,4,6,8,10,12,14NDD_AFFINITY_832,721
+NDD_AFFINITY_16= taskset -c 0-15NDD_AFFINITY_1633,768
+NDD_AFFINITY_32= taskset -c 0-15NDD_AFFINITY_3234,801
+NDD_AFFINITY_64= taskset -c 0-15NDD_AFFINITY_6435,834
+NDD_AFFINITY_12= taskset -c 0-15NDD_AFFINITY_1236,867
+NDD_AFFINITY_24= taskset -c 0-15NDD_AFFINITY_2437,900
+SHELL = /bin/bashSHELL39,934
+NDD_G1_DIR=2012-02-13-01NDD_G1_DIR41,953
+NDD_G2_DIR=09NDD_G2_DIR42,978
+	-dd if=/dev/zero of=$(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) bs=$$[4096*16] count=$$[59055800320/(4096*16)] oflag=directf53,1322
+	sudo insmod /lib/modules/3.2.1-io/kernel/drivers/block/brd.ko rd_size=$$[64*1024*1024] max_part=1 rd_nr=1d_size59,1517
+	-dd if=/dev/zero of=$(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) bs=$$[4096*16] count=$$[59055800320/(4096*16)] oflag=directf65,1763
+	sudo mount -t hugetlbfs -o rw,pagesize=2M,mode=0777 none /tmp/memuram0pagesize80,2385
+HSG1_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) $(NDDEXEC) $(NDDFLAGS) -queuedepth $(THREADS) -kbytes $(FILELEN) -rwratio $(RATIO) -blocksize $(REQSIZE) -seek range $$[($(FILELEN)*1024)/$(REQSIZE)] -target $(NDD_TARGET_DIR)/$(NDD_TARGET_FILE)HSG1_CMD87,2692
+HSG1_MEGADD_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) ./megadd $(NDD_RUNTIME) $(FILELEN) $(REQSIZE) $(RATIO)HSG1_MEGADD_CMD89,2953
+HSG1_FASTDD_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) ${BEE3HOME}/Workloads/fastdd/fastdd.exe asdf -footKB $(FILELEN) -r $(RATIO) -s $(REQSIZE) -tc $(THREADS) -file $(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) -rt $(NDD_RUNTIME)HSG1_FASTDD_CMD91,3081
+HSG2_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) $(NDDEXEC) $(NDDFLAGS) -queuedepth $(THREADS) -kbytes $(FILELEN) -rwratio $(RATIO) -blocksize $(REQSIZE) -seek range $$[($(FILELEN)*1024)/$(REQSIZE)] -target $(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) -startoffset 4096HSG2_CMD107,4143
+HSG2_MEGADD_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) ./megadd $(NDD_RUNTIME) $(FILELEN) $(REQSIZE) $(RATIO)HSG2_MEGADD_CMD109,4422
+HSG2_FASTDD_CMD=$(NDD_AFFINITY_$(THREADS)) $(NDD_WRAPPER_DIR)/$(SCRIPT) ${BEE3HOME}/Workloads/fastdd/fastdd.exe asdf -footKB $(FILELEN) -r $(RATIO) -s $(REQSIZE) -tc $(THREADS) -file $(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) -rt $(NDD_RUNTIME)HSG2_FASTDD_CMD111,4550
+FOO_TARGET_DIR  = /mnt/foodiskFOO_TARGET_DIR143,6817
+FOO_TARGET_FILE = zero.txtFOO_TARGET_FILE144,6848
+FOO_OUT_DIR = ~/resultsFOO_OUT_DIR157,7327
+FOO_G1_DIR=2012-06-07-02FOO_G1_DIR158,7351
+FOO_LOG_FILENAME = $(SCRIPT)-tc$(THREADS)-rw$(RATIO)-filelen$(FILELEN)k-reqsize$(REQSIZE).resultFOO_LOG_FILENAME159,7376
+FOO_WRAPPER_DIR = $(BEE3HOME)/Tools/PosixNVM/binFOO_WRAPPER_DIR161,7474
+FOOEXEC  = $(BEE3HOME)/Workloads/xdd/bin/xdd.linuxFOOEXEC162,7523
+FOO_RUNTIME = 40FOO_RUNTIME164,7575
+FOO_G1_CMD=$(NDD_AFFINITY_$(THREADS)) $(FOO_WRAPPER_DIR)/$(SCRIPT) ${BEE3HOME}/Workloads/fastdd/fastdd.exe asdf -footKB $(FILELEN) -r $(RATIO) -s $(REQSIZE) -tc $(THREADS) -file $(FOO_TARGET_DIR)/$(FOO_TARGET_FILE) -rt $(FOO_RUNTIME)FOO_G1_CMD166,7593
+FOO_G2_CMD=$(NDD_AFFINITY_$(THREADS)) $(FOO_WRAPPER_DIR)/$(SCRIPT) ${BEE3HOME}/Workloads/fastmeta/fastmeta.exe asdf -footKB $(FILELEN) -r $(RATIO) -s $(REQSIZE) -tc $(THREADS) -file $(FOO_TARGET_DIR)/meta -F $(FILECOUNT) -rt $(FOO_RUNTIME)FOO_G2_CMD184,8895
+FOO_G2_LOG_FILENAME = $(SCRIPT)-tc$(THREADS)-rw$(RATIO)-filelen$(FILELEN)k-reqsize$(REQSIZE)-filecount$(FILECOUNT).resultFOO_G2_LOG_FILENAME185,9135
+BDB_TARGET_DIR  = /tmp/memuram0BDB_TARGET_DIR215,11142
+BDB_WRAPPER_DIR = $(BEE3HOME)/Tools/PosixNVM/binBDB_WRAPPER_DIR217,11175
+BDB_WRAPPER_SCRIPTS = nvpNVP nvpUnmodBDB_WRAPPER_SCRIPTS218,11224
+BDB_NUM_THREADS = 1 2 4 8 16BDB_NUM_THREADS219,11262
+BDB_LOG_FILENAME = BDB-$(STRUCT)-$(SCRIPT)-tc$(THREADS).resultBDB_LOG_FILENAME220,11291
+BDB_TREE_EXEC = $(BEE3HOME)/Workloads/BDB/Multi/BTree.exeBDB_TREE_EXEC222,11355
+BDB_HASH_EXEC = $(BEE3HOME)/Workloads/BDB/Multi/HashTable.exeBDB_HASH_EXEC223,11413
+BDB_STORAGE_STRUCTS = TREE HASHBDB_STORAGE_STRUCTS225,11476
+BDB_FLAGS = -footMB 16384 -reload -file $(BDB_TARGET_DIR)/$(BDB_$(STRUCT)_DIR) -F -rt 600BDB_FLAGS227,11509
+BDB_TREE_DIR = BTreeBDB_TREE_DIR229,11600
+BDB_HASH_DIR = HashTableBDB_HASH_DIR230,11621
+BDB_OUT_DIR = /x/FAST2012-NVP/data/bdb/01BDB_OUT_DIR232,11647
+BDB_CMD = $(BDB_WRAPPER_DIR)/$(SCRIPT) $(BDB_$(STRUCT)_EXEC) bdb-$(STRUCT)-$(SCRIPT) $(BDB_FLAGS) -tc $(THREADS)BDB_CMD234,11690
+HSG2_ALT_CMD=$(NDD_AFFINITY) $(NDD_WRAPPER_DIR)/$(SCRIPT) $(NDDEXEC) $(NDDFLAGS) -queuedepth $(THREADS) -kbytes $(FILELEN) -rwratio $(RATIO) -blocksize $(REQSIZE) -seek range $$[($(FILELEN)*1024)/$(REQSIZE)] -target $(NDD_TARGET_DIR)/$(NDD_TARGET_FILE) 2>&1 >> $(NDD_OUT_DIR)/$(NDD_G2_DIR)/$(NDD_LOG_FILENAME)HSG2_ALT_CMD251,12631
+OLTP_TARGET_DIR  = /mnt/foodiskOLTP_TARGET_DIR292,15285
+OLTP_WRAPPER_DIR = $(BEE3HOME)/Tools/PosixNVM/binOLTP_WRAPPER_DIR294,15318
+OLTP_WRAPPER_SCRIPTS = nvpNVP nvpUnmodOLTP_WRAPPER_SCRIPTS295,15368
+OLTP_NUM_THREADS = 1 16OLTP_NUM_THREADS296,15407
+OLTP_LOG_FILENAME = OLTP-$(SCRIPT)-tc$(THREADS).resultOLTP_LOG_FILENAME297,15431
+OLTP_DEFAULTS=${BEE3HOME}/Tools/PosixNVM/oltp-config-foo.cnfOLTP_DEFAULTS299,15487
+OLTP_TIME=60OLTP_TIME301,15549
+OLTP_OUT_DIR = ~/results/2012-05-01-01OLTP_OUT_DIR303,15563
+OLTP_REDIRECT = OLTP_REDIRECT306,15665
+OLTP_CMD = $(OLTP_WRAPPER_DIR)/$(SCRIPT) $(OLTP_$(STRUCT)_EXEC) bdb-$(STRUCT)-$(SCRIPT) $(OLTP_FLAGS) -tc $(THREADS)OLTP_CMD308,15683
+
+/home/rohan/projects/quill-modified/stracefilter,0
+
+/home/rohan/projects/quill-modified/getopt.c,953
+#define _NO_PROTO_NO_PROTO30,1279
+#define constconst41,1496
+char *optarg = NULL;optarg88,3344
+int optind = 0;optind103,3907
+static char *nextchar;nextchar112,4206
+int opterr = 1;opterr117,4320
+int optopt = '?';optopt123,4503
+  REQUIRE_ORDER, PERMUTE, RETURN_IN_ORDERREQUIRE_ORDER156,5928
+  REQUIRE_ORDER, PERMUTE, RETURN_IN_ORDERPERMUTE156,5928
+  REQUIRE_ORDER, PERMUTE, RETURN_IN_ORDERRETURN_IN_ORDER156,5928
+} ordering;ordering157,5970
+static char *posixly_correct;posixly_correct160,6037
+#define	my_index	my_index168,6314
+my_index (str, chr)my_index177,6464
+static int first_nonopt;first_nonopt210,7398
+static int last_nonopt;last_nonopt211,7423
+exchange (argv)exchange223,7909
+_getopt_initialize (optstring)_getopt_initialize281,9432
+_getopt_internal (argc, argv, optstring, longopts, longind, long_only)_getopt_internal371,12917
+getopt (argc, argv, optstring)getopt669,20535
+main (argc, argv)main688,20917
+
+/home/rohan/projects/quill-modified/moneta_sim.c,1319
+#define MAGIC MAGIC14,216
+#define MAX_OPEN_DEVS MAX_OPEN_DEVS16,244
+int initialized = 0;initialized18,272
+     int magic;magic21,314
+     pid_t pid;pid22,331
+     char *device;device23,348
+     int index;index24,368
+} Channel;Channel25,385
+Channel *openDevs[MAX_OPEN_DEVS];openDevs27,399
+void * LoadFunc(void * dl, char *name)LoadFunc29,436
+static int(*my_read)(int, void *, size_t);my_read40,675
+static int(*my_write)(int, const void *, size_t);my_write41,719
+static int(*my_lseek)(int, off_t, int);my_lseek42,770
+#define LIBC_SO_LOC LIBC_SO_LOC44,813
+size_t GetFileLength(int fd) {GetFileLength48,873
+int moneta_CheckChannel(void *ci) {moneta_CheckChannel55,995
+static void CheckChannelSanity(void * ci)CheckChannelSanity75,1513
+int moneta_OpenChannel(const char* chardev, void** ci)moneta_OpenChannel82,1622
+int moneta_ReopenChannel(void **ci)moneta_ReopenChannel119,2442
+int moneta_CloseChannel(void* ci)moneta_CloseChannel129,2670
+int ValidateAccess(void * ci, int file, uint64_t offset, size_t accessBytes)ValidateAccess142,2945
+int moneta_Read(void* ci, int file, uint64_t offset, size_t length, void* buffer)moneta_Read174,3746
+int moneta_Write(void* ci, int file, uint64_t offset, size_t length, const void* buffer)moneta_Write201,4263
+void Init() {Init241,5164
+
+/home/rohan/projects/quill-modified/megadd.c,115
+#define _XOPEN_SOURCE _XOPEN_SOURCE10,174
+#define SEED SEED13,224
+int main(int argc, char* argv[])main19,386
+
+/home/rohan/projects/quill-modified/merkleLogicalBtree.h,1970
+#define MAP_SIZE MAP_SIZE11,185
+#define LEAF_MINIMUM_INDEX_GRANULARITY LEAF_MINIMUM_INDEX_GRANULARITY13,209
+#define BITMAP_PER_INDEX_NUM_CACHELINES BITMAP_PER_INDEX_NUM_CACHELINES14,251
+#define NUM_CHILDREN NUM_CHILDREN16,295
+#define DEPTH_OF_TREE DEPTH_OF_TREE17,318
+#define SIZE_OF_CACHELINE SIZE_OF_CACHELINE18,342
+#define TOTAL_NUM_CACHELINES TOTAL_NUM_CACHELINES20,372
+#define LEVEL0_NUM_CHILDREN LEVEL0_NUM_CHILDREN22,431
+#define LEVEL1_NUM_CHILDREN LEVEL1_NUM_CHILDREN23,461
+#define LEVEL2_NUM_CHILDREN LEVEL2_NUM_CHILDREN24,491
+#define LEVEL0_BIT_CACHELINE_COVERAGE LEVEL0_BIT_CACHELINE_COVERAGE27,603
+#define LEVEL1_BIT_CACHELINE_COVERAGE LEVEL1_BIT_CACHELINE_COVERAGE28,648
+#define LEVEL2_BIT_CACHELINE_COVERAGE LEVEL2_BIT_CACHELINE_COVERAGE29,692
+#define LEAF_PER_INDEX_CACHELINE_COVERAGE LEAF_PER_INDEX_CACHELINE_COVERAGE30,735
+#define DEFAULT_PAGE_SIZE DEFAULT_PAGE_SIZE31,780
+#define SIZE_OF_NODE SIZE_OF_NODE32,811
+#define NODE_BUFFER NODE_BUFFER33,836
+#define LEAF_BUFFER LEAF_BUFFER34,889
+struct merkleBtreeLeaf {merkleBtreeLeaf36,917
+	uint64_t bitmaps[LEAF_BUFFER];bitmaps37,942
+struct merkleBtreeNode {merkleBtreeNode40,978
+	uint64_t level0;level041,1003
+	uint64_t level1[8];level142,1021
+	uint64_t level2[32];level243,1042
+	struct merkleBtreeLeaf *leaf;leaf44,1064
+	uint8_t buffer[NODE_BUFFER];buffer45,1095
+static inline unsigned char _bittestandset(unsigned long *a, unsigned long b) {_bittestandset55,1428
+uint64_t min(uint64_t val1, uint64_t val2) {min60,1563
+void createTree(struct merkleBtreeNode **node) {createTree67,1659
+void printTree(struct merkleBtreeNode *root) {printTree91,2259
+void modifyBmap(struct merkleBtreeNode *root, uint64_t offset, uint64_t size) {modifyBmap159,4115
+void traverseTree(struct merkleBtreeNode *root, unsigned long mmap_start_addr) {traverseTree346,11522
+void traverseTreeSequential(struct merkleBtreeNode *root) {traverseTreeSequential450,15027
+
+/home/rohan/projects/quill-modified/nvp_mman.h,275
+#define CLFLUSH_SIZE CLFLUSH_SIZE16,788
+#define _mm_clflushopt(_mm_clflushopt17,813
+static inline void do_cflush_len(volatile void* addr, size_t length)do_cflush_len20,912
+static inline void do_cflushopt_len(volatile void* addr, size_t length)do_cflushopt_len36,1345

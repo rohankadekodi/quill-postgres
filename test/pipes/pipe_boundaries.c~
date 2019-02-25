@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/syscall.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/wait.h>
+
+#define TRANSFER_SIZE 4096
+
+int child_process(int file[2]) {
+
+	pid_t my_pid = 0;
+	char buf[TRANSFER_SIZE];
+	int i = 0;
+
+	printf("%s: pid = %d\n", __func__, getpid());
+
+	for (i=0; i<TRANSFER_SIZE - 1 ; i++)
+		buf[i] = 'A';		
+		
+	close(file[0]);
+	write(file[1], buf, TRANSFER_SIZE);
+	close(file[1]);
+
+	printf("%s: data written\n", __func__);
+	exit(0);
+
+}
+
+int main(int argc, char *argv[]) {
+
+	int file[2];
+	pid_t child_pid = 0, my_pid = 0;
+	int ret = 0;
+	
+	ret = pipe(file);
+	if (ret != 0) {
+		printf("%s: pipe failed. Error = %s\n", __func__, strerror(errno));
+		exit(-1);
+	}
+
+	child_pid = fork();
+	if (child_pid == -1) {
+		printf("%s: fork failed. Error = %s\n", __func__, strerror(errno));
+	}
+
+	if (child_pid == 0) {
+		child_process(file);
+	} else {
+
+		int size_read = 0;
+		char buf[TRANSFER_SIZE];
+
+		my_pid = getpid();
+		printf("%s: pid = %d\n", __func__, my_pid);
+
+		wait(NULL);
+
+		close(file[1]);
+		while ((size_read = read(file[0], buf, TRANSFER_SIZE)) > 0)
+			printf("Size read = %d\n", size_read);
+		close(file[0]);
+		
+		exit(0);
+
+		//child_process();
+	}
+	
+}

@@ -1,0 +1,21 @@
+#include <signal.h>
+#include <unistd.h>
+#include <stdio.h>
+
+void my_handler(int signum) {
+
+	if (signum == SIGUSR1) 
+		printf("Handled signal in my_handler\n");
+}
+
+
+int main(int argc, char *argv[]) {
+
+	int pid;
+	pid=getpid();
+	printf("PID: %d\n", pid);
+
+	signal(SIGUSR1, my_handler);
+
+	pause();
+}
